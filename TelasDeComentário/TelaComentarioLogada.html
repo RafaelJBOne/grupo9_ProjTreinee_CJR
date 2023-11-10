@@ -1,45 +1,64 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>telaComentarioLogada</title>
+    <title>TelaComentarioLogada</title>
+    <link rel="stylesheet" href="style2.css">
 </head>
 <body>
-    <div id="logo-cjr">
-        <img src="logoCjr (2).png" alt="logo da cjr">
+    <header id="navbar">
+        <div id="logo-cjr">
+            <img src="logoCjr (2).png" alt="logo da cjr">
+        </div>
+        <div id="Right">
+            <h1>Usuário 1</h1>
+            <img src="pfp.jpg" id="pfp1">
+            <input type="submit" id="Sair" value="Sair">
+        </div>
+    </header>
+    <div id="Coluna-de-comentários">
+        <div id="Comentários">
+            <h1>Comentários</h1>
+            <div id="Comentar">
+                <input type="submit" id="Comment" value="Comentar">
+            </div>
+        </div>
+        <div id="Comentário-1">
+            <div id="TopComment">
+                <div id="UsernDate">
+                    <img src="pfp.jpg" id="pfp">
+                    <h1>Usuário 1</h1>
+                    <h2>22/02/2022</h2>
+                </div>
+                <div id="delete">
+                    <input type="submit" id="Delete" value="Deletar">
+                </div>
+            </div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque nostrum dolorem iure quod eaque nam architecto molestias, corrupti natus, accusamus excepturi est, soluta non optio maiores expedita! Commodi, temporibus doloribus?</p>
+            <div id="Edit">
+                <input type="submit" id="Editar" value="Editar">
+            </div>
+        </div>
+        <div id="Comentário-2">
+            <div id="UsernDate">
+                <img src="pfp.jpg" id="pfp">
+                <h1>Usuário 2 </h1>
+                <h2>22/02/2022</h2>
+            </div>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quis reprehenderit reiciendis ex ipsa eveniet. Cum aut unde autem libero numquam? Quidem fuga iste deleniti, ipsum praesentium delectus dolore voluptatibus unde?</p>
+            <img id="foca" src="pup_seal.jpg" alt="imagem do comentário"> 
+        </div>
+        <div id="Comentário-3">
+            <div id="UsernDate">
+                <img src="pfp.jpg" id="pfp">
+                <h1>Usuário 3</h1>
+                <h2>22/02/2022</h2>
+            </div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit sunt, mollitia a cum ea esse maxime veritatis quisquam amet nam magni, accusantium est quam quaerat. Eveniet ea eligendi aspernatur similique.</p>
+        </div>
     </div>
-    <div id="Nome-do-usuário">
-        <h1>YourName</h1>
-    </div>
-    <div id="Foto-do-usuário">
-        <img src="pfp.jpg" alt="pfp do usuário">
-    </div>
-    <div id="Botão-de-sair">
-        <br><input type="submit" name="Sair" value="Sair">
-    </div>
-    <div id="Comentários">
-        <h1>Comentários</h1>
-    </div>
-    <div id="Botão-de-comentar">
-        <br><input type="submit" name="Comentar" value="Comentar">
-    </div>
-    <div id="Comentário-1">
-        <h1>Usuário 1</h1>
-        <h2>22/02/2022</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque nostrum dolorem iure quod eaque nam architecto molestias, corrupti natus, accusamus excepturi est, soluta non optio maiores expedita! Commodi, temporibus doloribus?</p>
-    </div>
-    <div id="Comentário-2">
-        <h1>Usuário 2</h1>
-        <h2>22/02/2022</h2>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quis reprehenderit reiciendis ex ipsa eveniet. Cum aut unde autem libero numquam? Quidem fuga iste deleniti, ipsum praesentium delectus dolore voluptatibus unde?</p>
-        <img src="Imagem comentario.png" alt="imagem do comentário"> 
-    </div>
-    <div id="Comentário-3">
-        <h1>Usuário 1</h1>
-        <h2>22/02/2022</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit sunt, mollitia a cum ea esse maxime veritatis quisquam amet nam magni, accusantium est quam quaerat. Eveniet ea eligendi aspernatur similique.</p>
-    </div>
+    
 
 </body>
 </html>
