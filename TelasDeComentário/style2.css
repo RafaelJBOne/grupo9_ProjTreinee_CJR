@@ -138,6 +138,7 @@ body {
   #Comentário-1 h1, #Comentário-2 h1, #Comentário-3 h1{
     margin-left: 10px;
     font-family: sans-serif;
+    text-decoration: none;
   }
   
   #Comentário-1 h2, #Comentário-2 h2, #Comentário-3 h2 {

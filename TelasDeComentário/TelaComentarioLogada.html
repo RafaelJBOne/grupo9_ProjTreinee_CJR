@@ -1,20 +1,36 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TelaComentarioLogada</title>
     <link rel="stylesheet" href="style2.css">
 </head>
+
 <body>
     <header id="navbar">
         <div id="logo-cjr">
             <img src="logoCjr (2).png" alt="logo da cjr">
         </div>
         <div id="Right">
-            <h1>Usuário 1</h1>
-            <img src="pfp.jpg" id="pfp1">
-            <input type="submit" id="Sair" value="Sair">
+            <!-- Redireciona para TELA DE PERFIL LOGADO ao clicar no nome do Usuário (AINDA NÃO CRIADA) -->
+            <a href="TELA_DE_PERFIL_LOGADO">
+                <button>
+                    <h1>Usuário 1</h1>
+                </button>
+            </a>
+            <!-- Redireciona para TELA DE PERFIL LOGADO ao clicar na foto de perfil (AINDA NÃO CRIADA) -->
+            <a href="TELA_DE_PERFIL_LOGADO">
+                <button>
+                    <img src="pfp.jpg" id="pfp1">
+                </button>
+            </a>
+            <!-- Redireciona para TELA DE COMENTÁRIO DESLOGADO ao clicar em sair -->
+            <a href="TelaComentarioDeslogada.html">
+                <button><img src="..\imagens\Botão Sair.png" alt="Botão de sair" style="height:35px;">
+                </button>
+            </a>
         </div>
     </header>
     <div id="Coluna-de-comentários">
@@ -27,38 +43,82 @@
         <div id="Comentário-1">
             <div id="TopComment">
                 <div id="UsernDate">
-                    <img src="pfp.jpg" id="pfp">
-                    <h1>Usuário 1</h1>
+                    <!-- Redireciona para TELA DE PERFIL LOGADO ao clicar na foto de perfil (AINDA NÃO CRIADA) -->
+                    <a href="TELA_DE_PERFIL_LOGADO">
+                        <button>
+                            <img src="pfp.jpg" id="pfp">
+                        </button>
+                    </a>
+                    <a href="TELA_DE_PERFIL_LOGADO">
+                        <button>
+                            <h1>Usuário 1</h1>
+                        </button>
+                    </a>
                     <h2>22/02/2022</h2>
                 </div>
+                <!-- Redireciona para a TELA DE CONFIRMAÇÃO DE EXCLUSÃO ao clicar no botão de excluir (AINDA NÃO CRIADA / TELA OPCIONAL) -->
                 <div id="delete">
-                    <input type="submit" id="Delete" value="Deletar">
+                    <a href="CONFIRMACAO_EXCLUSAO.HTML">
+                        <button>
+                            <img src="..\imagens\Botão Excluir.png" alt="Lixeira" style="height:20px;">
+                        </button>
+                    </a>
                 </div>
             </div>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque nostrum dolorem iure quod eaque nam architecto molestias, corrupti natus, accusamus excepturi est, soluta non optio maiores expedita! Commodi, temporibus doloribus?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque nostrum dolorem iure quod eaque nam
+                architecto molestias, corrupti natus, accusamus excepturi est, soluta non optio maiores expedita!
+                Commodi, temporibus doloribus?</p>
+            <!-- Redireciona para a TELA DE EDITAR COMENTÁRIO ao clicar no botão de editar (AINDA NÃO CRIADA) -->
             <div id="Edit">
-                <input type="submit" id="Editar" value="Editar">
+                <a href="EDITAR_COMENT/POST.HTML">
+                    <button>
+                        <img src="..\imagens\Botão Editar.png" alt="Editar" style="height:20px;">
+                    </button>
+                </a>
             </div>
         </div>
         <div id="Comentário-2">
             <div id="UsernDate">
-                <img src="pfp.jpg" id="pfp">
-                <h1>Usuário 2 </h1>
+                <!-- Redireciona para TELA DE PERFIL LOGADO ao clicar na foto de perfil (AINDA NÃO CRIADA) -->
+                <a href="TELA_DE_PERFIL_LOGADO">
+                    <button>
+                        <img src="pfp.jpg" id="pfp">
+                    </button>
+                </a>
+                <a href="TELA_DE_PERFIL_LOGADO">
+                    <button>
+                        <h1>Usuário 2</h1>
+                    </button>
+                </a>
                 <h2>22/02/2022</h2>
             </div>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quis reprehenderit reiciendis ex ipsa eveniet. Cum aut unde autem libero numquam? Quidem fuga iste deleniti, ipsum praesentium delectus dolore voluptatibus unde?</p>
-            <img id="foca" src="pup_seal.jpg" alt="imagem do comentário"> 
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quis reprehenderit reiciendis ex ipsa eveniet.
+                Cum aut unde autem libero numquam? Quidem fuga iste deleniti, ipsum praesentium delectus dolore
+                voluptatibus unde?</p>
+            <img id="foca" src="pup_seal.jpg" alt="imagem do comentário">
         </div>
         <div id="Comentário-3">
             <div id="UsernDate">
-                <img src="pfp.jpg" id="pfp">
-                <h1>Usuário 3</h1>
+                <!-- Redireciona para TELA DE PERFIL LOGADO ao clicar na foto de perfil (AINDA NÃO CRIADA) -->
+                <a href="TELA_DE_PERFIL_LOGADO">
+                    <button>
+                        <img src="pfp.jpg" id="pfp">
+                    </button>
+                </a>
+                <a href="TELA_DE_PERFIL_LOGADO">
+                    <button>
+                        <h1>Usuário 2</h1>
+                    </button>
+                </a>
                 <h2>22/02/2022</h2>
             </div>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit sunt, mollitia a cum ea esse maxime veritatis quisquam amet nam magni, accusantium est quam quaerat. Eveniet ea eligendi aspernatur similique.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit sunt, mollitia a cum ea esse
+                maxime veritatis quisquam amet nam magni, accusantium est quam quaerat. Eveniet ea eligendi aspernatur
+                similique.</p>
         </div>
     </div>
-    
+
 
 </body>
+
 </html>
