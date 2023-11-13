@@ -1,0 +1,72 @@
+header {
+    width: 1440px;
+    height: 80px;
+    top: -1px;
+    background-color: #27BD80;
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    width: 100%;    
+}
+
+/*
+#conteudoHeader {
+
+}
+*/
+
+#logoHeader {
+    padding-left: 50px;
+    scale: 0.6;
+    background-color: white;
+    padding-right: 50px;
+    border-radius: 25px;
+    height: 80px;
+
+}
+
+
+    
+
+/*
+#botaoEntrar{
+
+}
+
+#botaoCriarConta {
+
+}
+
+body {
+
+}
+
+aside {
+
+}
+
+footer {
+
+}
+
+#conteudoHeader {
+    
+}
+
+#boataoEntrar{
+    
+}
+
+#logoHeader {
+     
+}
+
+#formulario {
+
+}
+
+#logoTela {
+
+}
+
+*/
