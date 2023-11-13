@@ -1,0 +1,92 @@
+body {
+    margin: 0;
+    background-color: #001830;
+}
+
+#logoCJR {
+    background-color: white;
+    transform: scale(0.1);
+    padding: 50px;
+    padding-left: 300px;
+    padding-right: 300px;
+    border-radius: 100px;
+    margin-left: -454px
+}
+
+#navbar {
+    display: flex; /* Define um container flexível */
+    justify-content: space-between; /* Distribui os elementos horizontalmente */
+    align-items: center; /* Centraliza verticalmente os elementos */
+    background-color: #27BD80; /* Cor de fundo da navbar (opcional) */
+    height: 100px;
+    width: 100%;
+    
+}
+
+#Buttons {
+    margin-right: 100px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#enter {
+    background-color: #001830;
+    color: white;
+    font-size: larger;
+    padding: 15px;
+    font-family: sans-serif;
+    border: transparent;
+    padding-left: 30px;
+    padding-right: 30px;
+    border-radius: 20px;
+}
+
+#Entrar {
+    margin-left: 20px;
+}
+
+#account {
+    background-color: transparent;
+    color: #001830;
+    border: transparent;
+    font-size: larger;
+    padding: 15px;
+    font-family: sans-serif;
+    font-weight: bolder;
+}
+
+#enter:hover {
+    transform: scale(1.25);
+    transition: 0.25s;
+}
+
+#account:hover {
+        transform: scale(1.25);
+        transition: 0.25s;
+}
+
+#ProfileBox {
+    width: 40%;
+    margin: 0 auto;
+    background: linear-gradient(to bottom, #002F67 50%, white 50%);
+}
+
+#mainpfp {
+    transform: scale(0.25);
+    margin-top: -100px;
+    margin-left: -100px;
+}
+
+#job {
+    display: flex;
+    justify-content: flex-start;
+    height: 50px;
+}
+
+/*#Emprego {
+    height: 18px;
+    width: 16px;
+    margin-left: 20px;
+    margin-right: 20px;;
+    margin-top: 20px;
+}
