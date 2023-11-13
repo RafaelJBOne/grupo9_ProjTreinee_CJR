@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
+    <link rel="stylesheet" href="styleLogin.css">
 </head>
 
 <body>
     <header>
         <!--A imagem eh um print que eu tinha salvo, nao consegui pegar aq esta disponivel no figma-->
-        <img src="logoCjr.png" alt="Logo CJR">
+        <img src="imagens/logoCjr.png" alt="Logo CJR">
         <a href="login.html">
             <button>Entrar</button>
         </a>
@@ -21,7 +22,7 @@
     </header>
     
     <!--action define para onde o imput sera encaminhado-->
-    <form action="" method="post">
+    <form id="camposLogin" action="" method="post">
         <label for="loginInput">Login</label>
         <input type="text" name="Login" id="loginInput" required><br><br>
 
@@ -30,7 +31,6 @@
 
         <input type="submit" name="enviar" value="Logar"><br>
         <br><a href="">Esqueceu a senha?</a>
-        
     </form>
     
     <footer>
