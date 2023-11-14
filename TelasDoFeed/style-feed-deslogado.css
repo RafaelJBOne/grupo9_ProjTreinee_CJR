@@ -9,3 +9,21 @@
     .classe
     #id
 */
+
+body {
+    background-color: #001830;
+    margin: 0;
+  }
+
+header {
+background-color: #27BD80;
+display: flex; 
+justify-content: space-between; 
+align-items: center; 
+width: 100%;
+}
+
+#logo-cjr {
+scale: 0.1
+
+}
