@@ -14,21 +14,8 @@ body {
 #botões {
     display: flex;
     justify-content: space-between;
-    padding-right: 20px;
-    margin-right: 10px;
-    padding-bottom: 10px;
+    margin-right: 40px;
 }
-
-#botão-de-criar-conta input {
-    background-color: transparent;
-    color: #001830;
-    border: transparent;
-    margin-right: 35px;
-    scale: 1.2;
-    font-weight: bold;
-    padding-top: 10px;
-    margin-bottom: 10px;
-  }
   
   #botão-de-criar-conta input:hover { 
     transition: 0.25s;
@@ -42,17 +29,6 @@ body {
     padding-right: 50px;
     border-radius: 25px;
     height: 80px;
-}
-
-#botão-de-entrar input {
-    background-color: #001830;
-    color: white;
-    scale: 1.5;
-    margin-right: 20px ;
-    height: 30px;
-    width: 50px;
-    border-radius: 25px;
-    border: transparent;
 }
 
 #botão-de-entrar input:hover {
@@ -84,35 +60,6 @@ body {
   margin-left: 10px;
 }
 
-/*#Comentário-1,
-#Comentário-2,
-#Comentário-3 {
-  border: 2px solid #121212;
-  padding: 10px;
-  background-color: white;
-  font-family: sans-serif;
-}
-
-#Comentário-2 img {
-  max-width: 100%;
-  height: auto;
-}
-
-#UsernDate {
-  display: flex;
-  flex-direction: row;
-}
-
-#UsernDate h1 {
-  margin-right: 10px;
-}
-
-#UsernDate h2 {
-  margin-bottom: 10px;
-}
-
-*/
-
 #Comentário-1 h1, #Comentário-2 h1, #Comentário-3 h1{
   margin-left: 10px;
   font-family: sans-serif;
@@ -126,13 +73,12 @@ body {
 #UsernDate {
   display: flex;
   flex-direction: row;
+  background-color: transparent;
 }
 
 #UsernDate img {
   max-width: 30px;
   max-height: 30px;
-  margin-left: 20px;
-  margin-top: 20px;
   border-radius: 30px;
 }
 
@@ -168,4 +114,39 @@ body {
 
 #pfp {
   border: 2px white solid;
+}
+
+#botão-de-entrar {
+  scale: 1.2;
+  background-color:#001830;
+  color: white;
+  border-radius: 25px;
+  padding: 10px;
+  border: none;
+  font-family: sans-serif;
+  font-weight: 550;
+}
+
+#botão-de-criar-conta {
+  margin-right: 30px;
+  background: transparent;
+  font-family: sans-serif;
+  font-weight: bold;
+  color: #001830;
+  border: transparent;
+  scale: 1.2;
+  margin-top: 10px;
+}
+
+#commenterpfp {
+  background-color: transparent;
+  border: transparent;
+  margin-top: 15px;
+}
+
+#user {
+  background-color: transparent;
+  border: none;
+  color: white;
+  font-family: sans-serif;
 }

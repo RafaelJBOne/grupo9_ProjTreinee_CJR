@@ -12,29 +12,13 @@ body {
       max-height: 80px;
   }
   
-  #botões {
+  /*#botões {
       display: flex;
       justify-content: space-between;
       padding-right: 20px;
       margin-right: 10px;
       padding-bottom: 10px;
-  }
-  
-  #botão-de-criar-conta input {
-      background-color: transparent;
-      color: #001830;
-      border: transparent;
-      margin-right: 35px;
-      scale: 1.2;
-      font-weight: bold;
-      padding-top: 10px;
-      margin-bottom: 10px;
-    }
-    
-    #botão-de-criar-conta input:hover { 
-      transition: 0.25s;
-      transform: scale(1.25);
-    }  
+  } */
   
   #logo-cjr {
       padding-left: 50px;
@@ -45,7 +29,7 @@ body {
       height: 80px;
   }
   
-  #botão-de-entrar input {
+  /*#botão-de-entrar input {
       background-color: #001830;
       color: white;
       scale: 1.5;
@@ -54,12 +38,12 @@ body {
       width: 50px;
       border-radius: 25px;
       border: transparent;
-  }
+  } 
   
   #botão-de-entrar input:hover {
     transition: 0.25s;
     transform: scale(1.25);
-  }
+  } */
   
   #Coluna-de-comentários {
     display: flex;
@@ -149,14 +133,14 @@ body {
   #UsernDate {
     display: flex;
     flex-direction: row;
+    background-color: transparent;
   }
   
   #UsernDate img {
     max-width: 30px;
     max-height: 30px;
-    margin-left: 20px;
-    margin-top: 20px;
     border-radius: 30px;
+    border: 2px solid white;
   }
   
   #Comentário-1 p, #Comentário-2 p, #Comentário-3 p {
@@ -194,9 +178,9 @@ body {
     max-width: 40px;
     max-height: 40px;
     margin-left: 20px;
-    margin-top: 20px;
     border-radius: 30px;
     border: 2px solid white;
+    margin-top: 10px
   }
 
   #Right {
@@ -205,20 +189,6 @@ body {
     max-height: 80px;
     margin-right: 20px;
     font-family: sans-serif;
-  }
-
-  #Sair {
-    height: 50px;
-    margin-top: 15px;
-    background: transparent;
-    border: none;
-    scale: 1.5;
-  }
-
-  #Sair input :hover {
-    transition: 0.25s;
-    transform: scale(20);
-    
   }
 
   #pfp1 {
@@ -254,4 +224,42 @@ body {
     color: white;
     scale: 1.5;
     text-decoration: underline;
+  }
+
+  #commenterpfp {
+    background-color: transparent;
+    border: transparent;
+    margin-top: 15px;
+  }
+
+  #Username {
+    background-color: transparent;
+    color:#001830;
+    border: none;
+  }
+
+  #userpfp {
+    background-color: transparent;
+    border: none;
+  }
+
+  #exit {
+    margin-top: 15px;
+  }
+
+  #user {
+    background-color: transparent;
+    color: white;
+    font-family: sans-serif;
+    border: none;
+  }
+
+  #delete {
+    background-color: transparent;
+    border: none;
+  }
+
+  #Edit {
+    background-color: transparent;
+    border: none;
   }
