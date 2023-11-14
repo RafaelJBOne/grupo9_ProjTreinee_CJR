@@ -5,12 +5,11 @@ body {
 
 #logoCJR {
     background-color: white;
-    transform: scale(0.1);
-    padding: 50px;
-    padding-left: 300px;
-    padding-right: 300px;
-    border-radius: 100px;
-    margin-left: -454px
+    margin-left: 40px;
+    padding-left: 50px;
+    padding-right: 50px;
+    border-radius: 25px;
+    scale: 0.8;
 }
 
 #navbar {
@@ -24,7 +23,7 @@ body {
 }
 
 #Buttons {
-    margin-right: 100px;
+    margin-right: 40px;
     display: flex;
     justify-content: space-between;
 }
@@ -68,25 +67,33 @@ body {
 #ProfileBox {
     width: 40%;
     margin: 0 auto;
-    background: linear-gradient(to bottom, #002F67 50%, white 50%);
+    background: linear-gradient(to bottom, #002F67 0%, #002F67 40%, white 40%, white 100%);
 }
 
 #mainpfp {
-    transform: scale(0.25);
-    margin-top: -100px;
-    margin-left: -100px;
+    max-width: 150px;
+    max-height: 150px;
+    border-radius: 50%; /* Adiciona position absolute para posicionar a partir do canto superior esquerdo do container pai */
+    margin-top: 100px; /* Move 100px para baixo */
+    margin-left: 100px; /* Move 100px para a direita */
 }
 
-#job {
+/* Adiciona estilos para as informações (exemplo, ajuste conforme necessário) */
+#job,
+#mail {
     display: flex;
-    justify-content: flex-start;
-    height: 50px;
+    align-items: center;
+    font-family: sans-serif;
+    font-weight: lighter;
 }
 
-/*#Emprego {
-    height: 18px;
-    width: 16px;
-    margin-left: 20px;
-    margin-right: 20px;;
-    margin-top: 20px;
+#Emprego,
+#Email {
+    margin-right: 10px;
+    margin-left: 100px;
+}
+
+#mainuser {
+    margin-left: 100px;
+    font-family: sans-serif;
 }
