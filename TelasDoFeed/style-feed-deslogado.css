@@ -47,13 +47,28 @@ body {
     margin: 0;
 }
 
-#Coluna-publicacoes {}
+#Coluna-publicacoes {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    align-items: center;
+    }
 
-#Titulo-publicacoes {}
+#Titulo-publicacoes {
+    display: flex;
+}
 
-.publicacoes {}
+.publicacoes {
+    background-color: #002F67;
+    width: 40%;
+    border-radius: 25px;
+}
 
-.UsernDate {}
+.UsernDate {
+    display: flex;
+    flex-direction: row;
+    background-color: transparent;
+}
 
 .foto-perfil {
     scale: 1;
@@ -66,4 +81,12 @@ body {
 .texto-publicacao {
     text-decoration: none;
     color: brown
+}
+
+.Imagem-publicacao {
+    align-self: center;
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    scale: 0.9;
 }
