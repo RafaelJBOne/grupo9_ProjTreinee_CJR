@@ -1,11 +1,143 @@
-.texto-publicacao {
-    text-decoration: none;
-    color: brown
-}
-
-
 /* 
     elemento
     .classe
     #id
 */
+
+
+
+header {
+    background-color: #27BD80;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%
+}
+
+#logo-cjr {
+    padding-left: 50px;
+    padding-right: 50px;
+    scale: 0.6;
+    background-color: white;
+    border-radius: 25px;
+    height: 80px;
+}
+
+#Header-Right {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 40px;
+
+}
+
+#botao-de-criar-conta {
+    margin-right: 30px;
+    background: transparent;
+    font-family: sans-serif;
+    font-weight: bold;
+    color: #001830;
+    border: transparent;
+    scale: 1.2;
+    margin-top: 10px;
+}
+
+#botao-de-entrar {
+    scale: 1.2;
+    background-color:#001830;
+    color: white;
+    border-radius: 25px;
+    padding: 10px;
+    border: none;
+    font-family: sans-serif;
+    font-weight: 550;
+}
+
+body {
+    background-color: #001830;
+    margin: 0;
+}
+
+#Coluna-publicacoes {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    padding-top: 10px;
+    width: 40%;
+    }
+
+#Titulo-publicacoes {
+    display: flex;
+    background-color: white;
+    align-items: center;
+    justify-content: left;
+    margin: auto;
+    width: 40%;
+    border: 2px solid #121212;
+    padding-top: 0;
+
+}
+
+#Titulo-publicacoes h1{
+    margin-left: 10px;
+    font-family: sans-serif;
+}
+
+.publicacoes {
+    background-color: #002F67;
+    width: 100%;
+    border-radius: 25px;
+    
+
+}
+
+.UsernDate {
+    display: flex;
+    flex-direction: row;
+    background-color: transparent;
+    font-family: sans-serif;
+}
+
+.botoes-foto-perfil-publicacao {
+    scale: 1;
+    max-height: 35px;
+    width: auto;
+    width: fit-content;
+    height: fit-content;
+    margin-top: 1rem;
+    margin-left: 1rem;
+    background-color: transparent;
+    border: none;
+}
+
+.foto-perfil-publicacao {
+    border: 2px white solid;
+    max-width: 30px;
+    max-height: 30px;
+    border-radius: 30px;
+}
+
+.botoes-nome-usuario-publicacao {
+
+    margin-right: 1rem;
+    background-color: transparent;
+    border: none;
+}
+
+.texto-publicacao {
+    text-decoration: none;
+
+    text-align: left;
+    /* border: 2px solid #121212; */
+    border-top: transparent;
+    color:#001830;
+    font-family: sans-serif;
+    font-size: larger;
+    width: 100%;
+}
+
+.Imagem-publicacao {
+
+}
