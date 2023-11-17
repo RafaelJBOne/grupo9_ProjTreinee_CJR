@@ -64,23 +64,40 @@ body {
     align-items: center;
     justify-content: center;
     margin: auto;
+    padding-top: 10px;
     width: 40%;
     }
 
 #Titulo-publicacoes {
     display: flex;
+    background-color: white;
+    align-items: center;
+    justify-content: left;
+    margin: auto;
+    width: 40%;
+    border: 2px solid #121212;
+    padding-top: 0;
+
+}
+
+#Titulo-publicacoes h1{
+    margin-left: 10px;
+    font-family: sans-serif;
 }
 
 .publicacoes {
     background-color: #002F67;
     width: 100%;
     border-radius: 25px;
+    
+
 }
 
 .UsernDate {
     display: flex;
     flex-direction: row;
     background-color: transparent;
+    font-family: sans-serif;
 }
 
 .botoes-foto-perfil-publicacao {
@@ -113,18 +130,14 @@ body {
     text-decoration: none;
 
     text-align: left;
-    border: 2px solid #121212;
+    /* border: 2px solid #121212; */
     border-top: transparent;
     color:#001830;
-    font-size: 12px;
     font-family: sans-serif;
+    font-size: larger;
     width: 100%;
 }
 
 .Imagem-publicacao {
-    align-self: center;
-    max-width: 100%;
-    width: 100%;
-    height: auto;
-    scale: 0.9;
+
 }
