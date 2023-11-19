@@ -1,12 +1,6 @@
+/*
 header {
-    width: 1440px;
-    height: 80px;
-    top: -1px;
-    background-color: #27BD80;
-    display: flex; 
-    justify-content: space-between; 
-    align-items: center; 
-    width: 100%;    
+
 }
 
 #logoHeader {
@@ -26,13 +20,10 @@ header {
 
 
 
-    
-
-/*
 #botaoEntrar{
 
 }
-
+    
 #botaoCriarConta {
 
 }
