@@ -18,141 +18,167 @@
         </div>
 
         <div id="Header-Right">
-            <!-- Redireciona para TELA DE PERFIL LOGADO ao clicar na foto de perfil (AINDA NÃO CRIADA) -->
-            <a href="TELA_DE_PERFIL_LOGADO">
-                <button>
-                    Usuário Logado <img src="..\imagens\pfp.jpg " alt="Foto de Perfil" style="height:35px">
+            <!-- Redireciona para TELA DE PERFIL LOGADO ao clicar na foto de perfil -->
+            <a href="..\TelasDePerfil\TelaPerfilLogada.html">
+                <button id="nome-perfil-usuario-logado">
+                    Usuário Logado
+                </button>
+            </a>
+            <!-- Redireciona para TELA DE PERFIL LOGADO ao clicar na foto de perfil -->
+            <a href="..\TelasDePerfil\TelaPerfilLogada.html">
+                <button id="botao-foto-perfil-usuario-logado">
+                    <img src="..\imagens\pfp.jpg " alt="Foto de Perfil" style="height:35px">
                 </button>
             </a>
             <!-- Redireciona para TELA DO FEED DESLOGADO ao clicar em sair -->
             <a href="TelaFeedDeslogado.html">
-                <button><img src="..\imagens\Botão Sair.png" alt="Botão de sair" style="height:35px;">
+                <button><img id="botao-sair" src="..\imagens\Botão Sair.png" alt="Botão de sair" style="height:35px;">
                 </button>
             </a>
         </div>
 
     </header>
 
-    <div id="Publicações">
-        <h1>Publicações</h1>
+    <div id="Coluna-publicacoes">
+        <div id="Titulo-publicacoes">
+            <h1>Publicações</h1>
+        </div>
+
+        <!-- Fazer a Chamada do Back-End - Fetch API pra Superposição da tela de Criar Post -->
+        <div id="Botao-criar-post">
+            <input type="submit" id="Comment" value="Criar Post">
+        </div>
+
+        <br>
+
+        <div id="Publicacao1" class="publicacoes">
+            <div class="UsernDate">
+                <!-- Redireciona para TELA DE PERFIL LOGADO ao clicar na foto de perfil (AINDA NÃO CRIADA) -->
+                <a href="..\TelasDePerfil\TelaPerfilLogada.html">
+                    <button class="botoes-foto-perfil-publicacao">
+                        <img src="..\imagens\pfp.jpg " alt="Foto de Perfil" style="height:35px">
+                    </button>
+                </a>
+                <a href="..\TelasDePerfil\TelaPerfilLogada.html">
+                    <button class="botoes-nome-usuario-publicacao">
+                        <h1>Usuário 1</h1>
+                    </button>
+                </a>
+
+                <h2>22/10/2023</h2>
+            </div>
+            <!-- Redireciona para a TELA DE CONFIRMAÇÃO DE EXCLUSÃO ao clicar no botão de excluir (AINDA NÃO CRIADA / TELA OPCIONAL) -->
+            <a href="CONFIRMACAO_EXCLUSAO.HTML">
+                <button id="botao-excluir1" class="botoes-excluir">
+                    <img src="..\imagens\Botão Excluir.png" alt="Lixeira" style="height:20px;">
+                </button>
+            </a>
+
+            <!-- Abre a TELA DE COMENTÁRIOS LOGADA ao clicar na publicação -->
+            <a href="..\TelasDeComentário\TelaComentarioLogada.html" class="texto-publicacao">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque, ab modi et commodi delectus ad quos
+                    nemo quis vel itaque voluptatem labore vitae dolorum totam voluptatibus ipsum perspiciatis. Officiis,
+                    dignissimos.</p>
+            </a>
+
+            <!-- Redireciona para a TELA DE CRIAR COMENTÁRIO ao clicar no botão de comentar (AINDA NÃO CRIADA) -->
+            <a href="CRIAR_COMENTARIO.HTML">
+                <button class="botoes-criar-comentario">
+                    <img src="..\imagens\Botão Comentar.png" alt="Comentário" style="height:20px;">
+                </button>
+            </a>
+
+            <!-- Redireciona para a TELA DE EDITAR COMENTÁRIO ao clicar no botão de editar (AINDA NÃO CRIADA) -->
+            <a href="EDITAR_COMENT/POST.HTML">
+                <button class="botoes-editar-comentario/post">
+                    <img src="..\imagens\Botão Editar.png" alt="Editar" style="height:20px;">
+                </button>
+            </a>
+        </div>
+
+        <br><br>
+
+        <div id="Publicacao2" class="publicacoes">
+            <div class="UsernDate">
+                <!-- Redireciona para TELA DE PERFIL LOGADO ao clicar na foto de perfil (AINDA NÃO CRIADA) -->
+                <a href="..\TelasDePerfil\TelaPerfilLogada.html">
+                    <button class="botoes-foto-perfil-publicacao">
+                        <img src="..\imagens\pfp.jpg " alt="Foto de Perfil" style="height:35px">
+                    </button>
+                </a>
+                <a href="..\TelasDePerfil\TelaPerfilLogada.html">
+                    <button class="botoes-nome-usuario-publicacao">
+                        <h1>Usuário 2</h1>
+                    </button>
+                </a>
+
+                <h2>22/10/2023</h2>
+            </div>
+            <!-- Abre a TELA DE COMENTÁRIOS LOGADA ao clicar na publicação -->
+            <a href="..\TelasDeComentário\TelaComentarioLogada.html" class="texto-publicacao">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In dignissimos dicta et sequi consequuntur,
+                    voluptatum sapiente quasi esse consequatur nobis, beatae deleniti corrupti assumenda quas nulla
+                    quisquam, ipsum reprehenderit neque?</p>
+            </a>
+
+            <!-- Redireciona para a TELA DE CRIAR COMENTARIO ao clicar no botão de comentar (AINDA NÃO CRIADA) -->
+            <a href="CRIAR_COMENTARIO.HTML">
+                <button class="botoes-criar-comentario">
+                    <img src="..\imagens\Botão Comentar.png" alt="Comentário" style="height:20px;">
+                </button>
+            </a>
+        </div>
+
+        <br><br>
+
+        <div id="Publicacao3" class="publicacoes">
+            <div class="UsernDate">
+                <!-- Redireciona para TELA DE PERFIL LOGADO ao clicar na foto de perfil (AINDA NÃO CRIADA) -->
+                <a href="..\TelasDePerfil\TelaPerfilLogada.html">
+                    <button class="botoes-foto-perfil-publicacao">
+                        <img src="..\imagens\pfp.jpg " alt="Foto de Perfil" style="height:35px">
+                    </button>
+                </a>>
+                <a href="..\TelasDePerfil\TelaPerfilLogada.html">
+                    <button class="botoes-nome-usuario-publicacao">
+                        <h1>Usuário 1</h1>
+                    </button>
+                </a>
+
+                <h2>22/10/2023</h2>
+            </div>
+            <!-- Redireciona para a TELA DE CONFIRMAÇÃO DE EXCLUSÃO ao clicar no botão de excluir (AINDA NÃO CRIADA / TELA OPCIONAL) -->
+            <a href="CONFIRMACAO_EXCLUSAO.HTML">
+                <button id="botao-excluir2" class="botoes-excluir">
+                    <img src="..\imagens\Botão Excluir.png" alt="Lixeira" style="height:20px;">
+                </button>
+            </a>
+
+            <!-- Abre a TELA DE COMENTÁRIOS LOGADA ao clicar na publicação -->
+            <a href="..\TelasDeComentário\TelaComentarioLogada.html" class="texto-publicacao">
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate, ipsum ipsa earum magnam odio
+                    repellat corrupti? Tempore dolor voluptates quam consequuntur culpa neque dicta aut quasi, fugit sed hic
+                    vel.</p>
+            </a>
+
+            <!-- Imagem da publicação a ser usada do banco de dados -->
+            <img id="Imagem-publicacao" src="Imagem Publicação.png" alt="imagem da publicação">
+
+            <!-- Redireciona para a TELA DE CRIAR COMENTÁRIO ao clicar no botão de comentar (AINDA NÃO CRIADA) -->
+            <a href="CRIAR_COMENTÁRIO.HTML">
+                <button class="botoes-criar-comentario">
+                    <img src="..\imagens\Botão Comentar.png" alt="Comentário" style="height:20px;">
+                </button>
+            </a>
+
+            <!-- Redireciona para a TELA DE EDITAR COMENTÁRIO ao clicar no botão de editar (AINDA NÃO CRIADA) -->
+            <a href="EDITAR_COMENTÁRIO.HTML">
+                <button class="botoes-editar-comentario/post">
+                    <img src="..\imagens\Botão Editar.png" alt="Editar" style="height:20px;">
+                </button>
+            </a>
+        </div>
     </div>
-
-    <!-- Fazer a Chamada do Back-End - Fetch API pra Superposição da tela de Criar Post -->
-    <div id="Botão Criar Post">
-        <input type="submit" id="Comment" value="Criar Post">
-    </div>
-
-    <br>
-
-    <div id="Publicação 1">
-        <!-- Redireciona para TELA DE PERFIL LOGADO ao clicar na foto de perfil (AINDA NÃO CRIADA) -->
-        <a href="TELA_DE_PERFIL_LOGADO">
-            <button>
-                <img src="..\imagens\pfp.jpg " alt="Foto de Perfil" style="height:35px">
-                <h2>Usuário 1</h2>
-            </button>
-        </a>
-
-        <h3>22/10/2023</h3>
-        <!-- Redireciona para a TELA DE CONFIRMAÇÃO DE EXCLUSÃO ao clicar no botão de excluir (AINDA NÃO CRIADA / TELA OPCIONAL) -->
-        <a href="CONFIRMACAO_EXCLUSAO.HTML">
-            <button>
-                <img src="..\imagens\Botão Excluir.png" alt="Lixeira" style="height:20px;">
-            </button>
-        </a>
-
-        <!-- Abre a TELA DE COMENTÁRIOS LOGADA ao clicar na publicação -->
-        <a href="..\TelasDeComentário\TelaComentarioLogada.html" class="texto-publicacao">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque, ab modi et commodi delectus ad quos
-                nemo quis vel itaque voluptatem labore vitae dolorum totam voluptatibus ipsum perspiciatis. Officiis,
-                dignissimos.</p>
-        </a>
-
-        <!-- Redireciona para a TELA DE CRIAR COMENTÁRIO ao clicar no botão de comentar (AINDA NÃO CRIADA) -->
-        <a href="CRIAR_COMENTARIO.HTML">
-            <button>
-                <img src="..\imagens\Botão Comentar.png" alt="Comentário" style="height:20px;">
-            </button>
-        </a>
-
-        <!-- Redireciona para a TELA DE EDITAR COMENTÁRIO ao clicar no botão de editar (AINDA NÃO CRIADA) -->
-        <a href="EDITAR_COMENT/POST.HTML">
-            <button>
-                <img src="..\imagens\Botão Editar.png" alt="Editar" style="height:20px;">
-            </button>
-        </a>
-    </div>
-
-    <br><br>
-
-    <div id="Publicação 2">
-        <!-- Redireciona para TELA DE PERFIL LOGADO ao clicar na foto de perfil (AINDA NÃO CRIADA) -->
-        <a href="TELA_DE_PERFIL_LOGADO">
-            <button>
-                <img src="..\imagens\pfp.jpg " alt="Foto de Perfil" style="height:35px">
-                <h2>Usuário 2</h2>
-            </button>
-        </a>
-
-        <h3>22/10/2023</h3>
-        <!-- Abre a TELA DE COMENTÁRIOS LOGADA ao clicar na publicação -->
-        <a href="..\TelasDeComentário\TelaComentarioLogada.html" class="texto-publicacao">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In dignissimos dicta et sequi consequuntur,
-                voluptatum sapiente quasi esse consequatur nobis, beatae deleniti corrupti assumenda quas nulla
-                quisquam, ipsum reprehenderit neque?</p>
-        </a>
-
-        <!-- Redireciona para a TELA DE CRIAR COMENTARIO ao clicar no botão de comentar (AINDA NÃO CRIADA) -->
-        <a href="CRIAR_COMENTARIO.HTML">
-            <button>
-                <img src="..\imagens\Botão Comentar.png" alt="Comentário" style="height:20px;">
-            </button>
-        </a>
-    </div>
-
-    <br><br>
-
-    <div id="Publicação 3">
-        <!-- Redireciona para TELA DE PERFIL LOGADO ao clicar na foto de perfil (AINDA NÃO CRIADA) -->
-        <a href="TELA_DE_PERFIL_LOGADO">
-            <button>
-                <img src="..\imagens\pfp.jpg " alt="Foto de Perfil" style="height:35px">
-                <h2>Usuário 1</h2>
-            </button>
-        </a>
-        <h3>22/10/2023</h3>
-        <!-- Redireciona para a TELA DE CONFIRMAÇÃO DE EXCLUSÃO ao clicar no botão de excluir (AINDA NÃO CRIADA / TELA OPCIONAL) -->
-        <a href="CONFIRMACAO_EXCLUSAO.HTML">
-            <button>
-                <img src="..\imagens\Botão Excluir.png" alt="Lixeira" style="height:20px;">
-            </button>
-        </a>
-
-        <!-- Abre a TELA DE COMENTÁRIOS LOGADA ao clicar na publicação -->
-        <a href="..\TelasDeComentário\TelaComentarioLogada.html" class="texto-publicacao">
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate, ipsum ipsa earum magnam odio
-                repellat corrupti? Tempore dolor voluptates quam consequuntur culpa neque dicta aut quasi, fugit sed hic
-                vel.</p>
-        </a>
-
-        <!-- Imagem da publicação a ser usada do banco de dados -->
-        <img src="Imagem Publicação.png" alt="imagem da publicação">
-
-        <!-- Redireciona para a TELA DE CRIAR COMENTÁRIO ao clicar no botão de comentar (AINDA NÃO CRIADA) -->
-        <a href="CRIAR_COMENTÁRIO.HTML">
-            <button>
-                <img src="..\imagens\Botão Comentar.png" alt="Comentário" style="height:20px;">
-            </button>
-        </a>
-
-        <!-- Redireciona para a TELA DE EDITAR COMENTÁRIO ao clicar no botão de editar (AINDA NÃO CRIADA) -->
-        <a href="EDITAR_COMENTÁRIO.HTML">
-            <button>
-                <img src="..\imagens\Botão Editar.png" alt="Editar" style="height:20px;">
-            </button>
-        </a>
-    </div>
-
 </body>
 
 </html>
