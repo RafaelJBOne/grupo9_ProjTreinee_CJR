@@ -1,17 +1,10 @@
-/* 
-    elemento
-    .classe
-    #id
-*/
-
-
-
 header {
     background-color: #27BD80;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100%
+    width: 100%;
+    position: fixed;
 }
 
 #logo-cjr {
@@ -27,7 +20,6 @@ header {
     display: flex;
     justify-content: space-between;
     margin-right: 40px;
-
 }
 
 #botao-de-criar-conta {
@@ -41,6 +33,11 @@ header {
     margin-top: 10px;
 }
 
+#botao-de-criar-conta:hover { 
+    transition: 0.25s;
+    transform: scale(1.25);
+}  
+
 #botao-de-entrar {
     scale: 1.2;
     background-color:#001830;
@@ -52,6 +49,11 @@ header {
     font-weight: 550;
 }
 
+#botao-de-entrar:hover {
+    transition: 0.25s;
+    transform: scale(1.25);
+  }
+
 body {
     background-color: #001830;
     margin: 0;
@@ -61,36 +63,64 @@ body {
     display: flex;
     flex-direction: column;
     background-color: white;
+    align-items: top;
+    justify-content: center;
+    margin: 0 auto;
+    width: 40%;
+
+    /* display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin: auto;
-    padding-top: 10px;
-    width: 40%;
+    margin: 0 auto;
+    background-color: white;
+    width: 40%; */
     }
 
 #Titulo-publicacoes {
-    display: flex;
-    background-color: white;
-    align-items: center;
+    /* background-color: white;
+    align-items: top;
     justify-content: left;
     margin: auto;
     width: 40%;
+    font-family: sans-serif;
+    font-size: 12px;
     border: 2px solid #121212;
     padding-top: 0;
+    margin-top: 40px; */
 
+    text-align: left;
+    border-bottom: 2px solid #121212;
+    border-top: transparent;
+    color:#001830;
+    font-size: 12px;
+    font-family: sans-serif;
+    width: 100%;
+    margin-top: 40px;
 }
 
 #Titulo-publicacoes h1{
     margin-left: 10px;
-    font-family: sans-serif;
 }
 
-.publicacoes {
-    background-color: #002F67;
+/* .publicacoes */
+#Publicacao1, 
+#Publicacao2, 
+#Publicacao3 {
+    /* background-color: #002F67;
     width: 100%;
     border-radius: 25px;
-    
+    margin: 20px; */
+    border: 1px solid #121212;
+    padding: 10px;
+    background-color: #002F67;
+    color: white; 
+    margin: 10px; 
+    border-radius: 25px;
+}
 
+.publicacoes h2 {
+    margin-left: 20px
 }
 
 .UsernDate {
@@ -106,8 +136,7 @@ body {
     width: auto;
     width: fit-content;
     height: fit-content;
-    margin-top: 1rem;
-    margin-left: 1rem;
+    margin-top: 15px;
     background-color: transparent;
     border: none;
 }
@@ -120,24 +149,34 @@ body {
 }
 
 .botoes-nome-usuario-publicacao {
-
-    margin-right: 1rem;
     background-color: transparent;
     border: none;
+    color: white;
+}
+
+.botoes-nome-usuario-publicacao h1 {
+    margin-left: 10px;
 }
 
 .texto-publicacao {
     text-decoration: none;
-
     text-align: left;
     /* border: 2px solid #121212; */
     border-top: transparent;
-    color:#001830;
+    color: white;
     font-family: sans-serif;
     font-size: larger;
     width: 100%;
 }
 
-.Imagem-publicacao {
+.texto-publicacao p {
+    margin: 20px
+}
 
+#Imagem-publicacao {
+    align-self: center;
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    scale: 0.9;
 }
