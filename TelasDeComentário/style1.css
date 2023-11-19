@@ -9,6 +9,7 @@ body {
     justify-content: space-between; 
     align-items: center; 
     width: 100%;
+    position: fixed
 }
 
 #botões {
@@ -17,7 +18,7 @@ body {
     margin-right: 40px;
 }
   
-  #botão-de-criar-conta input:hover { 
+  #botão-de-criar-conta:hover { 
     transition: 0.25s;
     transform: scale(1.25);
   }  
@@ -31,7 +32,7 @@ body {
     height: 80px;
 }
 
-#botão-de-entrar input:hover {
+#botão-de-entrar:hover {
   transition: 0.25s;
   transform: scale(1.25);
 }
@@ -54,6 +55,7 @@ body {
   font-size: 12px;
   font-family: sans-serif;
   width: 100%;
+  margin-top: 80px;
 }
 
 #Comentários h1 {
@@ -97,7 +99,7 @@ body {
   max-width: 100%;
   width: 100%;
   height: auto;
-  scale: 0.9;
+  scale: 0.9; 
 }
 
 #Comentário-1,

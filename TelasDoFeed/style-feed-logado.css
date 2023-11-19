@@ -1,4 +1,23 @@
-.texto-publicacao {
-    text-decoration: none;
-    color: brown
+header {
+    background-color: #27BD80;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    position: fixed;
+}
+
+#logo-cjr {
+    padding-left: 50px;
+    padding-right: 50px;
+    scale: 0.6;
+    background-color: white;
+    border-radius: 25px;
+    height: 80px;
+}
+
+#Header-Right {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 40px;
 }
