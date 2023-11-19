@@ -8,6 +8,7 @@
 </head>
 
 <body>
+
     <header>
         <!--A imagem eh um print que eu tinha salvo, nao consegui pegar aq esta disponivel no figma-->
         <img src="imagens/logoCjr.png" alt="Logo CJR">
@@ -22,16 +23,19 @@
     </header>
     
     <!--action define para onde o imput sera encaminhado-->
-    <form id="camposLogin" action="" method="post">
-        <label for="loginInput">Login</label>
-        <input type="text" name="Login" id="loginInput" required><br><br>
-
-        <label for="senhaInput">Senha</label>
-        <input type="password" name="Senha" id="senhaInput" required><br><br>
-
-        <input type="submit" name="enviar" value="Logar"><br>
-        <br><a href="">Esqueceu a senha?</a>
-    </form>
+    <div id="loginBox">
+        <form id="camposLogin" action="" method="post">
+            <label for="loginInput">Login</label>
+            <input type="text" name="Login" id="loginInput" required><br><br>
+    
+            <label for="senhaInput">Senha</label>
+            <input type="password" name="Senha" id="senhaInput" required><br><br>
+    
+            <input type="submit" name="enviar" value="Logar"><br>
+            <br><a href="">Esqueceu a senha?</a>
+        </form>
+        
+    </div>
     
     <footer>
         <br><br><p><h6>Powered by Trainee group 9</h6></p>
