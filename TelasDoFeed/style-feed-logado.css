@@ -5,6 +5,7 @@ header {
     align-items: center;
     width: 100%;
     position: fixed;
+    z-index: 1;
 }
 
 #logo-cjr {
@@ -20,9 +21,10 @@ header {
     display: flex;
     justify-content: space-between;
     margin-right: 40px;
+    align-items: center;
 }
 
-#botao-de-criar-conta {
+#nome-perfil-usuario-logado {
     margin-right: 30px;
     background: transparent;
     font-family: sans-serif;
@@ -30,26 +32,46 @@ header {
     color: #001830;
     border: transparent;
     scale: 1.2;
-    margin-top: 10px;
 }
 
-#botao-de-criar-conta:hover { 
+#nome-perfil-usuario-logado:hover { 
     transition: 0.25s;
     transform: scale(1.25);
 }  
 
-#botao-de-entrar {
+#botao-foto-perfil-usuario-logado {
+    margin-right: 30px;
+    background: transparent;
+    font-family: sans-serif;
+    font-weight: bold;
+    color: #001830;
     scale: 1.2;
-    background-color:#001830;
+    border: none
+}
+
+#botao-foto-perfil-usuario-logado img {
+    border: 2px solid white;
+    border-radius: 30px;
+    height: 35px;
+}
+
+#botao-foto-perfil-usuario-logado:hover { 
+    transition: 0.25s;
+    transform: scale(1.25)
+}
+
+#botao-sair {
+    scale: 1;
+    background-color: transparent;
     color: white;
     border-radius: 25px;
-    padding: 10px;
+    margin: 0;
     border: none;
     font-family: sans-serif;
     font-weight: 550;
 }
 
-#botao-:hover {
+#botao-sair:hover {
     transition: 0.25s;
     transform: scale(1.25);
 }
@@ -69,6 +91,14 @@ body {
     width: 40%;
 }
 
+#titulo-mais-botao-criar-post {
+    margin-top: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #121212;
+}
+
 #Titulo-publicacoes {
     /* background-color: white;
     align-items: top;
@@ -80,20 +110,33 @@ body {
      */
 
     text-align: left;
-    border-bottom: 2px solid #121212;
     border-top: transparent;
     color:#001830;
     font-size: 12px;
     font-family: sans-serif;
-    width: 100%;
-    margin-top: 40px;
+    width: fit-content;
 }
 
 #Titulo-publicacoes h1{
-    margin-left: 10px;
+    margin-left: 10px
 }
 
-/* .publicacoes */
+#botao-criar-post input{
+    background-color: #002F67;
+    border-radius: 5px;
+    border: none;
+    color: white;
+}
+
+#botao-criar-post {
+    margin-right: 35px;
+    scale: 1.5;
+  }
+  
+#botao-criar-post input:hover {
+    transition: 0.25s;
+    transform: scale(1.25);
+  }
 
 #Publicacao1, 
 #Publicacao2, 
@@ -114,16 +157,20 @@ body {
     margin-left: 20px
 }
 
+.topo-publicacoes {
+    display: flex;
+    justify-content: space-between;
+}
+
 .UsernDate {
     display: flex;
     flex-direction: row;
     background-color: transparent;
     font-family: sans-serif;
-    z-index: -1;
 }
 
 .botoes-foto-perfil-publicacao {
-    scale: 1;
+    scale: 1.1;
     max-height: 35px;
     width: auto;
     width: fit-content;
@@ -131,13 +178,13 @@ body {
     margin-top: 15px;
     background-color: transparent;
     border: none;
-    z-index: -1;
+    z-index: -1;    
 }
 
 .botoes-foto-perfil-publicacao img {
     border: 2px white solid;
-    max-width: 30px;
-    max-height: 30px;
+    max-width: 40px;
+    max-height: 40px;
     border-radius: 30px;
 }
 
@@ -149,6 +196,13 @@ body {
 
 .botoes-nome-usuario-publicacao h1 {
     margin-left: 10px;
+}
+
+.botoes-excluir {
+    background-color: transparent;
+    border: none; 
+    margin: 20px 20px 0 0;  
+    text-decoration: none;
 }
 
 .texto-publicacao {
@@ -163,13 +217,31 @@ body {
 }
 
 .texto-publicacao p {
-    margin: 20px
+    margin-top: 0;
+}
+
+.conteudo-publicacoes {
+    margin: 0 10px 0 70px;
+}
+
+.botoes-criar-comentario {
+    background-color: transparent;
+    border: none;
+    margin-left: 70px;
+    text-decoration: none;
+}
+
+.botoes-editar-comentario-ou-post {
+    background-color: transparent;
+    border: none;
+    margin-left: 10px;
+    text-decoration: none;
 }
 
 #Imagem-publicacao {
-    align-self: center;
+    align-self: left;
     max-width: 100%;
     width: 100%;
-    height: auto;
-    scale: 0.9;
+    height: 80%;
+    scale: 0.95;
 }
