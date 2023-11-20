@@ -218,3 +218,30 @@ p {
   #comment {
     margin-right: 20px;
   }
+
+  #Buttons1 {
+    display: flex;
+    justify-content: space-evenly;
+    padding-bottom: 20px;
+    margin-top: 10px;
+  }
+
+  #EditProfile {
+    background-color: #002F67;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    padding: 10px;
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+
+  #CreatePost {
+    background-color: #002F67;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    padding: 10px;
+    padding-right: 10px;
+    padding-left: 10px;
+  }
