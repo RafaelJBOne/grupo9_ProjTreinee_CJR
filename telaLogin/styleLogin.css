@@ -1,26 +1,115 @@
-/*
-head{
-
-}
-
-body {
-
-}
-
-aside {
-
-}
-
 header {
-
+    /*como tirar os espaçamentos entre o header e a página*/
+    width: 1440px;
+    height: 80px;
+    top: -1px;
+    background-color: #27BD80;
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    width: 100%;    
 }
 
-form {
+#botoesHeader{
+    display: flex;
+    justify-content: space-between; /* Distribui os elementos igualmente */
+    align-items: center; /* Alinha verticalmente */
+    padding: 10px 10px; /* Adiciona um espaçamento interno */
+    position: fixed;
+    right: 20px;
+}
 
+#logoHeader {
+    padding-left: 50px;
+    scale: 0.6;
+    background-color: white;
+    padding-right: 50px;
+    border-radius: 25px;
+    height: 80px;
+    left: 20px;
+}
+
+#botaoEntrar{
+    scale: 1.2;
+    background-color:#001830;
+    color: white;
+    border-radius: 25px;
+    padding: 10px;
+    border: none;
+    font-family: sans-serif;
+    font-weight: 550;
+}
+
+#botaoCriarConta{
+    margin-right: 30px;
+    background: transparent;
+    font-family: sans-serif;
+    font-weight: bold;
+    color: #001830;
+    border: transparent;
+    scale: 1.2;
+    margin-top: 5px;
+}
+
+#perfilLogin{
+    width: 200px;
+    height: 200px;
+    top: 14px;
+    border-radius: 100px;
+    margin-bottom: 10px;
+}
+
+
+#formFields{
+    display: flex;
+    flex-direction: column; /* alinha os elementos verticalmente */
+    align-items: center;
+    margin-top: 30px;
+    font-size:medium;
+    font-style: normal;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#camposLogin{
+    width: 280px;
+    height: 320px;
+    top: 150px;
+    left: 440px;
+    margin-top: 100px;    
+}
+
+.caixaLogin {
+    width: 350px;
+    height: 450px;
+    top: 150px;
+    left: 440px;
+    margin: 0 auto; /* centralizar horizontalmente */
+    padding: 20px; /* espaçamento interno */
+    border: 1px solid black; /* borda com cor e espessura */
+    border-radius: 8px; /* cantos arredondados */
+    text-align: center; /* centralizar texto */
+}
+
+#botaoLogar{    
+    width: 80px;
+    height: 24px;
+    top: 530px;
+    left: 202px;
+    padding: 9px, 43px, 10px, 44px;
+    border-radius: 16px;
+    border: 1px;
+    color: white;
+    background-color:#001830;
+}
+#linkRedeSen{
+    text-decoration: none;
+    text-emphasis-color: blue;
+    font-size:xx-small;
+    opacity: 70%;
 }
 
 footer{
-
+    text-align: center;
+    opacity: 50%;
 }
 
-*/

@@ -11,7 +11,7 @@
 
     <body>
         <header>
-            <nav id="conteudoHeader">
+            <div id="elementHeader">
                 <img id="logoHeader" src="..\imagens\logoCjr.png" alt="Logo CJR">
             
                 <a id="botaoEntrar" href="login.html">
@@ -20,7 +20,7 @@
                 <a id="botaoCriarConta" href="cadastro.html">
                     <button>Criar conta</button><br><br>
                 </a> 
-            </nav>           
+            </div>           
         </header>
 
         <!--nao sei se eh necessario essa tag aside ja que a imagem ficara ao lado do formulario,
@@ -32,32 +32,35 @@
         </div>
 
         <div id="formulario">
-            <form action="" method="post"></form>
-            <label for="email">Email</label>
-            <br><input type="text" id="email" name="nome"><br>
-            
-            <br><label for="senha">Senha</label>
-            <br><input type="text" id="senha" name="senha"><br>
+            <form action="" method="post">
+                <label for="email">Email</label>
+                <br><input type="text" id="email" name="nome"><br>
+                
+                <br><label for="senha">Senha</label>
+                <br><input type="text" id="senha" name="senha"><br>
 
-            <br><label for="nome">Nome</label>
-            <br><input type="text" id="nome" name="nome"><br>
-            
-            <br><label for="genero">Genero</label>
-            <select name="genero" id="genero">
-                <option value="masculino">Masculino</option>
-                <option value="feminino">Feminino</option>
-                <option value="outro">Outro</option>
-                <option value="naoResposta">Não responder</option>
-            </select><br>
+                <br><label for="nome">Nome</label>
+                <br><input type="text" id="nome" name="nome"><br>
+                
+                <br><label for="genero">Genero</label>
+                <select name="genero" id="genero">
+                    <option value="masculino">Masculino</option>
+                    <option value="feminino">Feminino</option>
+                    <option value="outro">Outro</option>
+                    <option value="naoResposta">Não responder</option>
+                </select><br>
 
-            <br><label for="cargo">Cargo</label>
-            <br><input type="text" name="cargo" id="cargo">
-            <br><h6><a href="login.html">Já possui conta? Acesse aqui</a></h6>
-            <input type="submit" name="criarCadastro" value="Cadastrar"><br>
+                <br><label for="cargo">Cargo</label>
+                <br><input type="text" name="cargo" id="cargo">
+                <br><h6><a href="login.html">Já possui conta? Acesse aqui</a></h6>
+                <input type="submit" name="criarCadastro" value="Cadastrar"><br>
+            </form>
         </div>
 
         <footer>
-            <br><br><p><h6>Powered by Trainee group 9</h6></p>
+            <div id="elementFooter">
+                <br><br><p><h6>Powered by Trainee group 9</h6></p>
+            </div>    
         </footer>
 
     </body>

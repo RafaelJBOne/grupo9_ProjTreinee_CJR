@@ -8,34 +8,43 @@
     <link rel="stylesheet" href="styleLogin.css">
 </head>
 
-<body>
+<body>  
     <header>
         <!--A imagem eh um print que eu tinha salvo, nao consegui pegar aq esta disponivel no figma-->
-        <img src="..\imagens\logoCjr.png" alt="Logo CJR">
-        <a href="login.html">
-            <button>Entrar</button>
-        </a>
-        
-        <a href="cadastro.html">
-            <button >Criar conta</button><br><br>
-        </a>
-        
+        <img id="logoHeader" src="..\imagens\logoCjr.png" alt="Logo CJR">
+
+        <div id="botoesHeader">
+            <a href="cadastro.html">
+                <button id="botaoCriarConta">Criar conta</button><br><br>
+            </a>
+
+            <a href="login.html">
+                <button id="botaoEntrar">Entrar</button>
+            </a>
+            
+        </div>
     </header>
     
     <!--action define para onde o imput sera encaminhado-->
-    <form id="camposLogin" action="" method="post">
-        <label for="loginInput">Login</label>
-        <input type="text" name="Login" id="loginInput" required><br><br>
+    <div id="formFields" class="caixaLogin">
+        <img src="../imagens/pfp.jpg" id="perfilLogin" alt="Foto perfil">
+        <form id="camposLogin" action="" method="post">
+            <label for="loginInput">Login</label>
+            <input type="text" name="Login" id="loginInput" placeholder="Login de acesso"><br><br>
 
-        <label for="senhaInput">Senha</label>
-        <input type="password" name="Senha" id="senhaInput" required><br><br>
+            <label for="senhaInput">Senha</label>
+            <input type="password" name="Senha" id="senhaInput" placeholder="Digite sua senha" required><br>
+            
+            <br><a id="linkRedeSen" href="">Esqueceu a senha?</a><br><br>
 
-        <input type="submit" name="enviar" value="Logar"><br>
-        <br><a href="">Esqueceu a senha?</a>
-    </form>
-    
+            <input type="submit" id="botaoLogar" name="enviar" value="Logar" ><br>
+        </form>
+    </div>
+
     <footer>
-        <br><br><p><h6>Powered by Trainee group 9</h6></p>
+        <div id="elementFooter">
+            <br><br><p><h6>Powered by Trainee group 9</h6></p>
+        </div>    
     </footer>
 </body>
 </html>

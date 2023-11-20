@@ -9,12 +9,6 @@ header {
     width: 100%;    
 }
 
-/*
-#conteudoHeader {
-
-}
-*/
-
 #logoHeader {
     padding-left: 50px;
     scale: 0.6;
@@ -22,8 +16,14 @@ header {
     padding-right: 50px;
     border-radius: 25px;
     height: 80px;
+}
+
+/*
+#conteudoHeader {
 
 }
+*/
+
 
 
     
