@@ -20,18 +20,17 @@ header {
 #Header-Right {
     display: flex;
     justify-content: space-between;
-    margin-right: 40px;
+    margin-right: 20px;
     align-items: center;
 }
 
 #nome-perfil-usuario-logado {
-    margin-right: 30px;
     background: transparent;
     font-family: sans-serif;
     font-weight: bold;
     color: #001830;
     border: transparent;
-    scale: 1.2;
+    scale: 1;
 }
 
 #nome-perfil-usuario-logado:hover { 
@@ -40,19 +39,20 @@ header {
 }  
 
 #botao-foto-perfil-usuario-logado {
-    margin-right: 30px;
     background: transparent;
     font-family: sans-serif;
     font-weight: bold;
     color: #001830;
-    scale: 1.2;
-    border: none
+    scale: 1;
+    border: none;
 }
 
 #botao-foto-perfil-usuario-logado img {
     border: 2px solid white;
     border-radius: 30px;
-    height: 35px;
+    max-height: 40px;
+    max-width: 40px;
+    margin: 0 20px
 }
 
 #botao-foto-perfil-usuario-logado:hover { 

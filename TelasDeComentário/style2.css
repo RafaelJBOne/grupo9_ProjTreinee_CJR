@@ -66,12 +66,12 @@ body {
     width: 100%;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     margin-top: 80px;
   }
 
   #Comentar {
-    margin-right: 35px ;
-    margin-top: 25px;
+    margin-right: 35px;
     scale: 1.5; 
   }
 
