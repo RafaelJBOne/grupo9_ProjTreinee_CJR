@@ -246,6 +246,8 @@ body {
 
   #exit {
     margin-top: 15px;
+    background-color: #27BD80;
+    border: none;
   }
 
   #user {
