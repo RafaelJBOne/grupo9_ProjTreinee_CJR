@@ -136,26 +136,30 @@ body {
 #Publicação-1 h1, #Publicação-2 h1 {
     margin-left: 10px;
     font-family: sans-serif;
+    color: white;
   }
   
 #Publicação-1 h2, #Publicação-2 h2 {
     margin-left: 20px;
     font-family: sans-serif;
+    margin-bottom: -20px;
   }
   
   #UsernDate {
     display: flex;
     flex-direction: row;
     background-color: transparent;
+    margin-left: 20px;
   }
   
   #UsernDate img {
     max-width: 30px;
     max-height: 30px;
     border-radius: 30px;
+    border: solid 2px white;
   }
   
-#Publicação-1 p, #Publicação-2 p, p {
+p {
     margin: 20px;
     font-family: sans-serif;
     font-size: larger;
