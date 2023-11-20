@@ -10,7 +10,7 @@ header {
 #logo-cjr {
     padding-left: 50px;
     padding-right: 50px;
-    scale: 0.6;
+    scale: 0.6
     background-color: white;
     border-radius: 25px;
     height: 80px;
@@ -20,4 +20,156 @@ header {
     display: flex;
     justify-content: space-between;
     margin-right: 40px;
+}
+
+#botao-de-criar-conta {
+    margin-right: 30px;
+    background: transparent;
+    font-family: sans-serif;
+    font-weight: bold;
+    color: #001830;
+    border: transparent;
+    scale: 1.2;
+    margin-top: 10px;
+}
+
+#botao-de-criar-conta:hover { 
+    transition: 0.25s;
+    transform: scale(1.25);
+}  
+
+#botao-de-entrar {
+    scale: 1.2;
+    background-color:#001830;
+    color: white;
+    border-radius: 25px;
+    padding: 10px;
+    border: none;
+    font-family: sans-serif;
+    font-weight: 550;
+}
+
+#botao-:hover {
+    transition: 0.25s;
+    transform: scale(1.25);
+}
+
+body {
+    background-color: #001830;
+    margin: 0;
+}
+
+#Coluna-publicacoes {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    align-items: top;
+    justify-content: center;
+    margin: 0 auto;
+    width: 40%;
+}
+
+#Titulo-publicacoes {
+    /* background-color: white;
+    align-items: top;
+    justify-content: left;
+    margin: auto;
+    width: 40%;
+    border: 2px solid #121212;
+    padding-top: 0;
+     */
+
+    text-align: left;
+    border-bottom: 2px solid #121212;
+    border-top: transparent;
+    color:#001830;
+    font-size: 12px;
+    font-family: sans-serif;
+    width: 100%;
+    margin-top: 40px;
+}
+
+#Titulo-publicacoes h1{
+    margin-left: 10px;
+}
+
+/* .publicacoes */
+
+#Publicacao1, 
+#Publicacao2, 
+#Publicacao3 {
+    /* 
+    width: 100%;
+    margin: 20px; 
+    */
+    border: 1px solid #121212;
+    padding: 10px;
+    background-color: #002F67;
+    color: white; 
+    margin: 10px; 
+    border-radius: 25px;
+}
+
+.publicacoes h2 {
+    margin-left: 20px
+}
+
+.UsernDate {
+    display: flex;
+    flex-direction: row;
+    background-color: transparent;
+    font-family: sans-serif;
+    z-index: -1;
+}
+
+.botoes-foto-perfil-publicacao {
+    scale: 1;
+    max-height: 35px;
+    width: auto;
+    width: fit-content;
+    height: fit-content;
+    margin-top: 15px;
+    background-color: transparent;
+    border: none;
+    z-index: -1;
+}
+
+.botoes-foto-perfil-publicacao img {
+    border: 2px white solid;
+    max-width: 30px;
+    max-height: 30px;
+    border-radius: 30px;
+}
+
+.botoes-nome-usuario-publicacao {
+    background-color: transparent;
+    border: none;
+    color: white;
+}
+
+.botoes-nome-usuario-publicacao h1 {
+    margin-left: 10px;
+}
+
+.texto-publicacao {
+    text-decoration: none;
+    text-align: left;
+    /* border: 2px solid #121212; */
+    border-top: transparent;
+    color: white;
+    font-family: sans-serif;
+    font-size: larger;
+    width: 100%;
+}
+
+.texto-publicacao p {
+    margin: 20px
+}
+
+#Imagem-publicacao {
+    align-self: center;
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    scale: 0.9;
 }

@@ -5,6 +5,7 @@ header {
     align-items: center;
     width: 100%;
     position: fixed;
+    z-index: 1;
 }
 
 #logo-cjr {
@@ -63,7 +64,7 @@ body {
     display: flex;
     flex-direction: column;
     background-color: white;
-    align-items: top;
+    align-items: center;
     justify-content: center;
     margin: 0 auto;
     width: 40%;
@@ -130,6 +131,7 @@ body {
     margin-top: 15px;
     background-color: transparent;
     border: none;
+    z-index: 0;
 }
 
 .botoes-foto-perfil-publicacao img {
@@ -137,6 +139,7 @@ body {
     max-width: 30px;
     max-height: 30px;
     border-radius: 30px;
+    z-index: 0;
 }
 
 .botoes-nome-usuario-publicacao {
