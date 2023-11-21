@@ -205,6 +205,11 @@ body {
     text-decoration: none;
 }
 
+.botoes-excluir:hover { 
+    transition: 0.25s;
+    transform: scale(1.25);
+}  
+
 .texto-publicacao {
     text-decoration: none;
     text-align: left;
@@ -231,12 +236,22 @@ body {
     text-decoration: none;
 }
 
+.botoes-criar-comentario:hover { 
+    transition: 0.25s;
+    transform: scale(1.25);
+}  
+
 .botoes-editar-comentario-ou-post {
     background-color: transparent;
     border: none;
     margin-left: 10px;
     text-decoration: none;
 }
+
+.botoes-editar-comentario-ou-post:hover { 
+    transition: 0.25s;
+    transform: scale(1.25);
+}  
 
 #Imagem-publicacao {
     align-self: left;
