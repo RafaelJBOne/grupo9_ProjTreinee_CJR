@@ -1,6 +1,6 @@
 header {
     /*como tirar os espaçamentos entre o header e a página*/
-    width: 1440px;
+  
     height: 80px;
     top: -1px;
     background-color: #27BD80;
@@ -10,6 +10,10 @@ header {
     width: 100%;    
 }
 
+body{
+    margin: 0;
+}
+
 #botoesHeader{
     display: flex;
     justify-content: space-between; /* Distribui os elementos igualmente */
@@ -17,6 +21,7 @@ header {
     padding: 10px 10px; /* Adiciona um espaçamento interno */
     position: fixed;
     right: 20px;
+    text-decoration: none;
 }
 
 #logoHeader {
@@ -35,6 +40,7 @@ header {
     color: white;
     border-radius: 25px;
     padding: 10px;
+    margin-right: 20px;
     border: none;
     font-family: sans-serif;
     font-weight: 550;
@@ -52,8 +58,8 @@ header {
 }
 
 #perfilLogin{
-    width: 200px;
-    height: 200px;
+    width: 100px;
+    height: 100px;
     top: 14px;
     border-radius: 100px;
     margin-bottom: 10px;
@@ -75,18 +81,18 @@ header {
     height: 320px;
     top: 150px;
     left: 440px;
-    margin-top: 100px;    
+    margin-top: 50px;    
 }
 
 .caixaLogin {
-    width: 350px;
-    height: 450px;
+    width: 250px;
+    height: 290px;
     top: 150px;
     left: 440px;
     margin: 0 auto; /* centralizar horizontalmente */
     padding: 20px; /* espaçamento interno */
     border: 1px solid black; /* borda com cor e espessura */
-    border-radius: 8px; /* cantos arredondados */
+    border-radius: 8px; /* cantos arredondados */    
     text-align: center; /* centralizar texto */
 }
 

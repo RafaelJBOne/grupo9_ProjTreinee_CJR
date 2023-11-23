@@ -1,9 +1,20 @@
+body{
+    margin: 0;
+}
+
+#container{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
 header {
+    /*como tirar os espaçamentos entre o header e a página*/
     width: 1440px;
     height: 80px;
     top: -1px;
-    background-color: #27BD80;
     display: flex; 
+    background-color: #27BD80;
     justify-content: space-between; 
     align-items: center; 
     width: 100%;    
@@ -16,57 +27,94 @@ header {
     padding-right: 50px;
     border-radius: 25px;
     height: 80px;
+    left: 20px;
 }
 
-/*
-#conteudoHeader {
-
+#botoesCadastroHeader{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 20px;
+    position: fixed;
+    right: 20px;
 }
-*/
 
+#botoesHeader{
+    display: flex;
+    justify-content: space-between; /* Distribui os elementos igualmente */
+    align-items: center; /* Alinha verticalmente */
+    padding: 10px 10px; /* Adiciona um espaçamento interno */
+    position: fixed;
+    right: 20px;
+    text-decoration: none;
+}
 
-
-    
-
-/*
 #botaoEntrar{
-
+    scale: 1.2;
+    background-color:#001830;
+    color: white;
+    border-radius: 25px;
+    padding: 10px;
+    margin-right: 20px;
+    border: none;
+    font-family: sans-serif;
+    font-weight: 550;
 }
 
-#botaoCriarConta {
-
+#botaoCriarConta{
+    margin-right: 30px;
+    background: transparent;
+    font-family: sans-serif;
+    font-weight: bold;
+    color: #001830;
+    border: transparent;
+    scale: 1.2;
+    margin-top: 5px;
 }
 
-body {
-
+#logoTela{
+    width: 40%;
+    padding-left: 50px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    margin: 0%;
 }
 
-aside {
-
+#formulario{
+    width: 40%;
 }
 
-footer {
+#perfilLogin {
+    position: absolute;
+    top: 20px;
+    right: 283px;
+    width: 55px;
+    height: 55px;
+    top: 55px;
+    border-radius: 100px;
+    margin-bottom: 10px;
+    z-index: 2; /* Defina um valor maior para a camada da imagem */
+  }
+  
+.fm{
+    position: absolute;
+    top: 50px; 
+    right: 20px;
 
+    width: 25%;
+    border: solid 1px;
+    border-radius: 8px;
+    background-color: whitesmoke;
+    left: 64%;
+    margin: 0%;
+    padding-bottom: 25px;
+    padding-right: 0px;
+    padding-top: 70px;
 }
 
-#conteudoHeader {
-    
+
+footer{
+    text-align: center;
+    opacity: 50%;
 }
 
-#boataoEntrar{
-    
-}
-
-#logoHeader {
-     
-}
-
-#formulario {
-
-}
-
-#logoTela {
-
-}
-
-*/

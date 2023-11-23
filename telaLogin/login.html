@@ -11,11 +11,11 @@
 <body>  
     <header>
         <!--A imagem eh um print que eu tinha salvo, nao consegui pegar aq esta disponivel no figma-->
-        <img id="logoHeader" src="..\imagens\logoCjr.png" alt="Logo CJR">
+        <img id="logoHeader" src="..\imagens\Logo Azul-Verde.png" alt="Logo CJR">
 
-        <div id="botoesHeader">
+        <div id="log_botoesHeader">
             <a href="cadastro.html">
-                <button id="botaoCriarConta">Criar conta</button><br><br>
+                <button id="botaoCriarConta">Criar conta</button>
             </a>
 
             <a href="login.html">
@@ -24,27 +24,33 @@
             
         </div>
     </header>
-    
-    <!--action define para onde o imput sera encaminhado-->
-    <div id="formFields" class="caixaLogin">
-        <img src="../imagens/pfp.jpg" id="perfilLogin" alt="Foto perfil">
-        <form id="camposLogin" action="" method="post">
-            <label for="loginInput">Login</label>
-            <input type="text" name="Login" id="loginInput" placeholder="Login de acesso"><br><br>
+    <body>
 
-            <label for="senhaInput">Senha</label>
-            <input type="password" name="Senha" id="senhaInput" placeholder="Digite sua senha" required><br>
+        
+        
+        <!--action define para onde o imput sera encaminhado-->
+        <div id="formFields" class="caixaLogin">
             
-            <br><a id="linkRedeSen" href="">Esqueceu a senha?</a><br><br>
+            <form id="camposLogin" action="" method="post">
+                <img src="../imagens/pfp.jpg" id="perfilLogin" alt="Foto perfil">
+                
+                <label for="loginInput">Login</label>
+                <input type="text" name="Login" id="loginInput" placeholder="Login de acesso"><br><br>
 
-            <input type="submit" id="botaoLogar" name="enviar" value="Logar" ><br>
-        </form>
-    </div>
+                <label for="senhaInput">Senha</label>
+                <input type="password" name="Senha" id="senhaInput" placeholder="Digite sua senha" required><br>
+                
+                <br><a id="linkRedeSen" href="">Esqueceu a senha?</a><br><br>
 
+                <input type="submit" id="botaoLogar" name="enviar" value="Logar" ><br>
+            </form>
+        </div>
+
+    
+    </body>
     <footer>
         <div id="elementFooter">
             <br><br><p><h6>Powered by Trainee group 9</h6></p>
         </div>    
     </footer>
-</body>
 </html>
