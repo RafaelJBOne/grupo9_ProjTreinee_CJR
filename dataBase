@@ -1,0 +1,38 @@
+CREATE TABLE User (
+    id INTEGER PRIMARY KEY,
+    username TEXT,
+    password TEXT,
+    profile_picture BLOB,
+    gender TEXT,
+    email TEXT,
+    job_title_id INTEGER,
+    admin BOOLEAN,
+    created_at DATETIME,
+    updated_at DATETIME,
+    FOREIGN KEY (job_title_id) REFERENCES Job_title(id)
+);
+
+CREATE TABLE Post (
+    id INTEGER PRIMARY KEY,
+    user_id INTEGER,
+    content TEXT,
+    updated_at DATETIME,
+    created_at DATETIME,
+    FOREIGN KEY (user_id) REFERENCES User(id)
+);
+
+CREATE TABLE Comments (
+    id INTEGER PRIMARY KEY,
+    post_id INTEGER,
+    user_id INTEGER,
+    content TEXT,
+    FOREIGN KEY (post_id) REFERENCES Post(id),
+    FOREIGN KEY (user_id) REFERENCES User(id)
+);
+
+CREATE TABLE Job_title (
+    id INTEGER PRIMARY KEY,
+    name TEXT,
+    team TEXT,
+    created_at DATETIME
+);
