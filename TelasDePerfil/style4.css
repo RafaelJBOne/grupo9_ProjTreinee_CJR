@@ -62,6 +62,7 @@ body {
     margin: 0 auto;
     background: linear-gradient(to bottom, #002F67 0%, #002F67 40%, white 40%, white 100%);
     border-bottom: solid 2px #002F67;
+    display: flex;
 }
 
 #mainpfp {
@@ -217,4 +218,65 @@ p {
 
   #comment {
     margin-right: 20px;
+  }
+
+  /*#Buttons1 {
+    display: flex;
+    justify-content: space-evenly;
+    padding-bottom: 20px;
+    margin-top: 10px;
+  }
+
+  #EditProfile {
+    background-color: #002F67;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    padding: 10px;
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+
+  #CreatePost {
+    background-color: #002F67;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    padding: 10px;
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+
+  */
+
+  #Buttons1 a {
+    display: block;
+    margin-left: 12rem;
+  }
+
+  #Buttons1 {
+    margin-top: 16rem;
+  }
+
+  #CreatePost {
+    margin-top: 3rem;
+    background-color: #002F67;
+    border: none;
+    border-radius: 1rem;
+    padding: 1rem;
+    color: white;
+    justify-content: center;
+    text-align: center;
+    padding-right: 1.5rem;
+    font-weight: bolder;
+  }
+
+  #EditProfile {
+    background-color: #002F67;
+    border: none;
+    border-radius: 1rem;
+    padding: 1rem;
+    color: white;
+    justify-content: center;
+    font-weight: bolder;
   }
