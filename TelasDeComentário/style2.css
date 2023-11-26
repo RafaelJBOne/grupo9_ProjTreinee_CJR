@@ -180,7 +180,7 @@ body {
     max-height: 40px;
     margin-left: 20px;
     border-radius: 30px;
-    border: 2px solid white;
+    border: none;
     margin-top: 10px
   }
 
@@ -265,4 +265,29 @@ body {
   #Edit {
     background-color: transparent;
     border: none;
+  }
+  
+  #pfp1:hover {
+    transition: 0.25s;
+    transform: scale(1.25);
+  }
+
+  #exit:hover {
+    transition: 0.25s;
+    transform: scale(1.25);
+  }
+
+  #pfp:hover {
+    transition: 0.25s;
+    transform: scale(1.25);
+  }
+
+  #delete:hover {
+    transition: 0.25s;
+    transform: scale(1.25);
+  }
+
+  #Edit:hover {
+    transition: 0.25s;
+    transform: scale(1.25);
   }
