@@ -63,6 +63,7 @@ body {
     background: linear-gradient(to bottom, #002F67 0%, #002F67 40%, white 40%, white 100%);
     border-bottom: solid 2px #002F67;
     display: flex;
+    justify-content: space-between;
 }
 
 #mainpfp {
@@ -251,7 +252,7 @@ p {
 
   #Buttons1 a {
     display: block;
-    margin-left: 12rem;
+    margin-right: 100px;
   }
 
   #Buttons1 {
@@ -279,4 +280,44 @@ p {
     color: white;
     justify-content: center;
     font-weight: bolder;
+  }
+
+  #navpfp:hover {
+    transition: 0.25s;
+    transform: scale(1.25);
+  }
+
+  #exit:hover {
+    transition: 0.25s;
+    transform: scale(1.25);
+  }
+
+  #CreatePost:hover {
+    transition: 0.25s;
+    transform: scale(1.25);
+  }
+
+  #EditProfile:hover {
+    transition: 0.25s;
+    transform: scale(1.25);
+  }
+
+  #pfp:hover {
+    transition: 0.25s;
+    transform: scale(1.25);
+  }
+
+  #delete:hover {
+    transition: 0.25s;
+    transform: scale(1.25);
+  }
+
+  #edit:hover {
+    transition: 0.25s;
+    transform: scale(1.25);
+  }
+
+  #comment:hover {
+    transition: 0.25s;
+    transform: scale(1.25);
   }

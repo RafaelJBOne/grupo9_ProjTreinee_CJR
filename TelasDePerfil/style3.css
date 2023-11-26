@@ -182,4 +182,9 @@ p {
     border: transparent;
     margin-top: 15px;
   }
+
+  #account:hover {
+    transition: 0.25s;
+    transform: scale(1.25);
+  }
   
