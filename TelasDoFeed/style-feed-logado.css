@@ -33,10 +33,10 @@ header {
     scale: 1;
 }
 
-#nome-perfil-usuario-logado:hover { 
+#nome-perfil-usuario-logado:hover {
     transition: 0.25s;
     transform: scale(1.25);
-}  
+}
 
 #botao-foto-perfil-usuario-logado {
     background: transparent;
@@ -55,7 +55,7 @@ header {
     margin: 0 20px
 }
 
-#botao-foto-perfil-usuario-logado:hover { 
+#botao-foto-perfil-usuario-logado:hover {
     transition: 0.25s;
     transform: scale(1.25)
 }
@@ -111,17 +111,17 @@ body {
 
     text-align: left;
     border-top: transparent;
-    color:#001830;
+    color: #001830;
     font-size: 12px;
     font-family: sans-serif;
     width: fit-content;
 }
 
-#Titulo-publicacoes h1{
+#Titulo-publicacoes h1 {
     margin-left: 10px
 }
 
-#botao-criar-post input{
+#botao-criar-post input {
     background-color: #002F67;
     border-radius: 5px;
     border: none;
@@ -131,15 +131,15 @@ body {
 #botao-criar-post {
     margin-right: 35px;
     scale: 1.5;
-  }
-  
+}
+
 #botao-criar-post input:hover {
     transition: 0.25s;
     transform: scale(1.25);
-  }
+}
 
-#Publicacao1, 
-#Publicacao2, 
+#Publicacao1,
+#Publicacao2,
 #Publicacao3 {
     /* 
     width: 100%;
@@ -148,8 +148,8 @@ body {
     border: 1px solid #121212;
     padding: 10px;
     background-color: #002F67;
-    color: white; 
-    margin: 10px; 
+    color: white;
+    margin: 10px;
     border-radius: 25px;
 }
 
@@ -178,7 +178,7 @@ body {
     margin-top: 15px;
     background-color: transparent;
     border: none;
-    z-index: -1;    
+    z-index: -1;
 }
 
 .botoes-foto-perfil-publicacao img {
@@ -187,6 +187,11 @@ body {
     max-height: 40px;
     border-radius: 30px;
 }
+
+.botoes-foto-perfil-publicacao:hover {
+    transition: 0.25s;
+    transform: scale(1.25);
+  }
 
 .botoes-nome-usuario-publicacao {
     background-color: transparent;
@@ -200,15 +205,15 @@ body {
 
 .botoes-excluir {
     background-color: transparent;
-    border: none; 
-    margin: 20px 20px 0 0;  
+    border: none;
+    margin: 20px 20px 0 0;
     text-decoration: none;
 }
 
-.botoes-excluir:hover { 
+.botoes-excluir:hover {
     transition: 0.25s;
     transform: scale(1.25);
-}  
+}
 
 .texto-publicacao {
     text-decoration: none;
@@ -236,10 +241,10 @@ body {
     text-decoration: none;
 }
 
-.botoes-criar-comentario:hover { 
+.botoes-criar-comentario:hover {
     transition: 0.25s;
     transform: scale(1.25);
-}  
+}
 
 .botoes-editar-comentario-ou-post {
     background-color: transparent;
@@ -248,10 +253,10 @@ body {
     text-decoration: none;
 }
 
-.botoes-editar-comentario-ou-post:hover { 
+.botoes-editar-comentario-ou-post:hover {
     transition: 0.25s;
     transform: scale(1.25);
-}  
+}
 
 #Imagem-publicacao {
     align-self: left;
@@ -266,15 +271,15 @@ header {
     width: 1440px;
     height: 80px;
     top: -1px;
-    display: flex; 
+    display: flex;
     background-color: #27BD80;
-    justify-content: space-between; 
-    align-items: center; 
-    width: 100%;    
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
     position: fixed;
-  }
-  
-  #logoHeader {
+}
+
+#logoHeader {
     padding-left: 50px;
     scale: 0.6;
     background-color: white;
@@ -282,30 +287,33 @@ header {
     border-radius: 25px;
     height: 80px;
     left: 20px;
-  }
-  
-  #botoesCadastroHeader{
+}
+
+#botoesCadastroHeader {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px 20px;
     position: fixed;
     right: 20px;
-  }
-  
-  #botoesHeader{
+}
+
+#botoesHeader {
     display: flex;
-    justify-content: space-between; /* Distribui os elementos igualmente */
-    align-items: center; /* Alinha verticalmente */
-    padding: 10px 10px; /* Adiciona um espaçamento interno */
+    justify-content: space-between;
+    /* Distribui os elementos igualmente */
+    align-items: center;
+    /* Alinha verticalmente */
+    padding: 10px 10px;
+    /* Adiciona um espaçamento interno */
     position: fixed;
     right: 20px;
     text-decoration: none;
-  }
-  
-  #botaoEntrar{
+}
+
+#botaoEntrar {
     scale: 1.2;
-    background-color:#001830;
+    background-color: #001830;
     color: white;
     border-radius: 25px;
     padding: 10px;
@@ -313,9 +321,9 @@ header {
     border: none;
     font-family: sans-serif;
     font-weight: 550;
-  }
-  
-  #botaoCriarConta{
+}
+
+#botaoCriarConta {
     margin-right: 30px;
     background: transparent;
     font-family: sans-serif;
@@ -324,23 +332,23 @@ header {
     border: transparent;
     scale: 1.2;
     margin-top: 5px;
-  }
-  
-  #botaoEntrar:hover {
-    transition: 0.25s;
-    transform: scale(1.25);
-  }
-  
-  #botaoCriarConta:hover {
-    transition: 0.25s;
-    transform: scale(1.25);
-  }
+}
 
-  #navbar {
+#botaoEntrar:hover {
+    transition: 0.25s;
+    transform: scale(1.25);
+}
+
+#botaoCriarConta:hover {
+    transition: 0.25s;
+    transform: scale(1.25);
+}
+
+#navbar {
     background-color: #27BD80;
-    display: flex; 
-    justify-content: space-between; 
-    align-items: center; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     width: 100%;
     max-height: 80px;
     position: fixed;
@@ -356,49 +364,49 @@ header {
 }
 
 #pfp1 {
-  max-width: 40px;
-  max-height: 40px;
-  margin-left: 20px;
-  border-radius: 30px;
-  border: none;
-  margin-top: 10px
+    max-width: 40px;
+    max-height: 40px;
+    margin-left: 20px;
+    border-radius: 30px;
+    border: none;
+    margin-top: 10px
 }
 
 #Right {
-  display: flex;
-  flex-direction: row;
-  max-height: 80px;
-  margin-right: 20px;
-  font-family: sans-serif;
+    display: flex;
+    flex-direction: row;
+    max-height: 80px;
+    margin-right: 20px;
+    font-family: sans-serif;
 }
 
 #pfp1 {
-  margin-right: 20px;
+    margin-right: 20px;
 }
 
 #Username {
-  background-color: transparent;
-  color:white;
-  border: none;
+    background-color: transparent;
+    color: white;
+    border: none;
 }
 
 #userpfp {
-  background-color: transparent;
-  border: none;
+    background-color: transparent;
+    border: none;
 }
 
 #exit {
-  margin-top: 15px;
-  background-color: #27BD80;
-  border: none;
+    margin-top: 15px;
+    background-color: #27BD80;
+    border: none;
 }
 
 #exit:hover {
-  transition: 0.25s;
-  transform: scale(1.25);
+    transition: 0.25s;
+    transform: scale(1.25);
 }
 
 #pfp1:hover {
-  transition: 0.25s;
-  transform: scale(1.25);
+    transition: 0.25s;
+    transform: scale(1.25);
 }

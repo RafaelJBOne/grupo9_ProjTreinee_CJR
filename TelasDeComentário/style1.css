@@ -79,13 +79,14 @@ body {
 }
 
 #UsernDate img {
-  max-width: 30px;
-  max-height: 30px;
+  scale: 1.1;
+  max-width: 40px;
+  max-height: 40px;
   border-radius: 30px;
 }
 
 #Comentário-1 p, #Comentário-2 p, #Comentário-3 p {
-  margin: 20px;
+  margin: 0 20px 20px 70px;
   font-family: sans-serif;
   font-size: larger;
 } 
