@@ -262,8 +262,3 @@ p {
     transition: 0.25s;
     transform: scale(1.25);
   }
-
-  #pfp:hover {
-    transition: 0.25s;
-    transform: scale(1.25);
-  }

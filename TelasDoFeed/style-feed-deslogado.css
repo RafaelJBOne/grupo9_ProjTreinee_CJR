@@ -249,3 +249,8 @@ header {
     transition: 0.25s;
     transform: scale(1.25);
   }
+
+  .botoes-foto-perfil-publicacao:hover {
+    transition: 0.25s;
+    transform: scale(1.25);
+  }

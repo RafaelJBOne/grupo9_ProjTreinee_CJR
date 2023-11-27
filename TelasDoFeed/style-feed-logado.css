@@ -335,3 +335,70 @@ header {
     transition: 0.25s;
     transform: scale(1.25);
   }
+
+  #navbar {
+    background-color: #27BD80;
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    width: 100%;
+    max-height: 80px;
+    position: fixed;
+}
+
+#logo-cjr {
+    padding-left: 50px;
+    scale: 0.6;
+    background-color: white;
+    padding-right: 50px;
+    border-radius: 25px;
+    height: 80px;
+}
+
+#pfp1 {
+  max-width: 40px;
+  max-height: 40px;
+  margin-left: 20px;
+  border-radius: 30px;
+  border: none;
+  margin-top: 10px
+}
+
+#Right {
+  display: flex;
+  flex-direction: row;
+  max-height: 80px;
+  margin-right: 20px;
+  font-family: sans-serif;
+}
+
+#pfp1 {
+  margin-right: 20px;
+}
+
+#Username {
+  background-color: transparent;
+  color:white;
+  border: none;
+}
+
+#userpfp {
+  background-color: transparent;
+  border: none;
+}
+
+#exit {
+  margin-top: 15px;
+  background-color: #27BD80;
+  border: none;
+}
+
+#exit:hover {
+  transition: 0.25s;
+  transform: scale(1.25);
+}
+
+#pfp1:hover {
+  transition: 0.25s;
+  transform: scale(1.25);
+}
