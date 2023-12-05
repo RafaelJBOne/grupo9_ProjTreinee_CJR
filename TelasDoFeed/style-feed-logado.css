@@ -1,0 +1,447 @@
+header {
+    background-color: #27BD80;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+}
+
+#logo-cjr {
+    padding-left: 50px;
+    padding-right: 50px;
+    scale: 0.6;
+    background-color: white;
+    border-radius: 25px;
+    height: 80px;
+}
+
+#Header-Right {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 20px;
+    align-items: center;
+}
+
+#nome-perfil-usuario-logado {
+    background: transparent;
+    font-family: sans-serif;
+    font-weight: bold;
+    color: #001830;
+    border: transparent;
+    scale: 1;
+}
+
+#nome-perfil-usuario-logado:hover {
+    transition: 0.25s;
+    transform: scale(1.25);
+}
+
+#botao-foto-perfil-usuario-logado {
+    background: transparent;
+    font-family: sans-serif;
+    font-weight: bold;
+    color: #001830;
+    scale: 1;
+    border: none;
+}
+
+#botao-foto-perfil-usuario-logado img {
+    border: 2px solid white;
+    border-radius: 30px;
+    max-height: 40px;
+    max-width: 40px;
+    margin: 0 20px
+}
+
+#botao-foto-perfil-usuario-logado:hover {
+    transition: 0.25s;
+    transform: scale(1.25)
+}
+
+#botao-sair {
+    scale: 1;
+    background-color: transparent;
+    color: white;
+    border-radius: 25px;
+    margin: 0;
+    border: none;
+    font-family: sans-serif;
+    font-weight: 550;
+}
+
+#botao-sair:hover {
+    transition: 0.25s;
+    transform: scale(1.25);
+}
+
+body {
+    background-color: #001830;
+    margin: 0;
+}
+
+#Coluna-publicacoes {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    align-items: top;
+    justify-content: center;
+    margin: 0 auto;
+    width: 40%;
+}
+
+#titulo-mais-botao-criar-post {
+    margin-top: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #121212;
+}
+
+#Titulo-publicacoes {
+    /* background-color: white;
+    align-items: top;
+    justify-content: left;
+    margin: auto;
+    width: 40%;
+    border: 2px solid #121212;
+    padding-top: 0;
+     */
+
+    text-align: left;
+    border-top: transparent;
+    color: #001830;
+    font-size: 12px;
+    font-family: sans-serif;
+    width: fit-content;
+}
+
+#Titulo-publicacoes h1 {
+    margin-left: 10px
+}
+
+#openModalBtn input {
+    background-color: #002F67;
+    border-radius: 5px;
+    border: none;
+    color: white;
+}
+
+#openModalBtn {
+    margin-right: 35px;
+    scale: 1.5;
+}
+
+#openModalBtn input:hover {
+    transition: 0.25s;
+    transform: scale(1.25);
+}
+
+#Publicacao1,
+#Publicacao2,
+#Publicacao3 {
+    /* 
+    width: 100%;
+    margin: 20px; 
+    */
+    border: 1px solid #121212;
+    padding: 10px;
+    background-color: #002F67;
+    color: white;
+    margin: 10px;
+    border-radius: 25px;
+}
+
+.publicacoes h2 {
+    margin-left: 20px
+}
+
+.topo-publicacoes {
+    display: flex;
+    justify-content: space-between;
+}
+
+.UsernDate {
+    display: flex;
+    flex-direction: row;
+    background-color: transparent;
+    font-family: sans-serif;
+}
+
+.botoes-foto-perfil-publicacao {
+    scale: 1.1;
+    max-height: 35px;
+    width: auto;
+    width: fit-content;
+    height: fit-content;
+    margin-top: 15px;
+    background-color: transparent;
+    border: none;
+    z-index: -1;
+}
+
+.botoes-foto-perfil-publicacao img {
+    border: 2px white solid;
+    max-width: 40px;
+    max-height: 40px;
+    border-radius: 30px;
+}
+
+.botoes-foto-perfil-publicacao:hover {
+    transition: 0.25s;
+    transform: scale(1.25);
+  }
+
+.botoes-nome-usuario-publicacao {
+    background-color: transparent;
+    border: none;
+    color: white;
+}
+
+.botoes-nome-usuario-publicacao h1 {
+    margin-left: 10px;
+}
+
+.botoes-excluir {
+    background-color: transparent;
+    border: none;
+    margin: 20px 20px 0 0;
+    text-decoration: none;
+}
+
+.botoes-excluir:hover {
+    transition: 0.25s;
+    transform: scale(1.25);
+}
+
+.texto-publicacao {
+    text-decoration: none;
+    text-align: left;
+    /* border: 2px solid #121212; */
+    border-top: transparent;
+    color: white;
+    font-family: sans-serif;
+    font-size: larger;
+    width: 100%;
+}
+
+.texto-publicacao p {
+    margin-top: 0;
+}
+
+.conteudo-publicacoes {
+    margin: 0 10px 0 70px;
+}
+
+.botoes-criar-comentario {
+    background-color: transparent;
+    border: none;
+    margin-left: 70px;
+    text-decoration: none;
+}
+
+.botoes-criar-comentario:hover {
+    transition: 0.25s;
+    transform: scale(1.25);
+}
+
+.botoes-editar-comentario-ou-post {
+    background-color: transparent;
+    border: none;
+    margin-left: 10px;
+    text-decoration: none;
+}
+
+.botoes-editar-comentario-ou-post:hover {
+    transition: 0.25s;
+    transform: scale(1.25);
+}
+
+#Imagem-publicacao {
+    align-self: left;
+    max-width: 100%;
+    width: 100%;
+    height: 80%;
+    scale: 0.95;
+}
+
+header {
+    /*como tirar os espaçamentos entre o header e a página*/
+    width: 1440px;
+    height: 80px;
+    top: -1px;
+    display: flex;
+    background-color: #27BD80;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    position: fixed;
+}
+
+#logoHeader {
+    padding-left: 50px;
+    scale: 0.6;
+    background-color: white;
+    padding-right: 50px;
+    border-radius: 25px;
+    height: 80px;
+    left: 20px;
+}
+
+#botoesCadastroHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 20px;
+    position: fixed;
+    right: 20px;
+}
+
+#botoesHeader {
+    display: flex;
+    justify-content: space-between;
+    /* Distribui os elementos igualmente */
+    align-items: center;
+    /* Alinha verticalmente */
+    padding: 10px 10px;
+    /* Adiciona um espaçamento interno */
+    position: fixed;
+    right: 20px;
+    text-decoration: none;
+}
+
+#botaoEntrar {
+    scale: 1.2;
+    background-color: #001830;
+    color: white;
+    border-radius: 25px;
+    padding: 10px;
+    margin-right: 20px;
+    border: none;
+    font-family: sans-serif;
+    font-weight: 550;
+}
+
+#botaoCriarConta {
+    margin-right: 30px;
+    background: transparent;
+    font-family: sans-serif;
+    font-weight: bold;
+    color: #001830;
+    border: transparent;
+    scale: 1.2;
+    margin-top: 5px;
+}
+
+#botaoEntrar:hover {
+    transition: 0.25s;
+    transform: scale(1.25);
+}
+
+#botaoCriarConta:hover {
+    transition: 0.25s;
+    transform: scale(1.25);
+}
+
+#navbar {
+    background-color: #27BD80;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-height: 80px;
+    position: fixed;
+}
+
+#logo-cjr {
+    padding-left: 50px;
+    scale: 0.6;
+    background-color: white;
+    padding-right: 50px;
+    border-radius: 25px;
+    height: 80px;
+}
+
+#pfp1 {
+    max-width: 40px;
+    max-height: 40px;
+    margin-left: 20px;
+    border-radius: 30px;
+    border: none;
+    margin-top: 10px
+}
+
+#Right {
+    display: flex;
+    flex-direction: row;
+    max-height: 80px;
+    margin-right: 20px;
+    font-family: sans-serif;
+}
+
+#pfp1 {
+    margin-right: 20px;
+}
+
+#Username {
+    background-color: transparent;
+    color: white;
+    border: none;
+}
+
+#userpfp {
+    background-color: transparent;
+    border: none;
+}
+
+#exit {
+    margin-top: 15px;
+    background-color: #27BD80;
+    border: none;
+}
+
+#exit:hover {
+    transition: 0.25s;
+    transform: scale(1.25);
+}
+
+#pfp1:hover {
+    transition: 0.25s;
+    transform: scale(1.25);
+}
+
+/* Estilo do modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
