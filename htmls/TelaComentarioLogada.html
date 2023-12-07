@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="..\imagens\logoCjr.png" type="image/x-icon">
+    <title>TelaComentarioLogada</title>
+    <link rel="stylesheet" href="../style/style-comentario-logado.css">
+</head>
+
+<body> 
+    <header id="navbar">
+        <img src="..\imagens\Logo Azul-Verde.png" alt="logo da cjr" id="logo-cjr">
+    
+    <div id="Right">
+        <a href="..\TelasDePerfil\TelaPerfilLogada.html">
+            <button id="Username">
+                <h1>Usuário 1</h1>
+            </button>
+        </a>
+        <a href="..\TelasDePerfil\TelaPerfilLogada.html">
+            <button id="userpfp">
+                <img src="..\imagens\pfp.jpg" id="pfp1">
+            </button>
+        </a>
+        <a href="TelaComentarioDeslogada.html">
+            <button id="exit">
+                <img src="..\imagens\Botão Sair.png" alt="Botão de sair">
+            </button>
+        </a>
+    </div>
+</header>
+    
+    
+    <div id="Coluna-de-comentários">
+        <div id="Comentários">
+            <div id="Titulo-comentarios">
+                <h1>Comentários</h1>
+            </div>
+            
+            <button id="openModalBtn" onclick="openCommentModal()">Comentar</button>
+
+<div id="createCommentModal" class="modal">
+    <div class="modal-content">
+        <span class="close" id="closeCommentModalBtn">&times;</span>
+        <h2>Comentar</h2>
+        <textarea id="commentContent"></textarea>
+        <input type="file" id="imageInput" accept="image/*">
+
+        <button id="submitCommentBtn">Comentar</button>
+    </div>
+</div>   
+        </div>
+
+        <div id="Comentário-1">
+            <div id="TopComment">
+                <div id="UsernDate">
+                    <!-- Redireciona para TELA DE PERFIL LOGADO ao clicar na foto de perfil (AINDA NÃO CRIADA) -->
+                    <a href="..\TelasDePerfil\TelaPerfilLogada.html">
+                        <button id="commenterpfp">
+                            <img src="..\imagens\pfp.jpg" id="pfp">
+                        </button>
+                    </a>
+                    <!-- Redireciona para TELA DE PERFIL LOGADO ao clicar no nome de usuário (AINDA NÃO CRIADA) -->
+                    <a href="..\TelasDePerfil\TelaPerfilLogada.html">
+                        <button id="user">
+                            <h1>Usuário 1</h1>
+                        </button>
+                    </a>
+                    <h2>22/02/2022</h2>
+                </div>
+                <!-- Redireciona para a TELA DE CONFIRMAÇÃO DE EXCLUSÃO ao clicar no botão de excluir (AINDA NÃO CRIADA / TELA OPCIONAL) -->
+                <div>
+                    <a href="CONFIRMACAO_EXCLUSAO.HTML">
+                        <button id="delete">
+                            <img src="..\imagens\Botão Excluir.png" alt="Lixeira">
+                        </button>
+                    </a>
+                </div>
+            </div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque nostrum dolorem iure quod eaque nam
+                architecto molestias, corrupti natus, accusamus excepturi est, soluta non optio maiores expedita!
+                Commodi, temporibus doloribus?</p>
+            <!-- Redireciona para a TELA DE EDITAR COMENTÁRIO ao clicar no botão de editar (AINDA NÃO CRIADA) -->
+            <div>
+                <a href="EDITAR_COMENT/comment.HTML">
+                    <button id="Edit">
+                        <img src="..\imagens\Botão Editar.png" alt="Editar">
+                    </button>
+                </a>
+            </div>
+        </div>
+        <div id="Comentário-2">
+            <div id="UsernDate">
+                <!-- Redireciona para TELA DE PERFIL LOGADO ao clicar na foto de perfil (AINDA NÃO CRIADA) -->
+                <a href="..\TelasDePerfil\TelaPerfilDeslogada.html">
+                    <button id="commenterpfp">
+                        <img src="..\imagens\pfp.jpg" id="pfp">
+                    </button>
+                </a>
+                <!-- Redireciona para TELA DE PERFIL LOGADO ao clicar no nome de usuário (AINDA NÃO CRIADA) -->
+                <a href="..\TelasDePerfil\TelaPerfilDeslogada.html">
+                    <button id="user">
+                        <h1>Usuário 2</h1>
+                    </button>
+                </a>
+                <h2>22/02/2022</h2>
+            </div>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quis reprehenderit reiciendis ex ipsa eveniet.
+                Cum aut unde autem libero numquam? Quidem fuga iste deleniti, ipsum praesentium delectus dolore
+                voluptatibus unde?</p>
+            <img id="foca" src="..\imagens\pup_seal.jpg" alt="imagem do comentário">
+        </div>
+        <div id="Comentário-3">
+            <div id="UsernDate">
+                <!-- Redireciona para TELA DE PERFIL LOGADO ao clicar na foto de perfil (AINDA NÃO CRIADA) -->
+                <a href="..\TelasDePerfil\TelaPerfilDeslogada.html">
+                    <button id="commenterpfp">
+                        <img src="..\imagens\pfp.jpg" id="pfp">
+                    </button>
+                </a>
+                <!-- Redireciona para TELA DE PERFIL LOGADO ao clicar no nome de usuário (AINDA NÃO CRIADA) -->
+                <a href="..\TelasDePerfil\TelaPerfilDeslogada.html">
+                    <button id="user">
+                        <h1>Usuário 3</h1>
+                    </button>
+                </a>
+                <h2>22/02/2022</h2>
+            </div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit sunt, mollitia a cum ea esse
+                maxime veritatis quisquam amet nam magni, accusantium est quam quaerat. Eveniet ea eligendi aspernatur
+                similique.</p>
+        </div>
+    </div>
+    <script>
+        async function loadComments() {
+            try {
+                const response = await fetch("http://localhost:3000/posts");
+                const comments = await response.json()
+
+                const commentsContainer = document.getElementbyId("Coluna-decomentários");
+                commentsContainer.innerHtml = "",
+
+                comments.forEach(comment => {
+                    const commentDiv = document.createElement("div")
+                    commentDiv.id = "Comentario${comentario.id}"
+                    comentarioDiv.className = "comentarios";
+
+                    commentDiv.innerHtml = `
+                        <div id="TopComment">
+                            <div id="UsernDate">
+                                <a href="..\TelasDePerfil\TelaPerfilLogada.html">
+                                    <button id="commenterpfp">
+                                        <img src="${comment.profile_picture}">
+                                    </button>
+                                </a>
+                                <a href="..\TelasDePerfil\TelaPerfilLogada.html">
+                                    <button id="user">
+                                        <h1>${comment.username}/h1>
+                                    </button>
+                                </a>
+                            <h2>${comment.created_at}</h2>
+                            </div>
+                        <div>
+                            <a href="CONFIRMACAO_EXCLUSAO.HTML">
+                                <button id="delete">
+                                    <img src="..\imagens\Botão Excluir.png" alt="Lixeira">
+                                </button>
+                            </a>
+                        </div>
+                        </div>
+                        <p>${comment.content}</p>
+           
+                        <div>
+                            <a href="EDITAR_COMENT/comment.HTML">
+                                <button id="Edit">
+                                    <img src="..\imagens\Botão Editar.png" alt="Editar">
+                                </button>
+                            </a>
+                        </div>
+                    `;
+
+                    commentsContainer.appendChild(commentDiv);
+                });
+
+            } catch(error) {
+                console.error("Erro ao carregar comentários:", error)
+            }
+        }
+
+        loadComments()
+
+        
+    </script>
+     <script src="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.js"></script>
+
+    <!-- Adicione o link para o estilo do SimpleMDE -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.css">
+    
+    <script>
+        const openModalBtn = document.getElementById("openModalBtn");
+        const createCommentModal = document.getElementById("createCommentModal");
+        const closeModalBtn = document.getElementById("closeModalBtn")
+
+        openModalBtn.addEventListener("click", () => {
+            createCommentModal.style.display = "block";
+            const simplemde = new SimpleMDE({ element: document.getElementById("commentContent") });
+        });
+
+        closeModalBtn.addEventListener("click", () => {
+            createCommentModal.style.display = "none";
+        });
+
+        window.addEventListener("click", (event) => {
+            if (event.target === createCommentModal) {
+                createCommentModal.style.display = "none";
+            }
+        });
+
+        const submitCommentBtn = document.getElementById("submitPostBtn");
+        submitPostBtn.addEventListener("click", () => {
+            const postContent = simplemde.value();
+            console.log("Conteúdo do Comentário:", commentContent)
+            createCommentModal.style.display = "none"
+        });
+    </script>
+</body>
+
+</html>

@@ -24,10 +24,15 @@ app.get('/posts', async (req, res) => { //listar posts
   res.json(posts);
 });
 
-app.post('/posts', async (req, res) => { //criar post
+app.post('/posts', async (req, res) => {
   const newPost = req.body;
-  const post = await prisma.posts.create({ data: newPost });
-  res.json(post);
+
+  try {
+      const post = await prisma.posts.create({ data: newPost });
+      res.json(post);
+  } catch (error) {
+      res.status(500).json({ error: 'Erro ao criar o post.' });
+  }
 });
 
 app.delete('/posts/:postId', async (req, res) => { //deletar post
@@ -71,4 +76,3 @@ app.delete('/comments/:commentId', async (req, res) => {
       res.status(500).json({ error: 'Erro ao excluir o comentário.' });
     }
   });
-  
