@@ -7,5 +7,59 @@ generator client {
 
 datasource db {
   provider = "sqlite"
-  url      = env("DATABASE_URL")
+  url      = "file:./dataBase.db"
+}
+
+model Users {
+  id              Int    @id @default(autoincrement())
+  username        String @unique
+  password        String
+  profile_picture Bytes?
+  gender          String
+  email           String
+
+  job_title_id Int
+  job_title    Job_title @relation(fields: [job_title_id], references: [id])
+
+  admin      Boolean
+  created_at DateTime 
+  updated_at DateTime @updatedAt
+  
+  posts      Posts[]
+  comments   Comments[]
+}
+
+model Posts {
+  id         Int        @id @default(autoincrement())
+
+  user       Users       @relation(fields: [user_id], references: [id])
+  user_id    Int
+  
+  content    String
+  updated_at DateTime  @updatedAt
+  created_at DateTime
+
+  comments   Comments[]
+}
+
+model Comments {
+  id      Int    @id @default(autoincrement())
+
+  post    Posts   @relation(fields: [post_id], references: [id])
+  post_id Int
+  
+  user    Users   @relation(fields: [user_id], references: [id])
+  user_id Int
+
+  content String
+}
+
+model Job_title {
+  id         Int      @id @default(autoincrement())
+
+  name       String
+  users      Users[]
+
+  team       String
+  created_at DateTime
 }
