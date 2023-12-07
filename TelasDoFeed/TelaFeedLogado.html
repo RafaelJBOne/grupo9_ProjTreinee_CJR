@@ -12,32 +12,6 @@
 
 <body>
 
-    <!--<header>
-        <div id="logo-cjr">
-            <img src="..\imagens\logoCjr.png" alt="logo da cjr">
-        </div>
-
-        <div id="Header-Right">
-             Redireciona para TELA DE PERFIL LOGADO ao clicar na foto de perfil
-            <a href="..\TelasDePerfil\TelaPerfilLogada.html">
-                <button id="nome-perfil-usuario-logado">
-                    <h1>Usuário 1</h1>
-                </button>
-            </a>
-             Redireciona para TELA DE PERFIL LOGADO ao clicar na foto de perfil
-            <a href="..\TelasDePerfil\TelaPerfilLogada.html">
-                <button id="botao-foto-perfil-usuario-logado">
-                    <img src="..\imagens\pfp.jpg " alt="Foto de Perfil">
-                </button>
-            </a>
-             Redireciona para TELA DO FEED DESLOGADO ao clicar em sair
-            <a href="TelaFeedDeslogado.html">
-                <button id="botao-sair">
-                        <img src="..\imagens\Botão Sair.png" alt="Botão de sair">
-                </button>
-            </a>
-        </div>-->
-
         <header id="navbar">
             <img src="..\imagens\Logo Azul-Verde.png" alt="logo da cjr" id="logo-cjr">
         
@@ -71,9 +45,18 @@
             </div>
 
             <!-- Fazer a Chamada do Back-End - Fetch API pra Superposição da tela de Criar Post -->
-            <div id="botao-criar-post">
-                <input type="submit" id="Create-post" value= "Criar Post">
-            </div>
+            <button id="openModalBtn">Criar Publicação</button>
+
+<!-- Modal para criar publicações -->
+<div id="createPostModal" class="modal">
+    <div class="modal-content">
+        <span class="close" id="closeModalBtn">&times;</span>
+        <h2>Criar Publicação</h2>
+        <textarea id="postContent"></textarea>
+        <button id="submitPostBtn">Publicar</button>
+    </div>
+
+</div>
         </div>
 
         <div id="Publicacao1" class="publicacoes">
@@ -212,6 +195,119 @@
             </a>
         </div>
     </div>
+    <script>
+        
+        // Função para carregar as publicações do backend e exibir na página
+        async function loadPublications() {
+            try {
+                const response = await fetch('http://localhost:3000/posts');
+                const publications = await response.json();
+    
+                const publicationsContainer = document.getElementById('Coluna-publicacoes');
+                publicationsContainer.innerHTML = '';
+    
+                publications.forEach(publication => {
+                    const publicationDiv = document.createElement('div');
+                    publicationDiv.id = `Publicacao${publication.id}`;
+                    publicationDiv.className = 'publicacoes';
+    
+                    // Crie a estrutura HTML para exibir a publicação (modifique conforme necessário)
+                    publicationDiv.innerHTML = `
+                        <div class="topo-publicacoes">
+                            <div class="UsernDate">
+                                <a href="..\TelasDePerfil\TelaPerfilLogada.html">
+                                    <button class="botoes-foto-perfil-publicacao">
+                                        <img src="${publication.profile_picture}" alt="Foto de Perfil">
+                                    </button>
+                                </a>
+                                <a href="..\TelasDePerfil\TelaPerfilLogada.html">
+                                    <button class="botoes-nome-usuario-publicacao">
+                                        <h1>${publication.username}</h1>
+                                    </button>
+                                </a>
+    
+                                <h2>${publication.created_at}</h2>
+                            </div>
+                            
+                            <a href="CONFIRMACAO_EXCLUSAO.HTML">
+                                <button class="botoes-excluir">
+                                    <img src="..\imagens\Botão Excluir.png" alt="Lixeira">
+                                </button>
+                            </a>
+                        </div>
+    
+                        <div class="conteudo-publicacoes">
+                            <a href="..\TelasDeComentário\TelaComentarioLogada.html" class="texto-publicacao">
+                                <p>${publication.content}</p>
+                            </a>
+                        </div>
+    
+                        <a href="CRIAR_COMENTARIO.HTML">
+                            <button class="botoes-criar-comentario">
+                                <img src="..\imagens\Botão Comentar.png" alt="Comentário">
+                            </button>
+                        </a>
+    
+                        <a href="EDITAR_COMENTÁRIO.HTML">
+                            <button class="botoes-editar-comentario-ou-post">
+                                <img src="..\imagens\Botão Editar.png" alt="Editar">
+                            </button>
+                        </a>
+                    `;
+    
+                    publicationsContainer.appendChild(publicationDiv);
+                });
+            } catch (error) {
+                console.error('Erro ao carregar publicações:', error);
+            }
+        }
+    
+        // Carrega as publicações ao carregar a página
+        loadPublications();
+    </script>
+    <script src="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.js"></script>
+
+    <!-- Adicione o link para o estilo do SimpleMDE -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.css">
+    
+    <!-- Seu script JavaScript -->
+    <script>
+        // Abre o modal
+        const openModalBtn = document.getElementById('openModalBtn');
+        const createPostModal = document.getElementById('createPostModal');
+        const closeModalBtn = document.getElementById('closeModalBtn');
+    
+        openModalBtn.addEventListener('click', () => {
+            createPostModal.style.display = 'block';
+            // Inicialize o SimpleMDE
+            const simplemde = new SimpleMDE({ element: document.getElementById('postContent') });
+        });
+    
+        // Fecha o modal
+        closeModalBtn.addEventListener('click', () => {
+            createPostModal.style.display = 'none';
+        });
+    
+        // Fecha o modal ao clicar fora dele
+        window.addEventListener('click', (event) => {
+            if (event.target === createPostModal) {
+                createPostModal.style.display = 'none';
+            }
+        });
+    
+        // Manipula a submissão da publicação (você precisará implementar a lógica adequada)
+        const submitPostBtn = document.getElementById('submitPostBtn');
+        submitPostBtn.addEventListener('click', () => {
+            const postContent = simplemde.value(); // Obtém o conteúdo do SimpleMDE
+            console.log('Conteúdo da Publicação:', postContent);
+            // Aqui você deve enviar o conteúdo da publicação para o backend (usando fetch, por exemplo)
+            // e lidar com a lógica de criação de publicações no backend.
+            // Depois, pode fechar o modal ou realizar outras ações necessárias.
+            createPostModal.style.display = 'none';
+        });
+        
+    </script>
+    
 </body>
 
 </html>

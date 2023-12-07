@@ -6,37 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="..\imagens\logoCjr.png" type="image/x-icon">
     <title>TelaComentarioLogada</title>
-    <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="style-comentario-logado.css">
 </head>
 
-<body>
-    <!--<header id="navbar">
-        <div id="logo-cjr">
-            <img src="..\imagens\logoCjr.png" alt="logo da cjr">
-        </div>
-        
-        <div id="Right">
-             Redireciona para TELA DE PERFIL LOGADO ao clicar no nome do Usuário (AINDA NÃO CRIADA)
-            <a href="..\TelasDePerfil\TelaPerfilLogada.html">
-                <button id="Username">
-                    <h1>Usuário 1</h1>
-                </button>
-            </a>
-             Redireciona para TELA DE PERFIL LOGADO ao clicar na foto de perfil (AINDA NÃO CRIADA)
-            <a href="..\TelasDePerfil\TelaPerfilLogada.html">
-                <button id="userpfp">
-                    <img src="..\imagens\pfp.jpg" id="pfp1">
-                </button>
-            </a>
-             Redireciona para TELA DE COMENTÁRIO DESLOGADO ao clicar em sair
-            <a href="TelaComentarioDeslogada.html">
-                <button id="exit">
-                    <img src="..\imagens\Botão Sair.png" alt="Botão de sair">
-                </button>
-            </a>
-        </div>
-    </header>-->
-    
+<body> 
     <header id="navbar">
         <img src="..\imagens\Logo Azul-Verde.png" alt="logo da cjr" id="logo-cjr">
     
@@ -63,10 +36,17 @@
     <div id="Coluna-de-comentários">
         <div id="Comentários">
             <h1>Comentários</h1>
-            <div id="Comentar">
-                <input type="submit" id="Comment" value="Comentar">
-            </div>
+            <button id="openModalBtn">Comentar</button>
+<div id="createCommentModal" class="modal">
+    <div class="modal-content">
+        <span class="close" id="closeCommentModalBtn">&times;</span>
+        <h2>Comentar</h2>
+        <textarea id="commentContent"></textarea>
+        <button id="submitCommentBtn">Comentar</button>
+    </div>
+</div>          
         </div>
+
         <div id="Comentário-1">
             <div id="TopComment">
                 <div id="UsernDate">
@@ -98,7 +78,7 @@
                 Commodi, temporibus doloribus?</p>
             <!-- Redireciona para a TELA DE EDITAR COMENTÁRIO ao clicar no botão de editar (AINDA NÃO CRIADA) -->
             <div>
-                <a href="EDITAR_COMENT/POST.HTML">
+                <a href="EDITAR_COMENT/comment.HTML">
                     <button id="Edit">
                         <img src="..\imagens\Botão Editar.png" alt="Editar">
                     </button>
@@ -147,8 +127,96 @@
                 similique.</p>
         </div>
     </div>
+    <script>
+        async function loadComments() {
+            try {
+                const response = await fetch("http://localhost:3000/posts");
+                const comments = await response.json()
 
+                const commentsContainer = document.getElementbyId("Coluna-decomentários");
+                commentsContainer.innerHtml = "",
 
+                comments.forEach(comment => {
+                    const commentDiv = document.createElement("div")
+                    commentDiv.id = "Comentario${comentario.id}"
+                    comentarioDiv.className = "comentarios";
+
+                    commentDiv.innerHtml = `
+                        <div id="TopComment">
+                            <div id="UsernDate">
+                                <a href="..\TelasDePerfil\TelaPerfilLogada.html">
+                                    <button id="commenterpfp">
+                                        <img src="${comment.profile_picture}">
+                                    </button>
+                                </a>
+                                <a href="..\TelasDePerfil\TelaPerfilLogada.html">
+                                    <button id="user">
+                                        <h1>${comment.username}/h1>
+                                    </button>
+                                </a>
+                            <h2>${comment.created_at}</h2>
+                            </div>
+                        <div>
+                            <a href="CONFIRMACAO_EXCLUSAO.HTML">
+                                <button id="delete">
+                                    <img src="..\imagens\Botão Excluir.png" alt="Lixeira">
+                                </button>
+                            </a>
+                        </div>
+                        </div>
+                        <p>${comment.content}</p>
+           
+                        <div>
+                            <a href="EDITAR_COMENT/comment.HTML">
+                                <button id="Edit">
+                                    <img src="..\imagens\Botão Editar.png" alt="Editar">
+                                </button>
+                            </a>
+                        </div>
+                    `;
+
+                    commentsContainer.appendChild(commentDiv);
+                });
+
+            } catch(error) {
+                console.error("Erro ao carregar comentários:", error)
+            }
+        }
+
+        loadPublications()
+    </script>
+     <script src="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.js"></script>
+
+    <!-- Adicione o link para o estilo do SimpleMDE -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.css">
+    
+    <script>
+        const openModalBtn = document.getElementById("openModalBtn");
+        const createCommentModal = document.getElementById("createCommentModal");
+        const closeModalBtn = document.getElementById("closeModalBtn")
+
+        openModalBtn.addEventListener("click", () => {
+            createCommentModal.style.display = "block";
+            const simplemde = new SimpleMDE({ element: document.getElementById("commentContent") });
+        });
+
+        closeModalBtn.addEventListener("click", () => {
+            createCommentModal.style.display = "none";
+        });
+
+        window.addEventListener("click", (event) => {
+            if (event.target === createCommentModal) {
+                createCommentModal.style.display = "none";
+            }
+        });
+
+        const submitCommentBtn = document.getElementById("submitPostBtn");
+        submitPostBtn.addEventListener("click", () => {
+            const postContent = simplemde.value();
+            console.log("Conteúdo do Comentário:", commentContent)
+            createCommentModal.style.display = "none"
+        });
+    </script>
 </body>
 
 </html>
