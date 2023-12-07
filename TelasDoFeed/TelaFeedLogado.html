@@ -53,7 +53,7 @@
         <span class="close" id="closeModalBtn">&times;</span>
         <h2>Criar Publicação</h2>
         <textarea id="postContent"></textarea>
-        <button id="submitPostBtn">Publicar</button>
+        <button id="publishPostBtn">Publicar</button>
     </div>
 
 </div>
@@ -300,12 +300,36 @@
         submitPostBtn.addEventListener('click', () => {
             const postContent = simplemde.value(); // Obtém o conteúdo do SimpleMDE
             console.log('Conteúdo da Publicação:', postContent);
-            // Aqui você deve enviar o conteúdo da publicação para o backend (usando fetch, por exemplo)
-            // e lidar com a lógica de criação de publicações no backend.
-            // Depois, pode fechar o modal ou realizar outras ações necessárias.
+            // Aqui enviar o conteúdo das publicaçoes
             createPostModal.style.display = 'none';
         });
-        
+    
+        const publishPostBtn = document.getElementById('publishPostBtn');
+        const postContentInput = document.getElementById('postContent');
+
+        publishPostBtn.addEventListener('click', async () => {
+            const postContent = postContentInput.value;
+
+            try {
+                const response = await fetch('http://localhost:3000/posts', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ content: postContent }),
+                });
+
+                const newPost = await response.json();
+                console.log('Novo post criado:', newPost);
+
+                // Limpe o campo de texto e atualize a exibição das publicações
+                postContentInput.value = '';
+                loadPublications(); // Esta função deve ser definida no seu script para carregar as publicações novamente após a criação de uma nova
+            } catch (error) {
+                console.error('Erro ao criar novo post:', error);
+            }
+        });
+
     </script>
     
 </body>
