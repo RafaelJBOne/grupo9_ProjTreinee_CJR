@@ -440,7 +440,7 @@ body {
   transform: scale(1.25);
 }
 
-* Estilo do modal */
+/* Estilo do modal */
 .modal {
   display: none;
   position: fixed;

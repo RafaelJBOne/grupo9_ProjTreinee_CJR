@@ -5,6 +5,8 @@ const closeModalBtn = document.getElementById('closeModalBtn');
 // Variável para verificar se o modal está aberto
 let isModalOpen = false;
 
+const simplemde = new SimpleMDE({ element: document.getElementById('postContent') });
+
 openModalBtn.addEventListener('click', () => {
     // Verifique se o modal já está aberto antes de tentar abri-lo novamente
     if (!isModalOpen) {
@@ -12,14 +14,13 @@ openModalBtn.addEventListener('click', () => {
         isModalOpen = true;
 
         // Inicialize o SimpleMDE
-        const simplemde = new SimpleMDE({ element: document.getElementById('postContent') });
     }
 });
 
 // Fecha o modal
 closeModalBtn.addEventListener('click', () => {
     createPostModal.style.display = 'none';
-    createPostModal = 'null';
+    // createPostModal = 'null';
     isModalOpen = false;
 });
 
@@ -27,7 +28,7 @@ closeModalBtn.addEventListener('click', () => {
 window.addEventListener('click', (event) => {
     if (event.target === createPostModal) {
         createPostModal.style.display = 'none';
-        createPostModal = 'null';
+        // createPostModal = 'null';
         isModalOpen = false;
     }
 });
