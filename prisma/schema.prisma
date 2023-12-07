@@ -20,7 +20,7 @@ model Users {
   job_title_id    Int
   job_title       Job_title  @relation(fields: [job_title_id], references: [id])
   admin           Boolean
-  created_at      DateTime  
+  created_at      DateTime   @default(now())
   updated_at      DateTime   @updatedAt
   posts           Posts[]
   comments        Comments[]
@@ -32,7 +32,7 @@ model Posts {
   user_id    Int
   content    String
   updated_at DateTime   @updatedAt
-  created_at DateTime
+  created_at DateTime   @default(now())
   comments   Comments[]
 }
 
@@ -50,5 +50,5 @@ model Job_title {
   name       String
   users      Users[]
   team       String
-  created_at DateTime
+  created_at DateTime @default(now())
 }
