@@ -1,6 +1,7 @@
 const express = require('express');
 const { PrismaClient } = require('@prisma/client');
 const prisma = new PrismaClient();
+
 const app = express();
 const PORT = 3000;
 
@@ -16,6 +17,19 @@ app.post('/users', async (req, res) => { //criar usuários
   const newUser = req.body;
   const user = await prisma.users.create({ data: newUser });
   res.json(user);
+});
+
+app.delete('/users/:userId', async (req, res) => { //deletar usuários
+  const userId = parseInt(req.params.userId, 10);
+
+  try {
+    const deletedUser = await prisma.users.delete({
+      where: { id: userId }
+    });
+    res.json(deletedUser);
+  } catch (error) { 
+    res.status(500).json({ error: 'Erro ao excluir o usuário.' });
+  }
 });
 
 // Rotas para posts
@@ -55,20 +69,22 @@ app.post('/comments', async (req, res) => { //criar comentario
   res.json(comment);
 });
 
-app.listen(PORT, () => { //deletar comentario
+app.delete('/comments/:commentId', async (req, res) => { //deletar comentario
+  const commentId = parseInt(req.params.commentId, 10);
+
+  try {
+    const deletedComment = await prisma.comments.delete({
+      where: { id: commentId }
+    });
+    res.json(deletedComment);
+  } catch (error) {
+    res.status(500).json({ error: 'Erro ao excluir o comentário.' });
+  }
+});
+
+app.listen(PORT, () => { 
   console.log(`Server is running at http://localhost:${PORT}`);
 });
 
-app.delete('/comments/:commentId', async (req, res) => {
-    const commentId = parseInt(req.params.commentId, 10);
-  
-    try {
-      const deletedComment = await prisma.comments.delete({
-        where: { id: commentId }
-      });
-      res.json(deletedComment);
-    } catch (error) {
-      res.status(500).json({ error: 'Erro ao excluir o comentário.' });
-    }
-  });
+
   
