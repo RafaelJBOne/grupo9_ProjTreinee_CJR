@@ -2,21 +2,33 @@ const openModalBtn = document.getElementById('openModalBtn');
 const createPostModal = document.getElementById('createPostModal');
 const closeModalBtn = document.getElementById('closeModalBtn');
 
+// Variável para verificar se o modal está aberto
+let isModalOpen = false;
+
 openModalBtn.addEventListener('click', () => {
-    createPostModal.style.display = 'block';
-    // Inicialize o SimpleMDE
-    const simplemde = new SimpleMDE({ element: document.getElementById('postContent') });
+    // Verifique se o modal já está aberto antes de tentar abri-lo novamente
+    if (!isModalOpen) {
+        createPostModal.style.display = 'block';
+        isModalOpen = true;
+
+        // Inicialize o SimpleMDE
+        const simplemde = new SimpleMDE({ element: document.getElementById('postContent') });
+    }
 });
 
 // Fecha o modal
 closeModalBtn.addEventListener('click', () => {
     createPostModal.style.display = 'none';
+    createPostModal = 'null';
+    isModalOpen = false;
 });
 
 // Fecha o modal ao clicar fora dele
 window.addEventListener('click', (event) => {
     if (event.target === createPostModal) {
         createPostModal.style.display = 'none';
+        createPostModal = 'null';
+        isModalOpen = false;
     }
 });
 
@@ -50,6 +62,7 @@ publishPostBtn.addEventListener('click', async () => {
         imageInput.value = ''; // Limpe o campo de seleção de arquivo
         loadPublications(); // Esta função deve ser definida no seu script para carregar as publicações novamente após a criação de uma nova
         createPostModal.style.display = 'none'; // Feche o modal após a publicação
+        isModalOpen = false;
     } catch (error) {
         console.error('Erro ao criar novo post:', error);
     }
