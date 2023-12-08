@@ -39,16 +39,16 @@
                 <h1>Comentários</h1>
             </div>
             
-            <button id="openModalBtn" onclick="openCommentModal()">Comentar</button>
+            <button id="openModalBtn">Comentar</button>
 
 <div id="createCommentModal" class="modal">
     <div class="modal-content">
-        <span class="close" id="closeCommentModalBtn">&times;</span>
+        <span class="close" id="closeModalBtn">&times;</span>
         <h2>Comentar</h2>
         <textarea id="commentContent"></textarea>
         <input type="file" id="imageInput" accept="image/*">
 
-        <button id="submitCommentBtn">Comentar</button>
+        <button id="publishCommentBtn">Comentar</button>
     </div>
 </div>   
         </div>
@@ -198,33 +198,7 @@
     <!-- Adicione o link para o estilo do SimpleMDE -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.css">
     
-    <script>
-        const openModalBtn = document.getElementById("openModalBtn");
-        const createCommentModal = document.getElementById("createCommentModal");
-        const closeModalBtn = document.getElementById("closeModalBtn")
-
-        openModalBtn.addEventListener("click", () => {
-            createCommentModal.style.display = "block";
-            const simplemde = new SimpleMDE({ element: document.getElementById("commentContent") });
-        });
-
-        closeModalBtn.addEventListener("click", () => {
-            createCommentModal.style.display = "none";
-        });
-
-        window.addEventListener("click", (event) => {
-            if (event.target === createCommentModal) {
-                createCommentModal.style.display = "none";
-            }
-        });
-
-        const submitCommentBtn = document.getElementById("submitPostBtn");
-        submitPostBtn.addEventListener("click", () => {
-            const postContent = simplemde.value();
-            console.log("Conteúdo do Comentário:", commentContent)
-            createCommentModal.style.display = "none"
-        });
-    </script>
+    <script src="../scripts/modal2.js"></script>
 </body>
 
 </html>
