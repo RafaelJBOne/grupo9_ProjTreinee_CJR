@@ -33,6 +33,12 @@ class Comments {
         const comment = await Prisma.comments.delete({ where: { id } })
         res.json(comment)
     }
+
+    async UserByCommentId(req, res) {
+        const id = req.params.id.int()
+        const user = await Prisma.users.findUnique({ where: { id } })
+        res.json(user)
+    }
 }
 
 export default Comments

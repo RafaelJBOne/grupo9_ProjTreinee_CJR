@@ -1,9 +1,14 @@
 import express from 'express';
-import { PrismaClient } from '@prisma/client';
+import routerUser from './users/users-controller.js';
+import routerComment from './comments/comments-controller.js';
+import routerPost from './posts/posts-controller.js';
 
-const prisma = new PrismaClient();
 const app = express();
+app.use(express.json());
+
 const PORT = 3000;
 
-app.use(express.json());
+app.use(routerUser);
+app.use(routerComment);
+app.use(routerPost);
 

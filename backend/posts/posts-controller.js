@@ -1,12 +1,17 @@
 import Posts from './posts-service.js';
 
+import { Router } from 'express';
+
+const routerPost = Router();
+const post = new Posts();
+
 // Rotas para posts
-app.get('/posts', async (req, res) => { //listar posts
+routerPost.get('/posts', async (req, res) => { //listar posts
     const posts = await prisma.posts.findMany();
     res.json(posts);
   });
   
-  app.post('/posts', async (req, res) => {
+  routerPost.post('/posts', async (req, res) => {
     const newPost = req.body;
   
     try {
@@ -17,8 +22,8 @@ app.get('/posts', async (req, res) => { //listar posts
     }
   });
   
-  app.delete('/posts/:postId', async (req, res) => { //deletar post
-      const postId = parseInt(req.params.postId, 10);
+  routerPost.delete('/posts/:postId', async (req, res) => { //deletar post
+      const postId = req.params.postId.int();
     
       try {
         const deletedPost = await prisma.posts.delete({
@@ -29,3 +34,5 @@ app.get('/posts', async (req, res) => { //listar posts
         res.status(500).json({ error: 'Erro ao excluir o post.' });
       }
     });
+
+export default routerPost;

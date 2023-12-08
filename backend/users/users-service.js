@@ -1,4 +1,3 @@
-
 import { PrismaClient } from '@prisma/client'
 
 const Prisma = new PrismaClient()
@@ -18,6 +17,12 @@ class Users {
     async listUserById(req, res) {
         const id = req.params.id.int()
         const user = await Prisma.users.findUnique({ where: { id } })
+        res.json(user)
+    }
+
+    async listUserByEmail(req, res) {
+        const email = req.params.email
+        const user = await Prisma.users.findUnique({ where: { email } })
         res.json(user)
     }
 

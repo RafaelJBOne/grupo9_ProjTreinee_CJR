@@ -39,6 +39,12 @@ class Posts {
         const comments = await Prisma.comments.findMany({ where: { postId: id } })
         res.json(comments)
     }
+
+    async UserByPostId(req, res) {
+        const id = req.params.id.int()
+        const user = await Prisma.users.findUnique({ where: { id } })
+        res.json(user)
+    }
 }
 
 export default Posts

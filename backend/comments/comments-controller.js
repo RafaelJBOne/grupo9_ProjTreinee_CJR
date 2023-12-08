@@ -1,23 +1,28 @@
 import Comments from './comments-service.js';
 
+import { Router } from 'express';
+
+const routerComment = Router();
+const comment = new Comments();
+
 // Rotas para comentários
-app.get('/comments', async (req, res) => { //listar comentarios
+routerComment.get('/comments', async (req, res) => { //listar comentarios
     const comments = await prisma.comments.findMany();
     res.json(comments);
   });
   
-  app.post('/comments', async (req, res) => { //criar comentario
+  routerComment.post('/comments', async (req, res) => { //criar comentario
     const newComment = req.body;
     const comment = await prisma.comments.create({ data: newComment });
     res.json(comment);
   });
   
-  app.listen(PORT, () => { //deletar comentario
+  routerComment.listen(PORT, () => { //deletar comentario
     console.log(`Server is running at http://localhost:${PORT}`);
   });
   
-  app.delete('/comments/:commentId', async (req, res) => {
-      const commentId = parseInt(req.params.commentId, 10);
+  routerComment.delete('/comments/:commentId', async (req, res) => {
+      const commentId = req.params.commentId.int();
     
       try {
         const deletedComment = await prisma.comments.delete({
@@ -28,3 +33,5 @@ app.get('/comments', async (req, res) => { //listar comentarios
         res.status(500).json({ error: 'Erro ao excluir o comentário.' });
       }
     });
+
+export default routerComment;
