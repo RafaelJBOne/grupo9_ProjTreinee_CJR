@@ -1,3 +1,8 @@
+
+import Users from './users-service.js';
+
+// const users = new Users();
+
 // Rotas para usuários
 app.get('/users', async (req, res) => { //listar usuários
     const users = await prisma.users.findMany();
@@ -9,3 +14,5 @@ app.get('/users', async (req, res) => { //listar usuários
     const user = await prisma.users.create({ data: newUser });
     res.json(user);
   });
+
+  
