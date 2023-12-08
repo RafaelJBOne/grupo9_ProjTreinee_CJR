@@ -12,3 +12,6 @@ app.use(routerUser);
 app.use(routerComment);
 app.use(routerPost);
 
+app.listen(PORT, () => { 
+    console.log(`Server is running at http://localhost:${PORT}`);
+  });

@@ -15,8 +15,8 @@ model Users {
   username        String     @unique
   password        String
   profile_picture Bytes?
-  gender          String
-  email           String
+  gender          String?
+  email           String     @unique
   job_title_id    Int
   job_title       Job_title  @relation(fields: [job_title_id], references: [id])
   admin           Boolean

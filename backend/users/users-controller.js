@@ -18,16 +18,14 @@ routerUser.post('/users', async (req, res) => { //criar usuários
 });
 
 routerUser.delete('/users/:userId', async (req, res) => { //deletar usuário
-    const userId = req.params.userId.int();
+  const userId = req.params.userId.int();
 
-    try {
-      const deletedUser = await prisma.users.delete({
-        where: { id: userId }
-      });
-      res.json(deletedUser);
-    } catch (error) {
-      res.status(500).json({ error: 'Erro ao excluir o usuário.' });
-    }
-  });
+  try {
+    const deletedUser = await prisma.users.delete({where: { id: userId }});
+    res.json(deletedUser);
+  } catch (error) {
+    res.status(500).json({ error: 'Erro ao excluir o usuário.' });
+  }
+});
 
 export default routerUser;
