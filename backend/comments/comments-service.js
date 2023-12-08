@@ -1,43 +1,71 @@
-
 import { PrismaClient } from '@prisma/client'
 
 const Prisma = new PrismaClient()
 
 class Comments {
-    async createComment(req, res) {
-        const newComment = req.body
-        const comment = await Prisma.comments.create({ data: newComment })
-        res.json(comment)
+    async createComment(post_id, user_id, content) { //criar comentario
+        return comment = await Prisma.comments.create({
+            data: {
+                post_id,
+                user_id,
+                content,
+            }
+        }).catch(error => {
+            if (error.code === 'P2025')
+                throw new Error('Post não encontrado')
+            else
+                throw error
+        })
     }
 
-    async listComments(req, res) {
+    async listComments() { //listar comentarios
         const comments = await Prisma.comments.findMany()
-        res.json(comments)
+        return comments
     }
 
-    async listCommentById(req, res) {
-        const id = req.params.id.int()
-        const comment = await Prisma.comments.findUnique({ where: { id } })
-        res.json(comment)
+    async listCommentsByPostId(post_id) { //listar comentarios por id do post
+        return await Prisma.comments.findUnique({
+            where: { id: post_id }
+        }).catch(error => {
+            if (error.code === 'P2025')
+                throw new Error('Post não encontrado')
+            else
+                throw error
+        })
     }
 
-    async editComment(req, res) {
-        const id = req.params.id.int()
-        const data = req.body
-        const comment = await Prisma.comments.update({ where: { id }, data })
-        res.json(comment)
+    async editComment(comment_id, content) { //editar comentario
+        return await Prisma.comments.update({
+            where: { id: comment_id }, content
+        }).catch(error => {
+            if (error.code === 'P2025')
+                throw new Error('Comentário não encontrado')
+            else
+                throw error
+        })
     }
 
-    async deleteComment(req, res) {
-        const id = req.params.id.int()
-        const comment = await Prisma.comments.delete({ where: { id } })
-        res.json(comment)
+    async deleteComment(comment_id) { //deletar comentario
+        return await Prisma.comments.delete({
+            where: { id: comment_id }
+        }).catch(error => {
+            if (error.code === 'P2025')
+                throw new Error('Comentário não encontrado')
+            else
+                throw error
+        })
     }
 
-    async UserByCommentId(req, res) {
-        const id = req.params.id.int()
-        const user = await Prisma.users.findUnique({ where: { id } })
-        res.json(user)
+    async listUserByCommentId(comment_id) { //listar usuário por id do comentario
+        return await Prisma.comment.findUnique({
+            where: { id: comment_id },
+            select: { user_id: true }
+        }).catch(error => {
+            if (error.code === 'P2025')
+                throw new Error('Comentário não encontrado')
+            else
+                throw error
+        })
     }
 }
 
