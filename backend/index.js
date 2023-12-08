@@ -9,6 +9,7 @@ app.use(express.json());
 
 const PORT = 3000;
 
+app.use(authRouter);
 app.use(routerUser);
 app.use(routerComment);
 app.use(routerPost);
