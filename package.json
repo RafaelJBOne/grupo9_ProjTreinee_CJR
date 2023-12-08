@@ -1,5 +1,5 @@
 {
-  "name": "back-end",
+  "name": "testando",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -16,5 +16,6 @@
     "express": "^4.18.2",
     "jsonwebtoken": "^9.0.2",
     "prisma": "^5.7.0"
-  }
+  },
+  "devDependencies": {}
 }
