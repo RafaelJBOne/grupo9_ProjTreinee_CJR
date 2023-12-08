@@ -1,24 +1,21 @@
 import { PrismaClient } from '@prisma/client'
+import Job_title from './job-title-service.js'
 
 const Prisma = new PrismaClient()
+const job_titles = new Job_title()
 
 class Users {
     async createUser(username, email, password, job_title, gender, admin) { // criar usuário 
+        if (job_titles.listJobByName(job_title) === null)
+            job_titles.createJob_title(job_title)
         return await Prisma.users.create({
             data: {
                 username,
                 email,
                 password,
+                job_title,
                 gender,
-                admin,
-                job_title: typeof job_title === 'string'
-                    ? {
-                        connectOrCreate: {
-                            where: { job_title: job_title },
-                            create: { job_title: job_title }
-                        }
-                    }
-                    : undefined
+                admin
             },
         }).catch(error => {
             if (error.code === 'P2002')
