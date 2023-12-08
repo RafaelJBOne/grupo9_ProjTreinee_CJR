@@ -1,5 +1,9 @@
-import jwt from 'jsonwebtoken'
-import Users from '../user/user-service.js'
+import jwt from 'jsonwebtoken';
+import Users from '../user/user-service.js';
+import bcrypt from 'bcrypt';
+import dotenv from 'dotenv'
+
+dotenv.config();
 
 class AuthService {
     async signIn(email, password) {
@@ -7,15 +11,17 @@ class AuthService {
 
         if (!user) throw new Error('Usuário não encontrado')
 
-        if (user.password !== password) throw new Error('Senha incorreta');
+        if (!(await bcrypt.compare(password, user.password))) throw new Error('Senha incorreta');
 
-        const token = jwt.sign({id: user.id}, 'secret', {expiresIn: '15m'})
+        const token = jwt.sign({id: user.id}, process.env.JWT_SECRET, {expiresIn: '15m'})
 
         return {token};
 
     }
 
     async signUp(username, email, password, job_title_id, gender, admin) {
+        const salt = await bcrypt.genSalt()
+        password = await bcrypt.hash(password, salt)
         const newUser = await userService.createUser(username, email, password, job_title_id, gender, admin)
         return newUser
     }
