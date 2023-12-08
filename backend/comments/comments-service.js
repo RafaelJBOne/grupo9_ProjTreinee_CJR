@@ -4,7 +4,7 @@ const Prisma = new PrismaClient()
 
 class Comments {
     async createComment(post_id, user_id, content) { //criar comentario
-        return comment = await Prisma.comments.create({
+        return await Prisma.comments.create({
             data: {
                 post_id,
                 user_id,
@@ -14,7 +14,7 @@ class Comments {
             if (error.code === 'P2025')
                 throw new Error('Post não encontrado')
             else
-                throw error
+                throw Error('erro 1')
         })
     }
 

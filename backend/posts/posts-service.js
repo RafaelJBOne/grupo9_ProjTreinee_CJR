@@ -9,6 +9,11 @@ class Posts {
                 user_id,
                 content,
             }
+        }).catch(error => {
+            if (error.code === 'P2025')
+                throw new Error('Usuário não encontrado')
+            else
+                throw error
         })
     }
 

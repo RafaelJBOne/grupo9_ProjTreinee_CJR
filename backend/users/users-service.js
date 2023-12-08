@@ -3,15 +3,22 @@ import { PrismaClient } from '@prisma/client'
 const Prisma = new PrismaClient()
 
 class Users {
-    async createUser(username, email, password, job_title_id, gender, admin) { // criar usuário 
+    async createUser(username, email, password, job_title, gender, admin) { // criar usuário 
         return await Prisma.users.create({
             data: {
                 username,
                 email,
                 password,
-                job_title_id,
                 gender,
                 admin,
+                job_title: typeof job_title === 'string'
+                    ? {
+                        connectOrCreate: {
+                            where: { job_title: job_title },
+                            create: { job_title: job_title }
+                        }
+                    }
+                    : undefined
             },
         }).catch(error => {
             if (error.code === 'P2002')

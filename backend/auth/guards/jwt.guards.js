@@ -15,7 +15,7 @@ export default function JwtGuard (req, res, next) {
         return res.status(401).json({message: 'Token mal formatado'});
 
     try {
-        const decoded = jwt.verify(token, precess.env.JWT_SECRET);
+        const decoded = jwt.verify(token, process.env.JWT_SECRET);
         req.user = decoded;
         next()
     }

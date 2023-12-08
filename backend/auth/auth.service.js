@@ -15,16 +15,16 @@ class AuthService {
 
         if (!(await bcrypt.compare(password, user.password))) throw new Error('Senha incorreta');
 
-        const token = jwt.sign({id: user.id}, process.env.JWT_SECRET, {expiresIn: '15m'})
+        const token = jwt.sign({id: user.id}, process.env.JWT_SECRET, {expiresIn: '1d'})
 
         return token;
 
     }
 
-    async signUp(username, email, password, job_title_id, gender, admin) {
+    async signUp(username, email, password, job_title, gender, admin) {
         const salt = await bcrypt.genSalt()
         password = await bcrypt.hash(password, salt)
-        const newUser = await userService.createUser(username, email, password, job_title_id, gender, admin)
+        const newUser = await userService.createUser(username, email, password, job_title, gender, admin)
         return newUser
     }
 } 

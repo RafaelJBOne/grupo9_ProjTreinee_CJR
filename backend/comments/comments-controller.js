@@ -12,12 +12,18 @@ routerComment.get('/comments', async (req, res) => { //listar comentarios
 
 routerComment.post('/comments', async (req, res) => { //criar comentario
   const { postId, userId, content } = req.body;
-  const comment = await comment.createComment(postId, userId, content);
-  res.json(comment);
+
+  try {
+    const comentario = await comment.createComment(postId, userId, content);
+    res.json(comentario);
+  }
+  catch (error) {
+    res.status(500).json({ error: error.message });
+  }
 });
 
 routerComment.delete('/comments/:commentId', async (req, res) => { //deletar comentario
-  const commentId = req.params.commentId.int();
+  const commentId = parseInt(req.params.commentId);
 
   try {
     const deletedComment = await comment.deleteComment(commentId);

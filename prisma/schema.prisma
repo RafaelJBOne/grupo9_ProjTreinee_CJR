@@ -10,6 +10,14 @@ datasource db {
   url      = "file:./dev.db"
 }
 
+model Job_title {
+  id         Int      @id @default(autoincrement())
+  name       String   @unique
+  users      Users[]
+  team       String?
+  created_at DateTime @default(now())
+}
+
 model Users {
   id              Int        @id @default(autoincrement())
   username        String     @unique
@@ -17,8 +25,8 @@ model Users {
   profile_picture Bytes?
   gender          String?
   email           String     @unique
-  job_title_id    Int
-  job_title       Job_title  @relation(fields: [job_title_id], references: [id])
+  job             Job_title  @relation(fields: [job_title], references: [name])
+  job_title       String     @default("unemployed") 
   admin           Boolean
   created_at      DateTime   @default(now())
   updated_at      DateTime   @updatedAt
@@ -45,10 +53,3 @@ model Comments {
   content String
 }
 
-model Job_title {
-  id         Int      @id @default(autoincrement())
-  name       String
-  users      Users[]
-  team       String
-  created_at DateTime @default(now())
-}

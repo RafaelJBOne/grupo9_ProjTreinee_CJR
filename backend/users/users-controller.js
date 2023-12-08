@@ -1,6 +1,7 @@
 import Users from './users-service.js';
 import JwtGuard from '../auth/guards/jwt.guards.js';
 import { Router } from 'express';
+import jwt from 'jsonwebtoken'
 
 const routerUser = Router();
 const users = new Users();
@@ -12,7 +13,7 @@ routerUser.get('/users', async (req, res) => { //listar usuários
   res.json(usuariosListados);
 });
 
-routerUser.delete('/users/:userId', JwtGuard, async (req, res) => { //deletar usuário
+routerUser.delete('/users/:id', JwtGuard, async (req, res) => { //deletar usuário
   const user = req.user
 
   if (user.id !== +req.params.id)
@@ -21,7 +22,7 @@ routerUser.delete('/users/:userId', JwtGuard, async (req, res) => { //deletar us
   const {id} = req.params;
 
   try {
-    const deletedUser = await users.deleteUser(userId);
+    const deletedUser = await users.deleteUser(+id);
     res.json(deletedUser);
   } catch (error) {
     res.status(500).json({ error: error.message });
