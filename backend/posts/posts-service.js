@@ -1,49 +1,76 @@
-
 import { PrismaClient } from '@prisma/client'
 
 const Prisma = new PrismaClient()
 
 class Posts {
-    async createPost(req, res) {
-        const newPost = req.body
-        const post = await Prisma.posts.create({ data: newPost })
-        res.json(post)
+    async createPost(user_id, content) { //criar posts
+        return await Prisma.posts.create({
+            data: {
+                user_id,
+                content,
+            }
+        })
     }
 
-    async listPosts(req, res) {
+    async listPosts() { //listar posts
         const posts = await Prisma.posts.findMany()
-        res.json(posts)
+        return posts
     }
 
-    async listPostById(req, res) {
-        const id = req.params.id.int()
-        const post = await Prisma.posts.findUnique({ where: { id } })
-        res.json(post)
+    async listPostsByUserId(user_id) { //listar posts por id do usuário
+        return await Prisma.posts.findMany({
+            where: { user_id: user_id }
+        }).catch(error => {
+            if (error.code === 'P2025')
+                throw new Error('Usuário não encontrado')
+            else
+                throw error
+        })
     }
 
-    async editPost(req, res) {
-        const id = req.params.id.int()
-        const data = req.body
-        const post = await Prisma.posts.update({ where: { id }, data })
-        res.json(post)
+    async editPost(post_id, content) { //editar posts
+        return await Prisma.posts.update({
+            where: { id: post_id },
+            content
+        }).catch(error => {
+            if (error.code === 'P2025')
+                throw new Error('Post não encontrado')
+            else
+                throw error
+        })
     }
 
-    async deletePost(req, res) {
-        const id = req.params.id.int()
-        const post = await Prisma.posts.delete({ where: { id } })
-        res.json(post)
+    async deletePost(post_id) { //deletar posts
+        return await Prisma.posts.delete({
+            where: { id: post_id }
+        }).catch(error => {
+            if (error.code === 'P2025')
+                throw new Error('Post não encontrado')
+            else
+                throw error
+        })
     }
 
-    async listCommentsByPostId(req, res) {
-        const id = req.params.id.int()
-        const comments = await Prisma.comments.findMany({ where: { postId: id } })
-        res.json(comments)
+    async listCommentsByPostId(post_id) { //listar comentarios por id do post
+        return await Prisma.comments.findMany({
+            where: { id: post_id } 
+        }).catch(error => {
+            if (error.code === 'P2025')
+                throw new Error('Post não encontrado')
+            else
+                throw error
+        })
     }
 
-    async UserByPostId(req, res) {
-        const id = req.params.id.int()
-        const user = await Prisma.users.findUnique({ where: { id } })
-        res.json(user)
+    async UserByPostId(post_id) { //listar usuario por id do post
+        return await Prisma.users.findUnique({
+            where: { id: post_id }
+        }).catch(error => {
+            if (error.code === 'P2025')
+                throw new Error('Post não encontrado')
+            else
+                throw error
+        })
     }
 }
 

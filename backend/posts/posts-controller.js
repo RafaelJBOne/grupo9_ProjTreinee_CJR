@@ -6,18 +6,18 @@ const post = new Posts();
 
 // Rotas para posts
 routerPost.get('/posts', async (req, res) => { //listar posts
-  const posts = await prisma.posts.findMany();
+  const posts = await post.listPosts();
   res.json(posts);
 });
 
 routerPost.post('/posts', async (req, res) => { //criar posts
-  const newPost = req.body;
+  const { user_id, content } = req.body;
 
   try {
-    const post = await prisma.posts.create({ data: newPost });
+    const post = await post.createPost(user_id, content);
     res.json(post);
   } catch (error) {
-    res.status(500).json({ error: 'Erro ao criar o post.' });
+    res.status(500).json({ error: error.message });
   }
 });
 
@@ -25,12 +25,10 @@ routerPost.delete('/posts/:postId', async (req, res) => { //deletar post
   const postId = req.params.postId.int();
 
   try {
-    const deletedPost = await prisma.posts.delete({
-      where: { id: postId }
-    });
+    const deletedPost = await post.deletePost(postId);
     res.json(deletedPost);
   } catch (error) {
-    res.status(500).json({ error: 'Erro ao excluir o post.' });
+    res.status(500).json({ error: error.message });
   }
 });
 
