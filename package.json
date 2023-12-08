@@ -1,5 +1,5 @@
 {
-  "name": "back-end",
+  "name": "testando",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -15,5 +15,6 @@
     "dotenv": "^16.3.1",
     "express": "^4.18.2",
     "prisma": "^5.7.0"
-  }
+  },
+  "devDependencies": {}
 }
