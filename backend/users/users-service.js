@@ -3,48 +3,85 @@ import { PrismaClient } from '@prisma/client'
 const Prisma = new PrismaClient()
 
 class Users {
-    async createUser(req, res) {
-        const newUser = req.body
-        const user = await Prisma.users.create({ data: newUser })
-        res.json(user)
+    async createUser(username, email, password, job_title_id, gender, admin) { // criar usuário 
+        return await Prisma.users.create({
+            data: {
+                username,
+                email,
+                password,
+                job_title_id,
+                gender,
+                admin,
+            },
+        }).catch(error => {
+            if (error.code === 'P2002')
+                throw new Error('Email já cadastrado')
+            else
+                throw error
+        })
     }
 
-    async listUsers(req, res) {
+    async listUsers() { // listar usuários
         const users = await Prisma.users.findMany()
-        res.json(users)
+        return users
     }
 
-    async listUserById(req, res) {
-        const id = req.params.id.int()
-        const user = await Prisma.users.findUnique({ where: { id } })
-        res.json(user)
+    async listUserById(id) { // listar usuário por id
+        return await Prisma.users.findUnique({ where: { id } 
+        }).catch(error => {
+            if (error.code === 'P2025')
+                throw new Error('Usuário não encontrado')
+            else
+                throw error
+        })
     }
 
-    async listUserByEmail(req, res) {
-        const email = req.params.email
-        const user = await Prisma.users.findUnique({ where: { email } })
-        res.json(user)
+    async listUserByEmail(email) { // listar usuário por email
+        return await Prisma.users.findUnique({ where: { email } 
+        }).catch(error => {
+            if (error.code === 'P2025')
+                throw new Error('Usuário não encontrado')
+            else
+                throw error
+        })
     }
 
-    async editUser(req, res) {
-        const id = req.params.id.int()
-        const data = req.body
-        const user = await Prisma.users.update({ where: { id }, data })
-        res.json(user)
+    async editUser(id, username, email, password, job_title_id, gender, admin) { // editar usuário
+        return await Prisma.users.update({
+            where: { id },
+            username,
+            email,
+            password,
+            job_title_id,
+            gender,
+            admin,
+        }).catch(error => {
+            if (error.code === 'P2025')
+                throw new Error('Usuário não encontrado')
+            else
+                throw error
+        })
     }
 
-    async deleteUser(req, res) {
-        const id = req.params.id.int()
-        const user = await Prisma.users.delete({ where: { id } })
-        res.json(user)
+    async deleteUser(id) { // deletar usuário
+        return await Prisma.users.delete({ where: { id } 
+        }).catch(error => {
+            if (error.code === 'P2025')
+                throw new Error('Usuário não encontrado')
+            else
+                throw error
+        })
     }
 
-    async listPostsByUserId(req, res) {
-        const id = req.params.id.int()
-        const posts = await Prisma.posts.findMany({ where: { authorId: id } })
-        res.json(posts)
+    async listPostsByUserId(id) { // listar posts por id do usuário
+        return await Prisma.posts.findMany({ where: { authorId: id } 
+        }).catch(error => {
+            if (error.code === 'P2025')
+                throw new Error('Usuário não encontrado')
+            else
+                throw error
+        })
     }
-
 }
 
 export default Users

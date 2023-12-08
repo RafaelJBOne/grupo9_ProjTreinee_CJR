@@ -1,5 +1,4 @@
 import Posts from './posts-service.js';
-
 import { Router } from 'express';
 
 const routerPost = Router();

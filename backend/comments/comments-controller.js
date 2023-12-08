@@ -1,5 +1,4 @@
 import Comments from './comments-service.js';
-
 import { Router } from 'express';
 
 const routerComment = Router();
