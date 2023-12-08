@@ -39,7 +39,6 @@ class Posts {
         const comments = await Prisma.comments.findMany({ where: { postId: id } })
         res.json(comments)
     }
-
-    
-
 }
+
+export default Posts

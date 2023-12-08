@@ -1,3 +1,5 @@
+import Comments from './comments-service.js';
+
 // Rotas para comentários
 app.get('/comments', async (req, res) => { //listar comentarios
     const comments = await prisma.comments.findMany();

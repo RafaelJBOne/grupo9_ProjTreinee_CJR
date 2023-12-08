@@ -1,3 +1,5 @@
+import Posts from './posts-service.js';
+
 // Rotas para posts
 app.get('/posts', async (req, res) => { //listar posts
     const posts = await prisma.posts.findMany();
