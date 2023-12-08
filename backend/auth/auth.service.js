@@ -1,9 +1,11 @@
 import jwt from 'jsonwebtoken';
-import Users from '../user/user-service.js';
+import Users from '../users/users-service.js';
 import bcrypt from 'bcrypt';
 import dotenv from 'dotenv'
 
 dotenv.config();
+
+const userService = new Users();
 
 class AuthService {
     async signIn(email, password) {
@@ -15,7 +17,7 @@ class AuthService {
 
         const token = jwt.sign({id: user.id}, process.env.JWT_SECRET, {expiresIn: '15m'})
 
-        return {token};
+        return token;
 
     }
 

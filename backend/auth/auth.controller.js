@@ -1,5 +1,6 @@
 import {Router} from 'express'
-import AuthService from './auth.service'
+import AuthService from './auth.service.js'
+import { error } from 'console';
 
 const authService = new AuthService()
 const authRouter = Router();
@@ -11,8 +12,8 @@ authRouter.post('/sign-in', async (req, res) => {
         const token = await authService.signIn(email, password);
         res.status(200).json(token);
     }
-    catch  (e) {
-        res.status(400).json({message: e.message});
+    catch  (error) {
+        res.status(400).json({ error: error.message });
     }
 })
 
@@ -21,7 +22,7 @@ authRouter.post('/sign-up', async (req, res) => {
 
     try {
         const NewUser = await authService.signUp(username, email, password, job_title_id, gender, admin)
-        res.status(200).json(newUser)
+        res.status(200).json(NewUser)
     }
     catch (e) {
         res.status(400).json({message: e.message})
