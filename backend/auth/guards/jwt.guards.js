@@ -1,4 +1,7 @@
 import jwt from 'jsonwebtoken'
+import dotenv from 'dotenv'
+
+dotenv.config();
 
 export default function JwtGuard (req, res, next) {
     const authorization = req.headers.authorization;
@@ -12,7 +15,7 @@ export default function JwtGuard (req, res, next) {
         return res.status(401).json({message: 'Token mal formatado'});
 
     try {
-        const decoded = jwt.verify(token, 'secret');
+        const decoded = jwt.verify(token, precess.env.JWT_SECRET);
         req.user = decoded;
         next()
     }
