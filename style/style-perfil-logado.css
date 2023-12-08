@@ -239,7 +239,7 @@ p {
     padding-left: 10px;
   }
 
-  #CreatePost {
+  #openModalBtn {
     background-color: #002F67;
     color: white;
     border: none;
@@ -260,7 +260,7 @@ p {
     margin-top: 16rem;
   }
 
-  #CreatePost {
+  #openModalBtn {
     margin-top: 3rem;
     background-color: #002F67;
     border: none;
@@ -293,7 +293,7 @@ p {
     transform: scale(1.25);
   }
 
-  #CreatePost:hover {
+  #openModalBtn:hover {
     transition: 0.25s;
     transform: scale(1.25);
   }

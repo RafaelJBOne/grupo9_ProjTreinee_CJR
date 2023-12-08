@@ -5,26 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="..\imagens\logoCjr.png" type="image/x-icon">
     <title>TelaPerfilLogada</title>
+    <script src="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.js"></script>
     <link rel="stylesheet" type="text/css" href="../style/style-perfil-logado.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.css">
+    <link rel="stylesheet" type="text/css" href="../style/style-modal.css">
 </head>
 <body>
-    <!--<header id="navbar">
-        <img src="..\imagens\logoCjr.png" id="logoCJR">
-    <div id="Buttons">
-        <div id="UserData">
-            <h1>Usuário 1</h1>
-            <a href="..\TelasDePerfil\TelaPerfilLogada.html">
-                <img src="..\imagens\pfp.jpg" id="navpfp">
-            </a>
-        </div>
-        <div id="Sair">
-            <a href="..\TelasDePerfil\TelaPerfilDeslogada.html">
-                <img id="exit" src="..\imagens\Botão Sair.png">
-            </a>
-        </div>   
-    </div>
-    </header>-->
-
     <header id="navbar">
         <img src="..\imagens\Logo Azul-Verde.png" alt="logo da cjr" id="logo-cjr">
     
@@ -66,9 +52,18 @@
                 <a href="modal de editar perfil">
                     <button id="EditProfile">Editar Perfil</button>
                 </a>
-                <a href="modal de criar post">
-                    <button id="CreatePost">Criar Post</button>
-                </a>
+                    <button id="openModalBtn">Criar Post</button>
+<div id="createPostModal" class="modal">
+    <div class="modal-content">
+            <span class="close" id="closeModalBtn">&times;</span>
+            <h2>Criar Publicação</h2>
+            <textarea id="postContent"></textarea>
+            <input type="file" id="imageInput" accept="image/*">
+                    
+            <button id="publishPostBtn">Publicar</button>
+    </div>
+</div>
+
             </div>
         </div>
         <div id="Publicações">
@@ -117,6 +112,8 @@
                 </div>
             </div>
     </div>
-    
+
+    <script src="../scripts/modal-feed.js"></script>
+
 </body>
 </html>
