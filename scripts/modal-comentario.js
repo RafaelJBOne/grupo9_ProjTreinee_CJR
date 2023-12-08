@@ -25,10 +25,10 @@ window.addEventListener("click", (event) => {
     }
 });
 
-const submitCommentBtn = document.getElementById("publishCommentBtn"); // CORREÇÃO AQUI
-submitCommentBtn.addEventListener("click", () => { // CORREÇÃO AQUI
+const submitCommentBtn = document.getElementById("publishCommentBtn"); 
+submitCommentBtn.addEventListener("click", () => {
     const commentContent = simplemde.value();
-    console.log("Conteúdo do Comentário:", commentContent); // CORREÇÃO AQUI
+    console.log("Conteúdo do Comentário:", commentContent);
     createCommentModal.style.display = "none";
 });
 
