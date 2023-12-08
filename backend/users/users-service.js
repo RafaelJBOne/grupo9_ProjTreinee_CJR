@@ -6,14 +6,17 @@ const job_titles = new Job_title()
 
 class Users {
     async createUser(username, email, password, job_title, gender, admin) { // criar usuário 
-        if (job_titles.listJobByName(job_title) === null)
-            job_titles.createJob_title(job_title)
+
+
+        const job = await job_titles.listJobByName(job_title) ?? await job_titles.createJob_title(job_title)
+
+        console.log(job)
         return await Prisma.users.create({
             data: {
                 username,
                 email,
                 password,
-                job_title,
+                job_title_id: job.id,
                 gender,
                 admin
             },
