@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Tela do Feed Logado">
+    <link rel="shortcut icon" href="..\imagens\logoCjr.png" type="image/x-icon">
+    <link rel="stylesheet" href="../style/style-perfil-deslogado.css">
+    <title>Feed Deslogado</title>
+</head>
+
+<!--<header>
+    <div id="logo-cjr">
+        <img src="..\imagens\logoCjr.png" alt="logo da cjr">
+    </div>
+
+    <div id="Header-Right">
+         Redireciona para a TELA DE CADASTRO ao clicar no botão Criar Conta
+        <div>
+            <a href="..\telaLogin\cadastro.html">
+                <button id="botao-de-criar-conta">
+                    Criar conta
+                </button>
+            </a>
+        </div>
+
+         Redireciona pra TELA DE LOGIN ao clicar no botão Entrar 
+        <div>
+            <a href="..\telaLogin\login.html">
+                <button id="botao-de-entrar">
+                    Entrar
+                </button>
+            </a>
+        </div>
+    </div>
+
+</header>-->
+<header>
+    <!--HEADER DA TELA DE LOGIN-->
+    <img id="logoHeader" src="..\imagens\Logo Azul-Verde.png" alt="Logo CJR">
+
+    <div id="log_botoesHeader">
+        <a href="..\telaLogin\cadastro.html">
+            <button id="botaoCriarConta">Criar conta</button>
+        </a>
+
+        <a href="..\telaLogin\login.html">
+            <button id="botaoEntrar">Entrar</button>
+        </a>
+        
+    </div>
+</header>
+
+<br><br>
+
+<body>
+    <div id="Coluna-publicacoes">
+        <div id="Titulo-publicacoes">
+            <h1>Publicações</h1>
+        </div>
+        
+        <div id="Publicacao1" class="publicacoes">
+            <div class="UsernDate">
+                <!-- Redireciona para TELA DE PERFIL DESLOGADO ao clicar na foto de perfil (AINDA NÃO CRIADA) -->
+                <a href="..\TelasDePerfil\TelaPerfilDeslogada.html">
+                    <button class="botoes-foto-perfil-publicacao">
+                        <img src="..\imagens\pfp.jpg " alt="Foto de Perfil">
+                    </button>
+                </a>
+                <a href="..\TelasDePerfil\TelaPerfilDeslogada.html">
+                    <button class="botoes-nome-usuario-publicacao">    
+                        <h1>Usuário 1</h1>
+                    </button>
+                </a>
+                <h2>22/10/2023</h2>
+            </div>
+            <!-- Abre a TELA DE COMENTÁRIOS DESLOGADA ao clicar na publicacao -->
+            <a href="..\TelasDeComentário\TelaComentarioDeslogada.html" class="texto-publicacao">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque, ab modi et commodi delectus ad quos
+                    nemo quis vel itaque voluptatem labore vitae dolorum totam voluptatibus ipsum perspiciatis. Officiis,
+                    dignissimos.</p>
+            </a>
+        </div>
+
+        <div id="Publicacao2" class="publicacoes">
+            
+            <div class="UsernDate">
+                <!-- Redireciona para TELA DE PERFIL DESLOGADO ao clicar na foto de perfil (AINDA NÃO CRIADA) -->
+                <a href="..\TelasDePerfil\TelaPerfilDeslogada.html">
+                    <button class="botoes-foto-perfil-publicacao">
+                        <img class="foto-perfil-publicacao" src="..\imagens\pfp.jpg " alt="Foto de Perfil">
+                    </button>
+                </a>
+                <a href="..\TelasDePerfil\TelaPerfilDeslogada.html">
+                    <button class="botoes-nome-usuario-publicacao">      
+                        <h1>Usuário 2</h1>
+                    </button>
+                </a>
+                <h2>22/10/2023</h2>
+            </div>
+            <!-- Abre a TELA DE COMENTÁRIOS DESLOGADA ao clicar na publicacao -->
+            <a href="..\TelasDeComentário\TelaComentarioDeslogada.html " class="texto-publicacao">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In dignissimos dicta et sequi consequuntur,
+                    voluptatum sapiente quasi esse consequatur nobis, beatae deleniti corrupti assumenda quas nulla
+                    quisquam, ipsum reprehenderit neque?</p>
+            </a>
+        </div>
+
+        <div id="Publicacao3" class="publicacoes">
+            <div class="UsernDate">
+                <!-- Redireciona para TELA DE PERFIL DESLOGADO ao clicar na foto de perfil (AINDA NÃO CRIADA) -->
+                <a href="..\TelasDePerfil\TelaPerfilDeslogada.html">
+                    <button class="botoes-foto-perfil-publicacao">
+                        <img class="foto-perfil-publicacao" src="..\imagens\pfp.jpg " alt="Foto de Perfil">
+                    </button>
+                </a>
+                <a href="..\TelasDePerfil\TelaPerfilDeslogada.html">
+                    <button class="botoes-nome-usuario-publicacao">  
+                        <h1>Usuário 1</h1>
+                    </button>
+                </a>
+                <h2>22/10/2023</h2>
+            </div>
+            <!-- Abre a TELA DE COMENTÁRIOS DESLOGADA ao clicar na publicacao -->
+            <a href="..\TelasDeComentário\TelaComentarioDeslogada.html" class="texto-publicacao">
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate, ipsum ipsa earum magnam odio
+                    repellat corrupti? Tempore dolor voluptates quam consequuntur culpa neque dicta aut quasi, fugit sed hic
+                    vel.</p>
+            </a>
+            <!-- Imagem da publicacao a ser usada do banco de dados -->
+            <img id="Imagem-publicacao" src="..\imagens\pup_seal.jpg" alt="imagem da publicacao">
+        </div>
+    </div>
+
+    <script>
+        // Função para carregar as publicações do backend e exibir na página
+        async function loadPublications() {
+            try {
+                const response = await fetch('http://localhost:3000/posts');
+                const publications = await response.json();
+
+                const publicationsContainer = document.getElementById('Coluna-publicacoes');
+                publicationsContainer.innerHTML = '';
+
+                publications.forEach(publication => {
+                    const publicationDiv = document.createElement('div');
+                    publicationDiv.id = `Publicacao${publication.id}`;
+                    publicationDiv.className = 'publicacoes';
+
+                    // Crie a estrutura HTML para exibir a publicação (modifique conforme necessário)
+                    publicationDiv.innerHTML = `
+                        <div class="UsernDate">
+                            <a href="..\TelasDePerfil\TelaPerfilDeslogada.html">
+                                <button class="botoes-foto-perfil-publicacao">
+                                    <img src="..\imagens\pfp.jpg" alt="Foto de Perfil">
+                                </button>
+                            </a>
+                            <a href="..\TelasDePerfil\TelaPerfilDeslogada.html">
+                                <button class="botoes-nome-usuario-publicacao">    
+                                    <h1>${publication.username}</h1>
+                                </button>
+                            </a>
+                            <h2>${publication.created_at}</h2>
+                        </div>
+                        <a href="..\TelasDeComentário\TelaComentarioDeslogada.html" class="texto-publicacao">
+                            <p>${publication.content}</p>
+                        </a>
+                    `;
+
+                    publicationsContainer.appendChild(publicationDiv);
+                });
+            } catch (error) {
+                console.error('Erro ao carregar publicações:', error);
+            }
+        }
+
+        // Carrega as publicações ao carregar a página
+        loadPublications();
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="..\imagens\logoCjr.png" type="image/x-icon">
+    <title>TelaPerfilLogada</title>
+    <script src="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="../style/style-perfil-logado.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.css">
+    <link rel="stylesheet" type="text/css" href="../style/style-modal.css">
+</head>
+<body>
+    <header id="navbar">
+        <img src="..\imagens\Logo Azul-Verde.png" alt="logo da cjr" id="logo-cjr">
+    
+    <div id="Right">
+        <a href="..\TelasDePerfil\TelaPerfilLogada.html">
+            <button id="Username">
+                <h1>Usuário 1</h1>
+            </button>
+        </a>
+        <a href="..\TelasDePerfil\TelaPerfilLogada.html">
+            <button id="userpfp">
+                <img src="..\imagens\pfp.jpg" id="pfp1">
+            </button>
+        </a>
+        <a href="TelaPerfilDeslogada.html">
+            <button id="exit">
+                <img src="..\imagens\Botão Sair.png" alt="Botão de sair">
+            </button>
+        </a>
+    </div>
+</header>
+
+    <div id="CenterColumn">
+        <div id="ProfileBox">
+            <div id="PBright"><img src="..\imagens\pfp.jpg" id="mainpfp">
+                <h1 id="mainuser">Usuário 1</h1>
+                <div id="info">
+                    <div id="job">
+                        <img src="..\imagens\Emprego.png" id="Emprego">
+                        <h2>Fotógrafo</h2>
+                    </div>
+                    <div id="mail">
+                        <img src="..\imagens\Email.png" id="Email">
+                        <h2>Usuario1.23@cjr.org.br</h2>
+                    </div>
+                </div>
+            </div>
+            <div id="Buttons1">
+                <a href="modal de editar perfil">
+                    <button id="EditProfile">Editar Perfil</button>
+                </a>
+                    <button id="openModalBtn">Criar Post</button>
+<div id="createPostModal" class="modal">
+    <div class="modal-content">
+            <span class="close" id="closeModalBtn">&times;</span>
+            <h2>Criar Publicação</h2>
+            <textarea id="postContent"></textarea>
+            <input type="file" id="imageInput" accept="image/*">
+                    
+            <button id="publishPostBtn">Publicar</button>
+    </div>
+</div>
+
+            </div>
+        </div>
+        <div id="Publicações">
+            <h1 id="title">Publicações</h1>
+            <div id="Publicação-1">
+                <div id="Top">
+                    <div id="UsernDate">
+                        <img src="..\imagens\pfp.jpg" id="pfp">
+                        <h1>Usuário 1</h1>
+                        <h1>22/02/2022</h1>
+                    </div>
+                    <a href="CONFIRMACAO_EXCLUSAO.HTML">
+                        <img src="..\imagens\Botão Excluir.png" id="delete">
+                    </a>
+                </div>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vel quam nam nostrum repudiandae, architecto qui nobis nulla amet accusantium. In blanditiis impedit sint illum architecto ea qui ex nostrum ad!</p>
+                <div id="Bottom">
+                    <a href="MODAL_DE_CRIAR_COMENTARIO.HTML">
+                        <img src="..\imagens\Botão Comentar.png" id="comment">
+                    </a>
+                    <a href="MODAL_DE_CRIAR_POST">
+                        <img src="..\imagens\Botão Editar.png" id="edit">
+                    </a>
+                </div>
+            </div>
+            <div id="Publicação-2">
+                <div id="Top">
+                    <div id="UsernDate">
+                        <img src="..\imagens\pfp.jpg" id="pfp">
+                        <h1>Usuário 1</h1>
+                        <h1>22/02/2022</h1>
+                    </div>
+                    <a href="CONFIRMACAO_EXCLUSAO.HTML">
+                        <img src="..\imagens\Botão Excluir.png" id="delete">
+                    </a>
+                </div>
+                <img id="foca" src="..\imagens\pup_seal.jpg" alt="imagem do comentário">
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vel quam nam nostrum repudiandae, architecto qui nobis nulla amet accusantium. In blanditiis impedit sint illum architecto ea qui ex nostrum ad!</p>
+                <div id="Bottom">
+                    <a href="MODAL_DE_CRIAR_COMENTARIO.HTML">
+                        <img src="..\imagens\Botão Comentar.png" id="comment">
+                    </a>
+                    <a href="MODAL_DE_CRIAR_POST">
+                        <img src="..\imagens\Botão Editar.png" id="edit">
+                    </a>
+                </div>
+            </div>
+    </div>
+
+    <script src="../scripts/modal-feed.js"></script>
+
+</body>
+</html>
