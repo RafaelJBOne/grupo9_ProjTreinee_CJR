@@ -7,10 +7,8 @@ const job_titles = new Job_title()
 class Users {
     async createUser(username, email, password, job_title, gender, admin) { // criar usuário 
 
+        const job = await job_titles.listJobByName(job_title) ?? await job_titles.createJob_title(job_title) // verifica se o cargo já existe, se não existir cria um novo cargo
 
-        const job = await job_titles.listJobByName(job_title) ?? await job_titles.createJob_title(job_title)
-
-        console.log(job)
         return await Prisma.users.create({
             data: {
                 username,

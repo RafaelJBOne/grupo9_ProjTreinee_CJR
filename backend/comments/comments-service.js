@@ -14,7 +14,7 @@ class Comments {
             if (error.code === 'P2025')
                 throw new Error('Post não encontrado')
             else
-                throw Error('erro 1')
+                throw error
         })
     }
 

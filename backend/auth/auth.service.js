@@ -15,7 +15,7 @@ class AuthService {
 
         if (!(await bcrypt.compare(password, user.password))) throw new Error('Senha incorreta');
 
-        const token = jwt.sign({id: user.id}, process.env.JWT_SECRET, {expiresIn: '1d'})
+        const token = jwt.sign({id: user.id}, process.env.JWT_SECRET, {expiresIn: '60m'})
 
         return token;
 

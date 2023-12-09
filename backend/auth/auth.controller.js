@@ -5,7 +5,7 @@ import { error } from 'console';
 const authService = new AuthService()
 const authRouter = Router();
 
-authRouter.post('/sign-in', async (req, res) => {
+authRouter.post('/sign-in', async (req, res) => { // logar usuário
     const { email, password } = req.body;
 
     try {
@@ -17,7 +17,7 @@ authRouter.post('/sign-in', async (req, res) => {
     }
 })
 
-authRouter.post('/sign-up', async (req, res) => {
+authRouter.post('/sign-up', async (req, res) => { // cadastrar usuário
     const { username, email, password, job_title, gender, admin } = req.body;
 
     try {
