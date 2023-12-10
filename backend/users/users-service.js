@@ -16,7 +16,7 @@ class Users {
                 password,
                 job_title_id: job.id,
                 gender,
-                admin
+                admin: false
             },
         }).catch(error => {
             if (error.code === 'P2002')
