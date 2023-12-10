@@ -5,10 +5,10 @@ const user = new Users()
 const Prisma = new PrismaClient()
 
 class Posts {
-    async createPost(user_id, content) { //criar posts
+    async createPost(email, content) { //criar posts
         return await Prisma.posts.create({
             data: {
-                user_id,
+                email,
                 content,
             }
         }).catch(error => {

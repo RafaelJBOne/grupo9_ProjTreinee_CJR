@@ -11,9 +11,10 @@ routerPost.get('/posts', async (req, res) => { //listar posts
 });
 
 routerPost.post('/posts', async (req, res) => { //criar posts
-  const { user_id, content } = req.body;
+  const { email, content } = req.body;
+  console.log( email, content );
   try {
-    const publicacao = await post.createPost(user_id, content);
+    const publicacao = await post.createPost(email, content);
     res.json(publicacao);
   } catch (error) {
     res.status(500).json({ error: error.message });

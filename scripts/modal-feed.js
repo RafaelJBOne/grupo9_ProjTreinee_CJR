@@ -5,7 +5,7 @@ const closeModalBtn = document.getElementById('closeModalBtn');
 // Variável para verificar se o modal está aberto
 let isModalOpen = false;
 
-const simplemde = new SimpleMDE({ element: document.getElementById('postContent') });
+const simplemde = new simplemde({ element: document.getElementById('postContent') });
 
 openModalBtn.addEventListener('click', () => {
     // Verifique se o modal já está aberto antes de tentar abri-lo novamente
@@ -45,12 +45,13 @@ publishPostBtn.addEventListener('click', async () => { // criar publicação
         // Crie um objeto FormData para enviar dados binários (imagem)
         const formData = new FormData();
         formData.append('content', postContent);
-        formData.append('image', imageFile);
+        console.log(postContent)
+        // formData.append('image', imageFile);
 
         const response = await fetch('http://localhost:3000/posts', {
             method: 'POST',
-            user,
-            content: formData,
+            email: JSON.parse(localStorage.getItem('email')),
+            content: postContent,
             headers: {
                 "Content-Type": "application/json",
               },
