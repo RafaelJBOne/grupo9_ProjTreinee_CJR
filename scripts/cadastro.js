@@ -1,7 +1,8 @@
+
 document.addEventListener('DOMContentLoaded', () => {
     const signUpForm = document.querySelector('.fm');
 
-    signUpForm.addEventListener('submit', async (event) => {
+    signUpForm.addEventListener('submit', async (event) => { 
         event.preventDefault();
 
         const username = document.getElementById('nome').value;
@@ -10,32 +11,20 @@ document.addEventListener('DOMContentLoaded', () => {
         const job_title = document.getElementById('cargo').value;
         const gender = document.getElementById('genero').value;
 
-
-
-
-        try {
-            const body = JSON.stringify({
-                username,
-                email,
-                password,
-                job_title,
-                gender,
-                admin: false,
-            })
-
-            console.log(body)
-            
-            const response = await fetch('http://localhost:3000/sign-up', {
-                // mode: 'no-cors',
+        try {            
+            const response = await fetch('http://localhost:3000/sign-up', { // cadastrar usuário
                 method: 'POST',
                 headers: {
-                    "Content-Type": "application/json",
-                    
-                },
-                body: body,
+                    "Content-Type": "application/json",},
+                body: JSON.stringify({
+                    username,
+                    email,
+                    password,
+                    job_title,
+                    gender,
+                    admin: false,
+                }),
             });
-
-            
 
             if (response.ok) {
                 // Handle successful registration (redirect or show a success message)
@@ -49,19 +38,4 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
-  
-// async function posts(){
-//     const response = await fetch('http://localhost:3000/posts', {
-//         mode: 'no-cors',
-//         method: 'GET',
-//         headers: {
-//             'Content-Type': 'application/json',
-//         }
-//     })
-
-// console.log(response)
-// }
-
-// posts()
-
 
