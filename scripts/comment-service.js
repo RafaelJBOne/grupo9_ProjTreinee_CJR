@@ -6,9 +6,9 @@ async function getComments() {
   }
 
   async function createComment() {
-    const post_id = 
-    const user_id = 
-    const content = 
+    const post_id = ,
+    const user_id = ,
+    const content = ,
     const response = await fetch("http://localhost:3000/comments");
     const movies = await response.json();
     console.log(movies);

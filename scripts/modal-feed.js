@@ -17,15 +17,13 @@ openModalBtn.addEventListener('click', () => {
     }
 });
 
-// Fecha o modal
-closeModalBtn.addEventListener('click', () => {
+closeModalBtn.addEventListener('click', () => { // fechar modal
     createPostModal.style.display = 'none';
     // createPostModal = 'null';
     isModalOpen = false;
 });
 
-// Fecha o modal ao clicar fora dele
-window.addEventListener('click', (event) => {
+window.addEventListener('click', (event) => { // fechar modal ao clicar fora dele
     if (event.target === createPostModal) {
         createPostModal.style.display = 'none';
         // createPostModal = 'null';
@@ -33,16 +31,15 @@ window.addEventListener('click', (event) => {
     }
 });
 
-// Manipula a submissão da publicação
-const publishPostBtn = document.getElementById('publishPostBtn');
-const postContentInput = document.getElementById('postContent');
-const imageInput = document.getElementById('imageInput');
+const publishPostBtn = document.getElementById('publishPostBtn'); // botao de publicar publicação
+const postContentInput = document.getElementById('postContent'); // obter conteúdo da publicação
+const imageInput = document.getElementById('imageInput'); // obter imagem da publicação
 
-publishPostBtn.addEventListener('click', async () => {
+publishPostBtn.addEventListener('click', async () => { // criar publicação
     const postContent = postContentInput.value;
 
     // Obtenha o arquivo de imagem
-    const imageFile = imageInput.files[0];
+    const imageFile = imageInput.files[0]; //
 
     try {
         // Crie um objeto FormData para enviar dados binários (imagem)

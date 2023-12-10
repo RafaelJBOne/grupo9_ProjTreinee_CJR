@@ -47,7 +47,6 @@ publishCommentBtn.addEventListener('click', async () => { // criar comentário
 
         const response = await fetch('http://localhost:3000/comments', { // rota para enviar/receber dados do comentario
             method: 'POST',
-            mode: "no-cors",
             body: formData,
             headers: {
                 "Content-Type": "application/json",
@@ -80,21 +79,22 @@ async function loadComments() { // carregar comentarios
             commentDiv.id = `Comentario${comment.id}`;
             commentDiv.className = 'comentarios';
 
+            // Crie a estrutura HTML para exibir o comentário (modifique conforme necessário)
             commentDiv.innerHTML = `
                 <div class="UsernDate">
-                    <a href="..\TelasDePerfil\TelaPerfilDeslogada.html">
+                    <a href=".\TelaPerfilDeslogada.html">
                         <button class="botoes-foto-perfil-publicacao">
                             <img src="..\imagens\pfp.jpg" alt="Foto de Perfil">
                         </button>
                     </a>
-                    <a href="..\TelasDePerfil\TelaPerfilDeslogada.html">
+                    <a href=".\TelaPerfilDeslogada.html">
                         <button class="botoes-nome-usuario-publicacao">    
                             <h1>${comment.username}</h1>
                         </button>
                     </a>
                     <h2>${comment.created_at}</h2>
                 </div>
-                <a href="..\TelasDeComentário\TelaComentarioDeslogada.html" class="texto-publicacao">
+                <a href=".\TelaComentarioDeslogada.html" class="texto-publicacao">
                     <p>${comment.content}</p>
                 </a>
             `;

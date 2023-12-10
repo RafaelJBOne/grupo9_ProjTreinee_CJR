@@ -201,7 +201,11 @@
     </div>
     <script>
         
-        // Função para carregar as publicações do backend e exibir na página
+        // import { createPost } from '../scripts/create-post.js';
+
+        // const PostCreated = new createPost();
+
+        // // Função para carregar as publicações do backend e exibir na página
         async function loadPublications() {
             try {
                 const response = await fetch('http://localhost:3000/posts');
@@ -219,12 +223,12 @@
                     publicationDiv.innerHTML = `
                         <div class="topo-publicacoes">
                             <div class="UsernDate">
-                                <a href="..\TelasDePerfil\TelaPerfilLogada.html">
+                                <a href="./TelaPerfilLogada.html">
                                     <button class="botoes-foto-perfil-publicacao">
                                         <img src="${publication.profile_picture}" alt="Foto de Perfil">
                                     </button>
                                 </a>
-                                <a href="..\TelasDePerfil\TelaPerfilLogada.html">
+                                <a href="./TelaPerfilLogada.html">
                                     <button class="botoes-nome-usuario-publicacao">
                                         <h1>${publication.username}</h1>
                                     </button>
@@ -235,26 +239,26 @@
                             
                             <a href="CONFIRMACAO_EXCLUSAO.HTML">
                                 <button class="botoes-excluir">
-                                    <img src="..\imagens\Botão Excluir.png" alt="Lixeira">
+                                    <img src="../imagens/Botão Excluir.png" alt="Lixeira">
                                 </button>
                             </a>
                         </div>
     
                         <div class="conteudo-publicacoes">
-                            <a href="..\TelasDeComentário\TelaComentarioLogada.html" class="texto-publicacao">
+                            <a href="./TelaComentarioLogada.html" class="texto-publicacao">
                                 <p>${publication.content}</p>
                             </a>
                         </div>
     
                         <a href="CRIAR_COMENTARIO.HTML">
                             <button class="botoes-criar-comentario">
-                                <img src="..\imagens\Botão Comentar.png" alt="Comentário">
+                                <img src="../imagens/Botão Comentar.png" alt="Comentário">
                             </button>
                         </a>
     
                         <a href="EDITAR_COMENTÁRIO.HTML">
                             <button class="botoes-editar-comentario-ou-post">
-                                <img src="..\imagens\Botão Editar.png" alt="Editar">
+                                <img src="../imagens/Botão Editar.png" alt="Editar">
                             </button>
                         </a>
                     `;
@@ -266,8 +270,11 @@
             }
         }
     
+        // PostCreated.loadPublications();
+
         // Carrega as publicações ao carregar a página
         loadPublications();
+
     </script>
 
     <script src="../scripts/modal-feed.js"></script>
