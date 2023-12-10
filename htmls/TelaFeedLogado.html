@@ -37,10 +37,6 @@
             </a>
         </div>
     </header>
-    
-        
-
-    </header>
 
     <div id="Coluna-publicacoes">
         <div id="titulo-mais-botao-criar-post">
@@ -63,7 +59,9 @@
                 </div>
             </div>
         </div>
+        <div id="publications">
 
+        </div>
         <!--<div id="Publicacao1" class="publicacoes">
             <div class="topo-publicacoes">
                 <div class="UsernDate">
@@ -207,7 +205,7 @@
                 const response = await fetch('http://localhost:3000/posts');
                 const publications = await response.json();
     
-                const publicationsContainer = document.getElementById('Coluna-publicacoes');
+                const publicationsContainer = document.getElementById('publications');
                 publicationsContainer.innerHTML = '';
     
                 publications.forEach(publication => {
@@ -219,7 +217,7 @@
                     publicationDiv.innerHTML = `
                         <div class="topo-publicacoes">
                             <div class="UsernDate">
-                                <a href="..\TelasDePerfil\TelaPerfilLogada.html">
+                                <a href="../TelasDePerfil/TelaPerfilLogada.html">
                                     <button class="botoes-foto-perfil-publicacao">
                                         <img src="${publication.profile_picture}" alt="Foto de Perfil">
                                     </button>
