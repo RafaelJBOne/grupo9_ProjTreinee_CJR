@@ -89,6 +89,7 @@ body {
     justify-content: center;
     margin: 0 auto;
     width: 40%;
+    margin-top: 100px;
 }
 
 #titulo-mais-botao-criar-post {
@@ -138,9 +139,7 @@ body {
     transform: scale(1.25);
 }
 
-#Publicacao1,
-#Publicacao2,
-#Publicacao3 {
+#Publicacao {
     /* 
     width: 100%;
     margin: 20px; 

@@ -51,17 +51,17 @@
             <!-- Fazer a Chamada do Back-End - Fetch API pra Superposição da tela de Criar Post -->
             <button id="openModalBtn">Criar Publicação</button>
 
-<!-- Modal para criar publicações -->
-<div id="createPostModal" class="modal">
-    <div class="modal-content">
-        <span class="close" id="closeModalBtn">&times;</span>
-        <h2>Criar Publicação</h2>
-        <textarea id="postContent"></textarea>
-        <input type="file" id="imageInput" accept="image/*">
+            <!-- Modal para criar publicações -->
+            <div id="createPostModal" class="modal">
+                <div class="modal-content">
+                    <span class="close" id="closeModalBtn">&times;</span>
+                    <h2>Criar Publicação</h2>
+                    <textarea id="postContent"></textarea>
+                    <input type="file" id="imageInput" accept="image/*">
 
-        <button id="publishPostBtn">Publicar</button>
-    </div>
-</div>
+                    <button id="publishPostBtn">Publicar</button>
+                </div>
+            </div>
         </div>
 
         <!--<div id="Publicacao1" class="publicacoes">
@@ -212,7 +212,7 @@
     
                 publications.forEach(publication => {
                     const publicationDiv = document.createElement('div');
-                    publicationDiv.id = `Publicacao${publication.id}`;
+                    publicationDiv.id = `Publicacao`;
                     publicationDiv.className = 'publicacoes';
     
                     // Crie a estrutura HTML para exibir a publicação (modifique conforme necessário)
@@ -235,7 +235,7 @@
                             
                             <a href="CONFIRMACAO_EXCLUSAO.HTML">
                                 <button class="botoes-excluir">
-                                    <img src="..\imagens\Botão Excluir.png" alt="Lixeira">
+                                    <img src="../imagens/Botão Excluir.png" alt="Lixeira">
                                 </button>
                             </a>
                         </div>
@@ -248,13 +248,13 @@
     
                         <a href="CRIAR_COMENTARIO.HTML">
                             <button class="botoes-criar-comentario">
-                                <img src="..\imagens\Botão Comentar.png" alt="Comentário">
+                                <img src="../imagens/Botão Comentar.png" alt="Comentário">
                             </button>
                         </a>
     
                         <a href="EDITAR_COMENTÁRIO.HTML">
                             <button class="botoes-editar-comentario-ou-post">
-                                <img src="..\imagens\Botão Editar.png" alt="Editar">
+                                <img src="../imagens/Botão Editar.png" alt="Editar">
                             </button>
                         </a>
                     `;
