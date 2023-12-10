@@ -37,10 +37,6 @@
             </a>
         </div>
     </header>
-    
-        
-
-    </header>
 
     <div id="Coluna-publicacoes">
         <div id="titulo-mais-botao-criar-post">
@@ -63,7 +59,9 @@
                 </div>
             </div>
         </div>
+        <div id="publications">
 
+        </div>
         <!--<div id="Publicacao1" class="publicacoes">
             <div class="topo-publicacoes">
                 <div class="UsernDate">
@@ -200,18 +198,13 @@
         </div>-->
     </div>
     <script>
-        
-        // import { createPost } from '../scripts/create-post.js';
-
-        // const PostCreated = new createPost();
-
-        // // Função para carregar as publicações do backend e exibir na página
+        // Função para carregar as publicações do backend e exibir na página
         async function loadPublications() {
             try {
                 const response = await fetch('http://localhost:3000/posts');
                 const publications = await response.json();
     
-                const publicationsContainer = document.getElementById('Coluna-publicacoes');
+                const publicationsContainer = document.getElementById('publications');
                 publicationsContainer.innerHTML = '';
     
                 publications.forEach(publication => {
@@ -223,14 +216,14 @@
                     publicationDiv.innerHTML = `
                         <div class="topo-publicacoes">
                             <div class="UsernDate">
-                                <a href="./TelaPerfilLogada.html">
+                                <a href="../TelasDePerfil/TelaPerfilLogada.html">
                                     <button class="botoes-foto-perfil-publicacao">
                                         <img src="${publication.profile_picture}" alt="Foto de Perfil">
                                     </button>
                                 </a>
-                                <a href="./TelaPerfilLogada.html">
+                                <a href="..\TelasDePerfil\TelaPerfilLogada.html">
                                     <button class="botoes-nome-usuario-publicacao">
-                                        <h1>${publication.username}</h1>
+                                        <h1>${publication.user_id}</h1>
                                     </button>
                                 </a>
     
@@ -245,7 +238,7 @@
                         </div>
     
                         <div class="conteudo-publicacoes">
-                            <a href="./TelaComentarioLogada.html" class="texto-publicacao">
+                            <a href="..\TelasDeComentário\TelaComentarioLogada.html" class="texto-publicacao">
                                 <p>${publication.content}</p>
                             </a>
                         </div>
@@ -270,11 +263,8 @@
             }
         }
     
-        // PostCreated.loadPublications();
-
         // Carrega as publicações ao carregar a página
         loadPublications();
-
     </script>
 
     <script src="../scripts/modal-feed.js"></script>
