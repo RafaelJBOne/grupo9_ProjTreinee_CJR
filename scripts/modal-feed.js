@@ -5,7 +5,7 @@ const closeModalBtn = document.getElementById('closeModalBtn');
 // Variável para verificar se o modal está aberto
 let isModalOpen = false;
 
-const simplemde = new simplemde({ element: document.getElementById('postContent') });
+const simplemde = new SimpleMDE({ element: document.getElementById('postContent') });
 
 openModalBtn.addEventListener('click', () => {
     // Verifique se o modal já está aberto antes de tentar abri-lo novamente
