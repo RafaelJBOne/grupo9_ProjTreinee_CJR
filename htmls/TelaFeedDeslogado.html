@@ -59,6 +59,9 @@
         <div id="Titulo-publicacoes">
             <h1>Publicações</h1>
         </div>
+        <div id="publications">
+
+        </div>
         
         <!--<div id="Publicacao1" class="publicacoes">
             <div class="UsernDate">
@@ -140,12 +143,12 @@
                 const response = await fetch('http://localhost:3000/posts');
                 const publications = await response.json();
 
-                const publicationsContainer = document.getElementById('Coluna-publicacoes');
+                const publicationsContainer = document.getElementById('publications');
                 publicationsContainer.innerHTML = '';
 
                 publications.forEach(publication => {
                     const publicationDiv = document.createElement('div');
-                    publicationDiv.id = `Publicacao${publication.id}`;
+                    publicationDiv.id = `Publicacao`;
                     publicationDiv.className = 'publicacoes';
 
                     // Crie a estrutura HTML para exibir a publicação (modifique conforme necessário)

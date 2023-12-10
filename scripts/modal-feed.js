@@ -49,7 +49,9 @@ publishPostBtn.addEventListener('click', async () => { // criar publicação
 
         const response = await fetch('http://localhost:3000/posts', {
             method: 'POST',
-            body: formData,
+            user,
+            content: formData,
+            created_at,
             headers: {
                 "Content-Type": "application/json",
               },
