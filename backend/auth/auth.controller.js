@@ -18,7 +18,8 @@ authRouter.post('/sign-in', async (req, res) => { // logar usuário
 })
 
 authRouter.post('/sign-up', async (req, res) => { // cadastrar usuário
-    const { username, email, password, job_title, gender, admin } = req.body;
+    console.log(req.body)
+    const { username, email, password, job_title, gender, admin } = req.body;    
 
     try {
         const NewUser = await authService.signUp(username, email, password, job_title, gender, admin)
