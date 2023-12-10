@@ -12,7 +12,6 @@ routerPost.get('/posts', async (req, res) => { //listar posts
 
 routerPost.post('/posts', async (req, res) => { //criar posts
   const { user_id, content } = req.body;
-
   try {
     const publicacao = await post.createPost(user_id, content);
     res.json(publicacao);
@@ -31,5 +30,17 @@ routerPost.delete('/posts/:postId', async (req, res) => { //deletar post
     res.status(500).json({ error: error.message });
   }
 });
+
+routerPost.get('/post/:post_id', async (req, res) => { //listar usuario por id do post
+    const postId = parseInt(req.params.post_id);
+  
+    try {
+      const username = await post.UserByPostId(postId);
+      res.json(username);
+    } catch (error) {
+      res.status(500).json({ error: error.message });
+    }
+  }
+)
 
 export default routerPost;

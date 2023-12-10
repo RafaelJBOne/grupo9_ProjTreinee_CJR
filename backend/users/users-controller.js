@@ -29,4 +29,17 @@ routerUser.delete('/users/:id', JwtGuard, async (req, res) => { //deletar usuár
   }
 });
 
+routerUser.get('/user/:id', async (req, res) => { //listar usuário por id
+  const { id } = req.params;
+
+  console.log(req.params)
+
+  try {
+    const usuario = await users.listUserById(+id);
+    res.json(usuario);
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+});
+
 export default routerUser;

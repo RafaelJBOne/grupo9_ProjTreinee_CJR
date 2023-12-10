@@ -198,6 +198,12 @@
         </div>-->
     </div>
     <script>
+
+
+
+        async function nameByUserId(userId){
+            return await fetch(`http://localhost:3000/user/${userId}`)}
+
         // Função para carregar as publicações do backend e exibir na página
         async function loadPublications() {
             try {
@@ -211,7 +217,14 @@
                     const publicationDiv = document.createElement('div');
                     publicationDiv.id = `Publicacao`;
                     publicationDiv.className = 'publicacoes';
-    
+                
+                    // console.log(publication.user_id);
+
+                    // const Username = await nameByUserId(publication.user_id).username;
+
+                    // console.log(Username).username;
+                    
+                        
                     // Crie a estrutura HTML para exibir a publicação (modifique conforme necessário)
                     publicationDiv.innerHTML = `
                         <div class="topo-publicacoes">
@@ -223,7 +236,7 @@
                                 </a>
                                 <a href="./TelaPerfilLogada.html">
                                     <button class="botoes-nome-usuario-publicacao">
-                                        <h1>${publication.user_id}</h1>
+                                        <h1>Username</h1>
                                     </button>
                                 </a>
     
@@ -257,7 +270,7 @@
                     `;
     
                     publicationsContainer.appendChild(publicationDiv);
-                });
+                })
             } catch (error) {
                 console.error('Erro ao carregar publicações:', error);
             }

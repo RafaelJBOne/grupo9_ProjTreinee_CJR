@@ -1,5 +1,7 @@
 import { PrismaClient } from '@prisma/client'
+import Users from '../users/users-service.js'
 
+const user = new Users()
 const Prisma = new PrismaClient()
 
 class Posts {
@@ -68,7 +70,7 @@ class Posts {
     }
 
     async UserByPostId(post_id) { //listar usuario por id do post
-        return await Prisma.users.findUnique({
+        const post = await Prisma.posts.findUnique({
             where: { id_POST: post_id }
         }).catch(error => {
             if (error.code === 'P2025')
@@ -76,6 +78,8 @@ class Posts {
             else
                 throw error
         })
+        const User = await user.listUserById(post.user_id)
+        return User.username
     }
 }
 
