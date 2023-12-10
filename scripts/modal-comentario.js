@@ -47,7 +47,11 @@ publishCommentBtn.addEventListener('click', async () => {
 
         const response = await fetch('http://localhost:3000/comments', {
             method: 'POST',
+            mode: "no-cors",
             body: formData,
+            headers: {
+                "Content-Type": "application/json",
+              },
         });
 
         const newComment = await response.json();
