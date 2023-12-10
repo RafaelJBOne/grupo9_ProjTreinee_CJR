@@ -14,7 +14,7 @@ class Users {
                 username,
                 email,
                 password,
-                job_title_id: job.id,
+                job_title_id: job.id_JOB,
                 gender,
                 admin: false
             },
@@ -33,7 +33,7 @@ class Users {
 
     async listUserById(id) { // listar usuário por id
         return await Prisma.users.findUnique({
-            where: { id: id }
+            where: { id_USER: id }
         }).catch(error => {
             if (error.code === 'P2025')
                 throw new Error('Usuário não encontrado')
@@ -55,7 +55,7 @@ class Users {
 
     async editUser(id, username, email, password, job_title_id, gender, admin) { // editar usuário
         return await Prisma.users.update({
-            where: { id: id },
+            where: { id_USER: id },
             username,
             email,
             password,
@@ -72,7 +72,7 @@ class Users {
 
     async deleteUser(id) { // deletar usuário
         return await Prisma.users.delete({
-            where: { id: id }
+            where: { id_USER: id }
         }).catch(error => {
             if (error.code === 'P2025')
                 throw new Error('Usuário não encontrado')
@@ -83,7 +83,7 @@ class Users {
 
     async listPostsByUserId(id) { // listar posts por id do usuário
         return await Prisma.posts.findMany({
-            where: { authorId: id }
+            where: { user_id: id }
         }).catch(error => {
             if (error.code === 'P2025')
                 throw new Error('Usuário não encontrado')

@@ -35,7 +35,7 @@ class Posts {
 
     async editPost(post_id, content) { //editar posts
         return await Prisma.posts.update({
-            where: { id: post_id },
+            where: { id_POST: post_id },
             content
         }).catch(error => {
             if (error.code === 'P2025')
@@ -47,7 +47,7 @@ class Posts {
 
     async deletePost(post_id) { //deletar posts
         return await Prisma.posts.delete({
-            where: { id: post_id }
+            where: { id_POST: post_id }
         }).catch(error => {
             if (error.code === 'P2025')
                 throw new Error('Post não encontrado')
@@ -58,7 +58,7 @@ class Posts {
 
     async listCommentsByPostId(post_id) { //listar comentarios por id do post
         return await Prisma.comments.findMany({
-            where: { id: post_id } 
+            where: { id_POST: post_id } 
         }).catch(error => {
             if (error.code === 'P2025')
                 throw new Error('Post não encontrado')
@@ -69,7 +69,7 @@ class Posts {
 
     async UserByPostId(post_id) { //listar usuario por id do post
         return await Prisma.users.findUnique({
-            where: { id: post_id }
+            where: { id_POST: post_id }
         }).catch(error => {
             if (error.code === 'P2025')
                 throw new Error('Post não encontrado')

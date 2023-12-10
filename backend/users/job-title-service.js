@@ -36,7 +36,7 @@ class Job_title {
     
     async listJob_titleById(id) { //listar cargo por id
         return await prisma.job_title.findUnique({
-            where: { id: id }
+            where: { id_JOB: id }
         }).catch(error => {
             if (error.code === 'P2025')
                 throw new Error('Cargo não encontrado')

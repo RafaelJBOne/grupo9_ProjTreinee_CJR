@@ -71,7 +71,7 @@ publishPostBtn.addEventListener('click', async () => { // criar publicação
     }
 });
 
-async loadPublications() {
+async function loadPublications() {
     try {
         const response = await fetch('http://localhost:3000/posts');
         const publications = await response.json();

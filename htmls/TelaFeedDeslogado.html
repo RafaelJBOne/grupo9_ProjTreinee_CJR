@@ -154,19 +154,19 @@
                     // Crie a estrutura HTML para exibir a publicação (modifique conforme necessário)
                     publicationDiv.innerHTML = `
                         <div class="UsernDate">
-                            <a href="..\TelasDePerfil\TelaPerfilDeslogada.html">
+                            <a href="./TelaPerfilDeslogada.html">
                                 <button class="botoes-foto-perfil-publicacao">
-                                    <img src="..\imagens\pfp.jpg" alt="Foto de Perfil">
+                                    <img src="../imagens/pfp.jpg" alt="Foto de Perfil">
                                 </button>
                             </a>
-                            <a href="..\TelasDePerfil\TelaPerfilDeslogada.html">
+                            <a href="./TelaPerfilDeslogada.html">
                                 <button class="botoes-nome-usuario-publicacao">    
                                     <h1>${publication.username}</h1>
                                 </button>
                             </a>
                             <h2>${publication.created_at}</h2>
                         </div>
-                        <a href="..\TelasDeComentário\TelaComentarioDeslogada.html" class="texto-publicacao">
+                        <a href="./TelaComentarioDeslogada.html" class="texto-publicacao">
                             <p>${publication.content}</p>
                         </a>
                     `;
