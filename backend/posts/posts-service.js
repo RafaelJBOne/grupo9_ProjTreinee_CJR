@@ -10,7 +10,7 @@ class Posts {
                 content,
             }
         }).catch(error => {
-            if (error.code === 'P2025')
+            if (error.code === 'P2003')
                 throw new Error('Usuário não encontrado')
             else
                 throw error
