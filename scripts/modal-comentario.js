@@ -26,6 +26,9 @@ window.addEventListener("click", (event) => {
 });
 
 const submitCommentBtn = document.getElementById("publishCommentBtn"); 
+const commentContentInput = document.getElementById("commentContent");
+const imageInput = document.getElementById("imageInput");
+
 submitCommentBtn.addEventListener("click", () => {
     const commentContent = simplemde.value();
     console.log("Conteúdo do Comentário:", commentContent);
